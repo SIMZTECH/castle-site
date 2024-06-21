@@ -1,0 +1,144 @@
+import React, { useContext, useEffect, useState } from 'react';
+import ScreenContentLayout from '@/Layouts/CastleBetLayouts/ScreenContentLayout';
+import LoginRegisterTabHeader from '@/Layouts/CastleBetLayouts/Navs/LoginRegisterTabHeader';
+import {Link,useSearchParams,useNavigate} from 'react-router-dom';
+import { ClipLoader } from 'react-spinners';
+import PopupBox from './PopupBox';
+import { authUserContext } from '@/Context/UserAuthenticationContext';
+import { isNil } from 'lodash';
+
+
+function Login({loginCallBackHandler,authStatus}) {
+    const navigate=useNavigate();
+    const {authUser}=useContext(authUserContext);
+    const [searchParams,setSearchParams] = useSearchParams();
+    const [loader, setLoader] = useState(false);
+    const [showResPrompt,setShowResPrompt]=useState(false);
+    const [formData, setFormData] = useState({
+        username: "0700700707",
+        password: "7782",
+    });
+
+    /**
+     *
+     * @param {React.ChangeEvent<HTMLInputElement>} event
+     */
+    const onchangeInput = async (event) => {
+        setFormData({ ...formData, [event.target.name]: event.target.value });
+    };
+
+    /**
+     *
+     * @param {React.ChangeEvent} event
+     */
+    const onSubmitLogin = async (event) => {
+        event.preventDefault();
+        /**
+         * :::::::::Implement a callback that reports to the parent::::::::::::
+         */
+        setLoader(true);
+        loginCallBackHandler(formData); //will supply the login credentials to parent
+    };
+
+    /**
+     *
+     * @param {boolean} arg //these value comes from popupBox
+     */
+    const onClosePopupBox=(arg)=>{
+        setShowResPrompt(arg);
+    };
+
+
+
+
+    useEffect(() => {
+        if(authStatus) {
+            setLoader(false);
+            setShowResPrompt(true);
+            if(authStatus?.auth_token &&(!isNil(authUser?.auth_token))){
+                setTimeout(() => {
+                    // navigate to home page
+                    navigate("/castle-site?page=profile");
+                },500);
+            }
+            return;
+        }
+        return;
+    }, [authStatus]);
+
+    useEffect(()=>{
+        setShowResPrompt(false);
+    },[authUser]);
+
+
+    return (
+        <ScreenContentLayout>
+            <div className='w-full pt-8 bg-gray-50'>
+                {!showResPrompt && (
+                    <section className="p-3 my-3 border sm:max-w-[450px] mx-auto rounded-md  w-full">
+                        <form
+                            onSubmit={onSubmitLogin}
+                            className="flex flex-col pt-4 pb-8 font-poppins"
+                        >
+                            <div className="flex flex-col text-[12px] text-[#5c5c5c] mb-3">
+                                <label htmlFor="phone">Mobile Number</label>
+                                <input
+                                    name="username"
+                                    id="phone"
+                                    type="text"
+                                    onChange={onchangeInput}
+                                    value={formData?.username}
+                                    className="h-[35px] rounded-md"
+                                />
+                            </div>
+                            <div className="flex flex-col text-[12px] text-[#5c5c5c] mb-3">
+                                <label htmlFor="phone">Password (Min-4)</label>
+                                <input
+                                    name="password"
+                                    id="password"
+                                    onChange={onchangeInput}
+                                    type="password"
+                                    value={formData?.password}
+                                    className="h-[35px] rounded-md placeholder:text-[11px]"
+                                />
+                            </div>
+                            <button
+                                disabled={loader}
+                                className="flex cursor-pointer items-center justify-center rounded-md
+                        text-[14px] font-medium h-[35px] bg-black text-white mb-3 active:scale-95"
+                            >
+                                {loader ? (
+                                    <ClipLoader size={20} color="white" />
+                                ) : (
+                                    "LOGIN"
+                                )}
+                            </button>
+                        </form>
+                        <Link to={"/castle-site?page=password-reset"}>
+                            <p className="my-1 font-medium text-center rounded-md text-black border hover:underline h-[35px] flex items-center justify-center">
+                                RESET PASSWORD
+                            </p>
+                        </Link>
+                        <p className="text-[13px] text-center text-black">
+                            Don't have an account?
+                            <Link
+                                className="text-[12px] font-medium hover:underline text-primaryColor"
+                                to={"/castle-site?page=register"}
+                            >
+                                JOIN NOW
+                            </Link>
+                        </p>
+                    </section>
+                )}
+                {/*successfull or error login status modal */}
+                <PopupBox
+                    isOpen={showResPrompt}
+                    onClose={onClosePopupBox}
+                    response={authStatus}
+                />
+            </div>
+        </ScreenContentLayout>
+    );
+}
+
+export default Login;
