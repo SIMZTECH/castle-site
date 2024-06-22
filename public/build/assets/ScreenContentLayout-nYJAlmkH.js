@@ -1,0 +1,1 @@
+import{j as e}from"./app-CvnXDNqH.js";import{C as s}from"./CastleBetFooter-CNKeCqO4.js";function r({children:l}){return e.jsxs("div",{className:"flex flex-col w-full h-full bg-white",children:[e.jsx("main",{className:"flex-1 w-full ",children:l}),e.jsx(s,{})]})}export{r as S};

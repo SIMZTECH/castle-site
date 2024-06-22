@@ -58,7 +58,7 @@ function Welcome() {
 
              {!isNil(tempSwarmData) &&(
                 <header className="w-full">
-                    <div className="h-[10rem] w-screen sm:h-[12rem] xl:h-[14rem] 2xl:h-[16rem] px-1 py-1 bg-gray-900 sm:bg-white">
+                    <div className="h-[10rem] w-screen sm:w-[100%] sm:h-[12rem] xl:h-[14rem] 2xl:h-[16rem] px-1 py-1 bg-gray-900 sm:bg-white">
                         <Carousel slideInterval={5000}>
                             <img src={ad01} className="h-full " />
                             <img src={ad02} className="h-full " />
