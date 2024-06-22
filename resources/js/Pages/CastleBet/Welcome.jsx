@@ -34,7 +34,7 @@ const homeNav=[
     {
         id:3,
         icon:<IoFootball/>,
-        title:"Outlights"
+        title:"hlights"
     },
     {
         id:4,
@@ -58,7 +58,7 @@ function Welcome() {
 
              {!isNil(tempSwarmData) &&(
                 <header className="w-full">
-                    <div className="h-[10rem] sm:h-[12rem] xl:h-[14rem] 2xl:h-[16rem] px-1 py-1 bg-gray-900 sm:bg-white">
+                    <div className="h-[10rem] w-screen sm:h-[12rem] xl:h-[14rem] 2xl:h-[16rem] px-1 py-1 bg-gray-900 sm:bg-white">
                         <Carousel slideInterval={5000}>
                             <img src={ad01} className="h-full " />
                             <img src={ad02} className="h-full " />
@@ -74,14 +74,14 @@ function Welcome() {
             <section className="">
                 <div className="mb-4">
                     <div className={`flex items-center justify-center py-2 pt-3 mb-4 ${tempSwarmData?'bg-gray-900':''}  sm:bg-white`}>
-                        <div className="flex items-center gap-2 px-2 sm:w-[50%] justify-between">
+                        <div className="flex items-center gap-2 px-2 w-screen sm:w-[50%] justify-between">
                             {homeNav.map((el) => (
                                 <>
                                     {isNil(tempSwarmData) &&(
                                         <Skeleton width={40} height={40} animation="wave" variant='circular' /> 
                                     )}
                                     {!isNil(tempSwarmData) &&(
-                                        <button className="flex items-center active:scale-95 text-[#03396c] sm:bg-white  border-gray-500 gap-1 text-[12px] w-[80px] h-[30px] bg-gray-300 rounded-full border-[1px] justify-center">
+                                        <button className="flex items-center active:scale-95 text-[#03396c] sm:bg-white  border-gray-500 gap-1 text-[11px] w-[80px] h-[30px] bg-gray-300 rounded-full border-[1px] justify-center">
                                             <span>{el?.icon}</span>
                                             <p>{el?.title}</p>
                                         </button>

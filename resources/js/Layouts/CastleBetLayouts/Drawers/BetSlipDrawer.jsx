@@ -105,17 +105,18 @@ function BetSlipDrawer({auth,isOnBetSlipDrawer,onCloseBetSlipDrawer}){
     return (
         <div>
             <Drawer
+                edge={true}
                 position="right"
                 open={isOnBetSlipDrawer}
                 onClose={onCloseBetSlipDrawer}
-                className="bg-gray-900 shadow-md sm:hidden"
+                className="w-screen bg-gray-900 shadow-md overscroll-y-none sm:hidden"
             >
                 <Drawer.Header
                     title={<span className="text-white">BETSLIP</span>}
                     titleIcon={() => ""}
                 />
                 <Drawer.Items>
-                    <div className="relative flex flex-col flex-1 h-screen">
+                    <div className="relative flex flex-col flex-1">
                         {/* top section */}
                         <div className="mb-2 b">
                             <nav className="flex items-center justify-between px-4 mb-2">
