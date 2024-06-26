@@ -166,7 +166,6 @@ function Root() {
     return (
         <BetSlipContextProvider>
             <WelcomeGuestLayout
-                swarmData={swarmData}
                 logoutRes={logoutRes}
                 logOutCallBackHandler={logOutAuthenticatedUser}
                 cashOutRes={cashOutRes}

@@ -17,11 +17,14 @@ export const StoreTempContextProvider=({children})=>{
     const [getGameDetailsParams,setGetGameDetailsParams]=useState(null);
     const [getDepositParams,setGetDepositParams]=useState(null);
     const [getPaymentResponse,setGetPaymentResponse]=useState(null);
+    const [liveGamesUpdate,setLiveGamesUpdate]=useState(null);
 
     return (
         <storeTempContext.Provider
           value={{
             liveGames,
+            liveGamesUpdate,
+            setLiveGamesUpdate,
             setLiveGames,
             tempSwarmData,
             setTempSwarmData,

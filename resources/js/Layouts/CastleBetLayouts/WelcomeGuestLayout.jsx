@@ -1,4 +1,4 @@
-import React,{useState,useEffect } from 'react';
+import React,{useState,useEffect, useContext } from 'react';
 import TopNavBar from './TopNavBar';
 import AsideNavLeft from './AsideNavLeft';
 import AsideNavRight from './AsideNavRight';
@@ -13,9 +13,12 @@ import TopNavBarSkeleton from '../skeletons/TopNavBarSkeleton';
 import AsideNavLeftSkeleton from '../skeletons/AsideNavLeftSkeleton';
 import AsideNavRightSkeleton from '../skeletons/AsideNavRightSkeleton';
 import BetSlipDrawer from './Drawers/BetSlipDrawer';
+import { storeTempContext } from '@/Context/DataStoreTemp';
 
-function WelcomeGuestLayout({children,logOutCallBackHandler,logoutRes,cashOutRes,auth,onSelectedFilterHandler,swarmData}) {
+function WelcomeGuestLayout({children,logOutCallBackHandler,logoutRes,cashOutRes,auth,onSelectedFilterHandler}) {
+    const {tempSwarmData}=useContext(storeTempContext);
     const navigate=useNavigate();
+
     const [searchParams,setSearchParams] = useSearchParams();
     const [openDrawer, setOpenDrawer] = useState(false);
     const [logoutLoader,setLogoutLoader]=useState(false);
@@ -73,7 +76,7 @@ function WelcomeGuestLayout({children,logOutCallBackHandler,logoutRes,cashOutRes
         if(logoutRes){
             onCloseLogoutLoader(false);
             // route user to home page
-            navigate("/castle-site");
+            navigate("/");
         }
     },[logoutRes]);
 
@@ -88,8 +91,8 @@ function WelcomeGuestLayout({children,logOutCallBackHandler,logoutRes,cashOutRes
         <div className="relative w-screen h-screen">
             <div className="relative flex flex-col w-full h-full">
                 {/* filter for header layout mobile view */}
-                {!swarmData && <TopNavBarSkeleton />}
-                {swarmData && <TopNavBar
+                {isNil(tempSwarmData) && <TopNavBarSkeleton />}
+                {!isNil(tempSwarmData) && <TopNavBar
                     className={`${(page==="profile"||page==="transaction-history") ? "b hidden sm:flex":"flex"}`}
                     logOutCallBackHandler={() => {
                         logOutCallBackHandler(); //send request to socket
@@ -102,8 +105,8 @@ function WelcomeGuestLayout({children,logOutCallBackHandler,logoutRes,cashOutRes
                     <div className="flex h-full">
                         {/* left flex-20%*/}
                         <div className="basis-[20%] hidden sm:flex sm:flex-col border-r-[1px] border-l-0 border-t-0 border-b-0 border bg-[#f6f8fc] sm:pb-8">
-                        {!swarmData && <AsideNavLeftSkeleton />}
-                        {swarmData && <AsideNavLeft/>}
+                        {isNil(tempSwarmData) && <AsideNavLeftSkeleton />}
+                        {!isNil(tempSwarmData) && <AsideNavLeft/>}
 
                         </div>
                         {/* middle flex-cover available space*/}
@@ -112,8 +115,8 @@ function WelcomeGuestLayout({children,logOutCallBackHandler,logoutRes,cashOutRes
                         </section>
                         {/* right flex-20%*/}
                         <div className="basis-[20%] hidden sm:block bg-[#f6f8fc] px-1 border-l-[1px] border-r-0 border-t-0 border-b-0 border pb-8 ">
-                        {!swarmData && <AsideNavRightSkeleton/>}
-                        {swarmData && <AsideNavRight auth={auth}/>}
+                        {isNil(tempSwarmData) && <AsideNavRightSkeleton/>}
+                        {!isNil(tempSwarmData) && <AsideNavRight auth={auth}/>}
                         </div>
                     </div>
                 </main>

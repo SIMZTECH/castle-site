@@ -12,34 +12,34 @@ import { storeTempContext } from '@/Context/DataStoreTemp';
 const bootmNavLinks=[
     {
         id:1,
-        path:"/castle-site?page=home",
+        path:"/?page=home",
         title:"Home",
         name:"home",
         icon:<IoHome />
     },
     {
         id:2,
-        path:"/castle-site?page=league&reg_id=all&compt_id=all&filter=live",
+        path:"/?page=league&reg_id=all&compt_id=all&filter=live",
         title:"Live",
         name:"live",
         icon:<IoPlayCircle/>
     },
     {
         id:3,
-        path:"/castle-site?page=betSlip",
+        path:"/?page=betSlip",
         title:"Bet Slip",
         icon:<CgNotes/>
     },
     {
         id:4,
-        path:"/castle-site?page=mybets&filter=open",
+        path:"/?page=mybets&filter=open",
         title:"My Bets",
         name:"mybets",
         icon:<GoChecklist/>
     },
     {
         id:5,
-        path:"/castle-site?page=profile",
+        path:"/?page=profile",
         title:"Profile",
         name:"profile",
         icon:<FaUser/>

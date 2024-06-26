@@ -1,9 +1,10 @@
-import React,{ useCallback, useEffect,useRef,useState,useContext}  from 'react';
+import React,{useEffect,useRef,useState,useContext}  from 'react';
 import { authUserContext } from '@/Context/UserAuthenticationContext';
 import { isNil } from 'lodash';
 import { storeTempContext } from '@/Context/DataStoreTemp';
+
 function WebSocketCustomHook() {
-    const {setLiveGames,setTempSwarmData,setGetBoostedGames,setGetSingleGame,setTodayGames,setGetGamesByCompetition,placeBetResponse,setPlaceBetResponse,setGetPaymentResponse}=useContext(storeTempContext);
+    const {setLiveGames,setLiveGamesUpdate,setTempSwarmData,setGetBoostedGames,setGetSingleGame,setTodayGames,setGetGamesByCompetition,placeBetResponse,setPlaceBetResponse,setGetPaymentResponse}=useContext(storeTempContext);
     const {authUser,dispatch}=useContext(authUserContext);
     const [isReady,setIsReady]=useState(false);
     const [swarmData,setSwarmData]=useState(null);
@@ -11,211 +12,249 @@ function WebSocketCustomHook() {
     const [userAuth,setUserAuth]=useState(null);
     const [placeBetRes,setPlaceBetRes]=useState(null);
     const [logoutRes,setLogoutRes]=useState(null);
-    const [socketRerender,setSocketRerender]=useState(1);
     const [registerRes,setRegisterRes]=useState(null);
     const [cashOutRes,setCashOutRes]=useState(null);
-
-    //logoutRes
 
     const ws=useRef(null);
 
     useEffect(() => {
-        const webSocket = new WebSocket(
-            "wss://eu-swarm-test.betconstruct.com/"
-        );
-
-        ws.current = webSocket;
-
+        const webSocket = new WebSocket("wss://eu-swarm-test.betconstruct.com/");
+        if(isNil(ws.current)){
+            ws.current = webSocket;
+        }
+        
         webSocket.onopen = () => {
-            setSocketRerender(socketRerender + 1);
             setTimeout(() => {
                 setIsReady(true);
             }, 2500);
         };
+    }, []);
 
-        webSocket.onmessage = (event) => {
+    useEffect(()=>{
+        ws.current.onmessage = (event) => {
             const {data,rid} = JSON.parse(event?.data);
-
-            if(rid=="1"){//session request
-                if(data?.sid){//id present
-                    setAuthData(data);
-                    //TODO::check if user auth exists
-                    if (!isNil(authUser?.auth_token)) {
-                        restoreUserLogin(authUser);
-                    } else {
-                        //TODO::request all the games
+            switch (rid) {
+                case "1":{
+                    if(data?.sid){//id present
+                        setAuthData(data);
+                        //TODO::check if user auth exists
+                        if (!isNil(authUser?.auth_token)) {
+                            restoreUserLogin(authUser);
+                        } else {
+                            //TODO::request all the games
+                            getAllFootballGamesCollection();
+    
+                            // TODO::get all live games
+                            getAllLiveGames();
+    
+                            // TODO:;get all bosted games request
+                            getBoostedGames();
+                        }
+                    }
+                }
+                    break;
+                case "2":{
+                    if(data?.auth_token){//successfull login
+                        getAuthenticatedUserProfile(data);//request user details
+                        // getAuthUserBetHistory();
+                    }else{
+                        setUserAuth(data);//report to the caller error
+                        console.log(data,"i have reported to the call login error......");
+                    }
+                }
+                    break;
+                case "3":
+                    
+                    break;
+                case "4":{
+                     // TODO::log user profile in store
+                    if (data.auth_token) {
+                        logAuthenticatedUser(data);
+                        // TODO::set context
+                        setUserAuth(data); //report to the caller
+                        // TODO::request auth bet history
+                        getAuthUserBetHistory(data);
+                    }
+                }
+                    break;
+                case "5":{//place bet
+                    if(data?.result=="OK"){
+                        //TODO::request for account balance
+                        getAuthenticatedUserProfile();
+                        console.log(data,"am reporting to the caller the place bet success");
+                        //TODO::report to call place bets error
+                        setPlaceBetResponse(data);
+                        // setPlaceBetRes(data);
+                    }else{
+                        //TODO::report to call place bets error
+                        setPlaceBetResponse(data);
+                        // setPlaceBetRes(data);
+                        console.log(data,"am reporting to the caller the place bet errors");
+                    }
+                }
+                    break;
+                case "6":
+                    
+                    break;
+                case "7":{//restore user login
+                    if(data?.auth_token){
+                        //TODO::Get all games request
                         getAllFootballGamesCollection();
-
+    
                         // TODO::get all live games
-                        getAllLiveGames();
-
+                        setTimeout(() => {
+                            getAllLiveGames(); 
+                        },2000);
+                        
+    
+                        // TODO:;get all bosted games request
+                        getBoostedGames();
+    
+                        //TODO::Get Authenticated user profile data
+                        getAuthenticatedUserProfile(data);
+    
+                        console.log(data,"here is the restored user login data.....");
+                        return;
+                    }else{
+                        console.log(data,"rejected restore session");
+                        // TODO::clear prev user auth token
+                        clearPreviousAuthData();
+    
+                        // TODO::get all games collection
+                        getAllFootballGamesCollection();
+    
+                         // TODO::get all live games
+                         setTimeout(() => {
+                            getAllLiveGames(); 
+                        },2000);
+    
                         // TODO:;get all bosted games request
                         getBoostedGames();
                     }
                 }
-            }else if(rid=="2"){//first login request
-                if(data?.auth_token){//successfull login
-                    getAuthenticatedUserProfile(data);//request user details
-                    // getAuthUserBetHistory();
-                }else{
-                    setUserAuth(data);//report to the caller error
-                    console.log(data,"i have reported to the call login error......");
+                    break;
+                case "8":{//logout user
+                     //TODO::data=null user has been logout
+                    if(isNil(data)){
+                        console.log(data,"recieved logout response....");
+                        dispatch({
+                            type:"AUTHUSERUNLOGGED",
+                        });
+                        setLogoutRes({data,rid});
+                    }else{
+                        // pass res to application
+                        console.log(data,"i have passed the logout res to caller")
+                        setLogoutRes({data,rid});
+                    }
                 }
-
-            }else if(rid=="4"){//request user profile data
-                // TODO::log user profile in store
-                if (data.auth_token) {
-                    logAuthenticatedUser(data);
-                    // TODO::set context
-                    setUserAuth(data); //report to the caller
-
-                    // TODO::request auth bet history
-                    getAuthUserBetHistory(data);
+                    break;
+                case "9":{//place bet history
+                    if(data){
+                        const copyAuthUser={...JSON.parse(localStorage.getItem("authUser"))}
+                        copyAuthUser.bet_history=data;
+                        logAuthenticatedUser(copyAuthUser);
+                        // reguest user transaction history
+                        getUserTransactionHistory();
+                        //request payment wallets
+                        getPaymentWallets();
+                        return;
+                    }
                 }
-
-            }else if(rid=="13"){
-                if(data?.data?.sport){
-                    setSwarmData(data);
-                    setTempSwarmData(data);
+                    break;
+                case "10":
+                    
+                    break;
+                case "11":{//reg res
+                    setRegisterRes(data);
+                    console.log(data,"user registration data res.....");
                 }
-
-            }else if(rid=="5"){//place bet data
-                if(data?.result=="OK"){
-                    //TODO::request for account balance
-                    getAuthenticatedUserProfile();
-                    console.log(data,"am reporting to the caller the place bet success");
-                    //TODO::report to call place bets error
-                    setPlaceBetResponse(data);
-                    // setPlaceBetRes(data);
-                }else{
-                    //TODO::report to call place bets error
-                    setPlaceBetResponse(data);
-                    // setPlaceBetRes(data);
-                    console.log(data,"am reporting to the caller the place bet errors");
+                    break;
+                case "12":{
+                    setCashOutRes(data);
+                    console.log(data,"cashout data has been recieved in socket....");
                 }
-
-            }else if(rid=="7"){//restore login response
-                if(data?.auth_token){
-                    //TODO::Get all games request
-                    getAllFootballGamesCollection();
-
-                    // TODO::get all live games
-                    getAllLiveGames();
-
-                    // TODO:;get all bosted games request
-                    getBoostedGames();
-
-                    //TODO::Get Authenticated user profile data
-                    getAuthenticatedUserProfile(data);
-
-                    console.log(data,"here is the restored user login data.....");
-                    return;
-                }else{
-                    console.log(data,"rejected restore session");
-                    // TODO::clear prev user auth token
-                    clearPreviousAuthData();
-
-                    // TODO::get all games collection
-                    getAllFootballGamesCollection();
-
-                    // TODO::get all live games
-                    getAllLiveGames();
-
-                    // TODO:;get all bosted games request
-                    getBoostedGames();
+                    break;
+                case "13":{
+                    if(data?.data?.sport){
+                        setSwarmData(data);
+                        setTempSwarmData(data);
+                    }
+                } 
+                    break;
+                case "14":{
+                     //Get match scores for live games
+                    if(data){
+                        setLiveGames(data?.data);
+                    }
+    
+                    console.log(JSON.parse(event?.data),"the live games update all.....");
+    
+                    //TODO:: am handling the updates recieved
+                    // console.log(data,"live games are here sir......");
+                    // if(!isNil(data.subid)){
+                    //     if(!checkSubscriptionIfExist(data?.subid)){
+                    //         subscriptionId.push({
+                    //             subId:data?.subid,
+                    //             rid:"14",
+                    //             name:"live-games"
+                    //         })
+                    //     }
+                    // }
+                    //TODO::Implement invock get game scores for each match present in the game collection
                 }
-            }else if(rid=="8"){//logout user response
-                //TODO::data=null user has been logout
-                if(isNil(data)){
-                    console.log(data,"recieved logout response....");
-                    dispatch({
-                        type:"AUTHUSERUNLOGGED",
-                    });
-                    setLogoutRes({data,rid});
-                }else{
-                     // pass res to application
-                     console.log(data,"i have passed the logout res to caller")
-                    setLogoutRes({data,rid});
+                    break;
+                case "15":{
+                    setGetBoostedGames(data?.data);
+                    console.log(data,"boosted games are here........");
                 }
-            }else if(rid=="9"){//bet history response
-                if(data){
-
-                    const copyAuthUser={...JSON.parse(localStorage.getItem("authUser"))}
-                    copyAuthUser.bet_history=data;
-
-                    logAuthenticatedUser(copyAuthUser);
-
-                    // reguest user transaction history
-                    getUserTransactionHistory();
-
-                    //request payment wallets
-                    getPaymentWallets();
-                    return;
+                    break;
+                case "16":{
+                    setGetGamesByCompetition(data?.data);
+                    console.log(data,"games by competition are here........");
                 }
-            }else if(rid=="10"){//account balance response
-                if(data?.data?.profile){
-
+                    break;
+                case "16":
+                    
+                    break;
+                case "18":
+                    
+                    break;
+                case "19":{//transaction history
+                    console.log(data,"transaction data history is here........");
+                    if(data){
+                        const copyAuthUser={...JSON.parse(localStorage.getItem("authUser"))}
+                        copyAuthUser.transaction_history=data;
+                        logAuthenticatedUser(copyAuthUser);
+                    }
                 }
-            }else if(rid=="11"){
-
-                setRegisterRes(data);
-                console.log(data,"user registration data res.....");
-
-            }else if(rid=="12"){
-                setCashOutRes(data);
-                console.log(data,"cashout data has been recieved in socket....");
-
-            }else if(rid=="14"){
-                //Get match scores for live games
-                if(data){
-                    setLiveGames(data?.data);
+                    break;
+                case "20":{
+                    console.log(data,"payment services data are here........");
+                    if(data){
+                        const copyAuthUser={...JSON.parse(localStorage.getItem("authUser"))}
+                        copyAuthUser.payment_services=data;
+                        logAuthenticatedUser(copyAuthUser);
+                    }
                 }
-                console.log(data,"live games are here sir......");
-                //TODO::Implement invock get game scores for each match present in the game collection
-
-            }else if(rid=="15"){//boosted games request
-                setGetBoostedGames(data?.data);
-                console.log(data,"boosted games are here........");
-
-            }else if(rid=="16"){//get specific games by competition and region
-                setGetGamesByCompetition(data?.data);
-                console.log(data,"games by competition are here........");
-            }
-            else if(rid=="17"){//today games
-                setTodayGames(data?.data);
-                console.log(data,"today games are here........");
-            }
-            else if(rid=="18"){//match scores
-                setGetSingleGame(data);
-                console.log(data,"sing game details are........");
-            }else if(rid=="19"){//transaction history
-                console.log(data,"transaction data history is here........");
-                if(data){
-                    const copyAuthUser={...JSON.parse(localStorage.getItem("authUser"))}
-                    copyAuthUser.transaction_history=data;
-
-                    logAuthenticatedUser(copyAuthUser);
+                    break;
+                case "21":{
+                    setGetPaymentResponse(data);
+                    console.log(data,"deposit response data is here......");
                 }
-            }else if(rid=="20"){//transaction history
-                console.log(data,"payment services data are here........");
-                if(data){
-                    const copyAuthUser={...JSON.parse(localStorage.getItem("authUser"))}
-                    copyAuthUser.payment_services=data;
-                    logAuthenticatedUser(copyAuthUser);
-                }
-            }else if(rid=="21"){//deposit response
-
-                setGetPaymentResponse(data);
-                console.log(data,"deposit response data is here......");
+                    break;
+                default:
+                    console.log(JSON.parse(event?.data),"the main updates.....")
+                    break;
             }
         };
-
-
-        webSocket.onerror = (event) => {
+    
+        ws.current.onerror = (event) => {
             console.log("socket error......",event);
         };
+    },[ws.current])
 
-    }, []);
+   
+
 
     const clearPreviousAuthData=()=>{
         dispatch({
@@ -226,14 +265,14 @@ function WebSocketCustomHook() {
 
     const getAllLiveGames=()=>{
         const query = {
-            "command": "get",
-            "params": {
-                "source": "betting",
-                "what": { //selector
-                    "sport": ['alias'], //football
-                    "region": ['id','alias'],//europe
-                    "competition":['id','name'],//UEFA Champions League
-                    "game": [
+            command: "get",
+            params: {
+                source:"betting",
+                what: { //selector
+                    sport: ['alias'], //football
+                    region: ['id','alias'],//europe
+                    competition:['id','name'],//UEFA Champions League
+                    game: [
                         'info',
                         'id',
                         'team1_name',
@@ -243,28 +282,31 @@ function WebSocketCustomHook() {
                         'strong_team',
                         'type',
                         "live_events",
+                        "is_live"
                     ],
-                    "market": ["name","type","market_type"],
-                    "event": [],//list of all games under
+                    market: ["name","type","market_type"],
+                    event:["id","price","order","name"]
                 },
-                "where": {//filter on selected
-                    "sport": {"alias":"Soccer"},
-                    "market":{
-                        "market_type":{
+                where: {//filter on selected
+                    sport: {alias:"Soccer"},
+                    market:{
+                        market_type:{
                             "@in":["MatchResult"]
                         }
                     },
-                    "game":{
-                        "type":1
-                    }
+                    game:{'is_live':1}
                 },
-                "subscribe":true,
+                subscribe:true,
             },
-            "rid": "14",
+            rid: "14",
         };
 
-        console.log(query,"i have requested for live games.....");
-        ws.current.send(JSON.stringify(query));
+        
+        setTimeout(() => {
+            ws.current.send(JSON.stringify(query));
+            console.log(query,"i have requested for live games.....");
+        },4000);
+        
     }
 
     const getBoostedGames=()=>{//popular games
@@ -299,7 +341,6 @@ function WebSocketCustomHook() {
                         "favorite":true//popular competition
                     }
                 },
-                // "subscribe":true,
             },
             "rid":"15",
         };
@@ -308,45 +349,6 @@ function WebSocketCustomHook() {
         ws.current.send(JSON.stringify(query));
     }
 
-
-    // get match scores for provided game id's
-    /**
-     *
-     * @param {*} arg
-    */
-    const getMatchScoresByGameId = (arg) => {
-        const { sport } = arg?.data;
-        /**
-         * @type {Array<number>}
-         */
-        const arr = [];
-
-        Object.keys(sport).map((sportKey) => {
-            Object.keys(sport[sportKey].region).map((regionKey) => {
-                Object.keys(sport[sportKey].region[regionKey].competition).map(
-                    (comptKey) => {
-                        const competition =
-                            sport[sportKey].region[regionKey].competition[
-                                comptKey
-                            ];
-                        Object.keys(competition.game).map((gameKey) => {
-                            arr.push(competition.game[gameKey].id); //push in all the game id's
-                        });
-                    }
-                );
-            });
-        });
-
-        const query = {
-            "command": "get_result_games",
-            "params": {
-                "game_id":arr,
-            },
-            "rid":"18",
-        };
-        ws.current.send(JSON.stringify(query));
-        console.log(query, "i have requested for match scores.....");
-    };
 
      // get all available games on swarm
      const getAllFootballGamesCollection=()=>{
@@ -508,6 +510,7 @@ function WebSocketCustomHook() {
         console.log(query,"i have requested payments wallets.......");
         ws.current.send(JSON.stringify(query));
     }
+
 
 
 

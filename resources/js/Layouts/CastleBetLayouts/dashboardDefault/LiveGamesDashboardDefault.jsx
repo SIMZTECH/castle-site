@@ -105,6 +105,8 @@ function LiveGamesDashboardDefault() {
 
     },[liveGames]);
 
+    console.log(extractAndSortLiveGames(),"live games in live game dashboard default......");
+
   return (
     <>
         {isNil(recivedLiveGames) &&(
@@ -129,9 +131,6 @@ function LiveGamesDashboardDefault() {
                             colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
                             colorsTime={[7, 5, 2, 0]}
                             onComplete={() => {
-                                // request update of live games
-                                requestLiveGamesUpdate();
-    
                                 return { shouldRepeat: true, delay: 1 };
                             }}
                         >
@@ -146,30 +145,30 @@ function LiveGamesDashboardDefault() {
                         <RxQuestionMark />
                     </p>
                 </header>
-                {/* display the sample of live games */}
+               
                 <div className="flex flex-col px-3">
                     {!isNil(recivedLiveGames) && (
                         <div className='flex flex-col'>
                             {recivedLiveGames.map((el,index) => (
                                     <div key={index}>
-                                        {getTrancatedGames(el?.game).map((game) => (
+                                        {getTrancatedGames(el?.game).map((game) =>(
                                             <LiveGameDashboardDefaultComponent
-                                            key={Number(game?.id)}
-                                            competition_name={el?.compt_name}
-                                            fetchedGameData={game}
-                                            sport_name={el?.sport_alias}
-                                            sport_id={el?.sport_id}
-                                            region_id={el?.reg_id}
-                                            region_name={el?.reg_alias}
-                                            game_id={Number(game?.id)}
-                                            competition_id={el?.compt_id}
+                                                key={Number(game?.id)}
+                                                competition_name={el?.compt_name}
+                                                fetchedGameData={game}
+                                                sport_name={el?.sport_alias}
+                                                sport_id={el?.sport_id}
+                                                region_id={el?.reg_id}
+                                                region_name={el?.reg_alias}
+                                                game_id={Number(game?.id)}
+                                                competition_id={el?.compt_id}
                                         />
-                                        ))}
+                                        )
+                                        
+                                        )}
                                     </div>
                                 )
                             )}
-    
-                            {/* button for loading more games */}
                             <button 
                             onClick={()=>navigate("/castle-site?page=league&reg_id=all&compt_id=all&filter=live")}
                             className='text-white rounded-sm w-[40%]  outline-none font-medium mx-auto p-3 active:scale-95 bg-primaryColor text-[12px] font-poppins'>

@@ -2,6 +2,7 @@
 import EventComponent from '@/Components/CastleSitePartials/EventComponent';
 import { formatDateByTimeStamp } from '@/utilities/DateFormatter';
 import MarketHandlerUtilities from '@/utilities/MarketHandlerUtilities';
+import { isNil } from 'lodash';
 import React from 'react'
 import { LuClock } from 'react-icons/lu';
 import { TfiAngleRight } from 'react-icons/tfi';
@@ -26,6 +27,63 @@ function LiveGameDashboardDefaultComponent({fetchedGameData,competition_name,spo
     const routeConstruct=()=>{
         return `/castle-site?page=game&game_id=${game_id}&compt_id=${competition_id}&reg_id=${region_id}&markt_type=All`;
     };
+
+    /**
+     * 
+     * @param {Array<{}>} arg 
+     * @returns {Array<{
+     *  id:number,
+     *  price:number,
+     *  order:number,
+     *  name:string
+     *  
+     * }>}
+     */
+    const eventsSorterHandler=(arg)=>{
+        /**
+         * @type {Array<{
+        *  id:number,
+        *  price:number,
+        *  order:number,
+        *  name:string 
+        * }>}
+         */
+        const arr=[];
+
+        if(!isNil(arg)){
+            Object.keys(arg).map((eventKeys)=>{ 
+                arr.push({
+                    id:arg[eventKeys].id,
+                    price:arg[eventKeys].price,
+                    order:arg[eventKeys].order,
+                    name:arg[eventKeys].name,
+                });
+            })
+
+            return arr.sort(function(a,b){return a.order-b.order});
+        }
+
+        return arr;  
+    };
+
+    /**
+     * 
+     * @param {string} name 
+     * @returns {string}
+     */
+    const getEventName=(name)=>{
+        switch (name.toLowerCase()) {
+            case "w1":{
+                return "1"
+            }
+            case "draw":{
+                return "x"
+            }
+            case "w2":{
+                return "2"
+            }
+        }
+    }
 
      /**
       *
@@ -99,30 +157,22 @@ function LiveGameDashboardDefaultComponent({fetchedGameData,competition_name,spo
           <div>
               {Object.keys(market).map((keys) => (
                   <div className="flex items-center justify-between" key={keys}>
-                      {/* for W1 */}
-                      {Object.keys(market[keys].event).map((eventKeys) => (
-                          <>
-                              {market[keys].event[eventKeys].name == "W1" && (
+                  
+                      {eventsSorterHandler(market[keys].event).map((elv)=> (
                                   <EventComponent
-                                      isHighLighted={isEventIdExistInBetSlip(
-                                          market[keys].event[eventKeys].id
-                                      )}
+                                      isHighLighted={isEventIdExistInBetSlip(elv.id)}
                                       isStrongTeam={strong_team == 1}
                                       onSelectedCallBack={() => {
                                           const _data = {
                                               market_id: Number(keys),
                                               game_id: Number(game_id),
-                                              selection:
-                                                  market[keys].event[eventKeys]
-                                                      .name,
-                                              market_price:
-                                                  market[keys].event[eventKeys]
-                                                      .price,
+                                              selection:elv.name,
+                                              market_price:elv.price,
                                               home_team: team1_name,
                                               away_team: team2_name,
                                               competition: competition_name,
                                               start_time: start_ts,
-                                              event_id: Number(eventKeys),
+                                              event_id: Number(elv.id),
                                               sport_name: sport_name,
                                               region_name: region_name,
                                               market_name: market[keys].name,
@@ -130,17 +180,14 @@ function LiveGameDashboardDefaultComponent({fetchedGameData,competition_name,spo
                                           // push to betslip on click
                                           selectedMarketHandler(_data);
                                       }}
-                                      name={"1"}
-                                      price={
-                                          market[keys].event[eventKeys].price
-                                      }
-                                      key={market[keys].event[eventKeys].id}
+                                      name={getEventName(elv.name)}
+                                      price={elv.price}
+                                      key={elv.id}
                                   />
-                              )}
-                          </>
-                      ))}
-                      {/* for Draw */}
-                      {Object.keys(market[keys].event).map((eventKeys) => (
+                              )
+                      )}
+                     
+                      {/* {Object.keys(market[keys].event).map((eventKeys) => (
                           <>
                               {market[keys].event[eventKeys].name == "Draw" && (
                                   <EventComponent
@@ -217,7 +264,7 @@ function LiveGameDashboardDefaultComponent({fetchedGameData,competition_name,spo
                                   />
                               )}
                           </>
-                      ))}
+                      ))} */}
                   </div>
               ))}
           </div>

@@ -18,7 +18,7 @@ function LiveGames({requestLiveGamesUpdate}) {
     //TODO::implement the timer to peridically get updated games....
     const incrementTimerKeyHandler=()=>{
         // Innvock get updates handler
-        requestLiveGamesUpdate();
+        // requestLiveGamesUpdate();
     };
 
     useEffect(()=>{
@@ -29,7 +29,7 @@ function LiveGames({requestLiveGamesUpdate}) {
 
     useEffect(()=>{
         if(tempSwarmData){
-            requestLiveGamesUpdate();//handle refresh
+            // requestLiveGamesUpdate();//handle refresh
             return;
         }
     },[tempSwarmData]);

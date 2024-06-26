@@ -9,65 +9,17 @@ export default function FetchSwarmData() {
     const {getCompAndRegParams,setGetGamesByCompetition,placeBetReqParams,setPlaceBetReqParams,liveGamesUpdateKey,getGameDetailsParams,singleLiveGamesUpdateKey,getDepositParams}=useContext(storeTempContext);
     const [isReady,swarmData,send,authData,userAuth,placeBetRes,logoutRes,registerRes,cashOutRes] = WebSocketCustomHook();
 
-    // request specific games by region and competion method
-    function getAllGamesForWelcome(reg = 20001, sport_id = 1, alias = "Soccer", compt = 566, type = "P1XP2") {
-        const getAllGames = {
-            "command": "get",
-            "params": {
-                "source": "betting",
-                "what": { //selector
-                    "sport": ['id', 'name', 'type', 'region'], //football
-                    "region": ['competition', 'name'],//europe
-                    "competition": ['id', 'game', 'name', 'game'],//UEFA Champions League
-                    "game": [
-                        'id',
-                        'team1_id',
-                        'team2_id',
-                        'team1_name',
-                        'team2_name',
-                        'start_ts',
-                        'markets_count',
-                        'event',
-                        'market',
-                        'strong_team',
-                        'add_info_name'
-                    ],
-                    "market": ['event', 'type'],
-                    "event": ['id', 'name', 'price'],//list of all games under
-                },
-                "where": {//filter on selected
-                    "sport": { 'alias': alias },
-                    "region": { "id": reg },
-                    "competition": { "id": compt },
-                    "market": {
-                        "type": {
-                            "@in": [type]
-                        }
-                    }
-                },
-                "subscribe": false,
-            },
-            "rid":"13"
-        };//end of data querry
-
-        console.log({
-            params:getAllGames
-        });
-
-        send(JSON.stringify(getAllGames));
-    };
-
     // request session method
     function writeSessionData() {
         const request_session = {
             "command": "request_session",
             "params": {
                 "site_id": 65,
-                "language": "eng"
+                "language": "eng",
+                "subscribe":true,
             },
             "rid":"1"
         }//end of data structure
-
         send(JSON.stringify(request_session));
         console.log("i have requested the session......socket:"+isReady);
     };
@@ -709,7 +661,6 @@ useMemo(()=>{
         authData,
         placeBetRequest,
         writeSessionData,
-        getAllGamesForWelcome,
         getUpcomingGamesByTime,
         getAllFootballGamesCollection,
         loginUserFirstTime,

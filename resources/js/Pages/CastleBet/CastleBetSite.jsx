@@ -17,40 +17,40 @@ import { StoreTempContextProvider } from '@/Context/DataStoreTemp';
 
 const router = createBrowserRouter([
     {
-        path: "/castle-site",
+        path: "/",
         element: <Root />,
         errorElement: <ErrorPage />,
         children: [
             {
-                path: "/castle-site",
+                path: "/",
                 element: <Welcome />,
             },
             {
-                path: "/castle-site/group",
+                path: "/group",
                 element: <Group />,
             },
             {
-                path: "/castle-site/game",
+                path: "/game",
                 element: <GameScreen />,
             },
             {
-                path: "/castle-site/my-bets",
+                path: "/my-bets",
                 element: <Bets />,
             },
             {
-                path: "/castle-site/my-account",
+                path: "/my-account",
                 element: <Profile />,
             },
             {
-                path: "/castle-site/login",
+                path: "/login",
                 element: <Login />,
             },
             {
-                path: "/castle-site/join-now",
+                path: "/join-now",
                 element: <Register />,
             },
             {
-                path: "/castle-site/password-reset",
+                path: "/password-reset",
                 element: <div>reset password</div>,
             },
         ],
