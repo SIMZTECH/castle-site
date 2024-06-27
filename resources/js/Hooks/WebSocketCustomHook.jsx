@@ -4,7 +4,19 @@ import { isNil } from 'lodash';
 import { storeTempContext } from '@/Context/DataStoreTemp';
 
 function WebSocketCustomHook() {
-    const {setLiveGames,setLiveGamesUpdate,setTempSwarmData,setGetBoostedGames,setGetSingleGame,setTodayGames,setGetGamesByCompetition,placeBetResponse,setPlaceBetResponse,setGetPaymentResponse}=useContext(storeTempContext);
+    const {
+        setLiveGames,
+        setLiveGamesUpdate,
+        setTempSwarmData,
+        setGetBoostedGames,
+        setGetSingleGame,
+        setTodayGames,
+        setGetGamesByCompetition,
+        placeBetResponse,
+        setPlaceBetResponse,
+        setGetPaymentResponse,
+        setRegisterRes
+    }=useContext(storeTempContext);
     const {authUser,dispatch}=useContext(authUserContext);
     const [isReady,setIsReady]=useState(false);
     const [swarmData,setSwarmData]=useState(null);
@@ -12,7 +24,6 @@ function WebSocketCustomHook() {
     const [userAuth,setUserAuth]=useState(null);
     const [placeBetRes,setPlaceBetRes]=useState(null);
     const [logoutRes,setLogoutRes]=useState(null);
-    const [registerRes,setRegisterRes]=useState(null);
     const [cashOutRes,setCashOutRes]=useState(null);
 
     const ws=useRef(null);
@@ -169,8 +180,7 @@ function WebSocketCustomHook() {
                     
                     break;
                 case "11":{//reg res
-                    setRegisterRes(data);
-                    console.log(data,"user registration data res.....");
+                    setRegisterRes(JSON.parse(event.data));
                 }
                     break;
                 case "12":{
@@ -203,8 +213,10 @@ function WebSocketCustomHook() {
                     console.log(data,"games by competition are here........");
                 }
                     break;
-                case "18":
-                    
+                case "18":{//get single game details
+                    console.log(data,"single game details is here in the socket....");
+                    setGetSingleGame(data);
+                }   
                     break;
                 case "19":{//transaction history
                     console.log(data,"transaction data history is here........");
@@ -514,7 +526,7 @@ function WebSocketCustomHook() {
 
 
 
-  return [isReady,swarmData,ws.current?.send.bind(ws.current),authData,userAuth,placeBetRes,logoutRes,registerRes,cashOutRes];
+  return [isReady,swarmData,ws.current?.send.bind(ws.current),authData,userAuth,placeBetRes,logoutRes,cashOutRes,ws.current];
 }
 
 export default WebSocketCustomHook;

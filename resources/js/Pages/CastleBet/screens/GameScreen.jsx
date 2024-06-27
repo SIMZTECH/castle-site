@@ -20,6 +20,7 @@ import BothTeamsToScoreComponent from '@/Layouts/CastleBetLayouts/markets_compon
 import HalfTimeUnderOver from '@/Layouts/CastleBetLayouts/markets_components/HalfTimeUnderOver';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import { isNil } from 'lodash';
+import UtilizedHooks from '@/Hooks/UtilizedHooks';
 
 const market_data=[
     {
@@ -49,20 +50,20 @@ const market_data=[
     }
 ]
 
-function GameScreen({requestGetGameDetails}) {
-    const route=useNavigate()
+function GameScreen({requestGetGameDetails,socket}) {
+    const route=useNavigate();
+    const {placeBetRequest,getSingleGameDetails}=UtilizedHooks();
     const {tempSwarmData,getSingleGame,setGetGameDetailsParams,setSingleLiveGamesUpdateKey} = useContext(storeTempContext);
     const [gameDetails,setFoundGameDetails]=useState(null);
     const [searchParams,setSearchParams] = useSearchParams();
     const [activeMarket,setActiveMarket]=useState(searchParams.get("markt_type"));
-
-    const requestLiveGamesUpdate=()=>{
-        if(!isNil(tempSwarmData)){
-            // setSingleLiveGamesUpdateKey((prev)=>prev+=1);
-            requestGetGameDetails(queryParams);
-        } 
-        // setSingleLiveGamesUpdateKey((prev)=>prev+=1);
-    }
+    
+    const [queryParams,setQueryParams]=useState({
+        region_id:Number(searchParams.get("reg_id")),
+        competition_id:Number(searchParams.get("compt_id")),
+        game_id:Number(searchParams.get("game_id")),
+        market_type:searchParams.get("markt_type")
+    });
 
     /**
      * @var {Number} globalVar
@@ -72,12 +73,12 @@ function GameScreen({requestGetGameDetails}) {
 
     let firstHalfUderOverKey=1;
 
-    const [queryParams,setQueryParams]=useState({
-        region_id:Number(searchParams.get("reg_id")),
-        competition_id:Number(searchParams.get("compt_id")),
-        game_id:Number(searchParams.get("game_id")),
-        market_type:searchParams.get("markt_type")
-    });
+    const requestLiveGamesUpdate=()=>{
+        if(!isNil(tempSwarmData)){
+            requestGetGameDetails(queryParams);
+            getSingleGameDetails(queryParams,socket);
+        } 
+    }
 
     const activeTabHandler=(arg)=>{
         setActiveMarket(arg);
@@ -132,16 +133,14 @@ function GameScreen({requestGetGameDetails}) {
     useEffect(()=>{
         if(tempSwarmData){
             console.log("i have executed the get single games.......");
-            setGetGameDetailsParams(queryParams);
-            // requestGetGameDetails(queryParams);
+            getSingleGameDetails(queryParams,socket);
         }
     },[]);
 
     //handle refresh
     useEffect(() => {
         if (tempSwarmData && !getSingleGame) {
-            // TODO::implement request this game details
-            setGetGameDetailsParams(queryParams);
+            getSingleGameDetails(queryParams,socket);
         }
         //get specific game details
         if (tempSwarmData&&getSingleGame) {
@@ -166,7 +165,7 @@ function GameScreen({requestGetGameDetails}) {
     //text-[#03396c]
 
     return (
-        <div className="flex flex-col flex-1 h-full bg-gray-200">
+        <div className="flex flex-col flex-1 h-full">
             {!tempSwarmData && (
                 <Skeleton
                     animation="wave"
@@ -177,11 +176,11 @@ function GameScreen({requestGetGameDetails}) {
             )}
 
             {gameDetails && (
-                <header className="flex items-center font-poppins justify-between bg-gray-700 text-white text-opacity-60 h-[50px] px-2 space-x-1">
+                <header className="flex items-center font-poppins justify-between bg-gray-200 text-gray-600 text-opacity-60 h-[40px] px-2 space-x-1">
                     <div className="flex items-center">
                         <button
-                            onClick={() => route("/castle-site?page=home")}
-                            className="text-[15px] outline-none"
+                            onClick={() => route("/?page=home")}
+                            className="text-[18px] outline-none px-2"
                         >
                             <IoHome />
                         </button>
@@ -206,7 +205,7 @@ function GameScreen({requestGetGameDetails}) {
                                 colorsTime={[7, 5, 2, 0]}
                                 onComplete={() => {
                                     // request update of live games
-                                    requestLiveGamesUpdate();
+                                    // requestLiveGamesUpdate();
 
                                     return { shouldRepeat: true, delay: 1 };
                                 }}
@@ -320,7 +319,7 @@ function GameScreen({requestGetGameDetails}) {
                             </div>
                             {/* market naviagtion list */}
                             <div className="flex items-center gap-2 text-[11px] font-poppins ">
-                                <div className="flex items-center justify-between w-[100%] px-1">
+                                <div className="flex mx-2 items-center justify-between w-[100%] px-1 gap-2">
                                     {market_data.map((marketObj, index) => (
                                         <div
                                             onClick={() =>
@@ -328,10 +327,10 @@ function GameScreen({requestGetGameDetails}) {
                                                     marketObj?.alias
                                                 )
                                             }
-                                            className={`cursor-pointer border-[1px] px-1 h-[30px] text-[12px] w-[70px] rounded-full flex items-center justify-center ${
+                                            className={`cursor-pointer text-center basis-1/3 p-2.5 border-b-2 border-b-transparent  text-[13px] ${
                                                 marketObj?.alias == activeMarket
-                                                    ? "b bg-gray-800  text-white hover:text-white hover:bg-opacity-100"
-                                                    : " border-gray-700 text-primaryColor"
+                                                    ? " border-b-gray-800 text-gray-700"
+                                                    : " text-gray-500"
                                             } `}
                                             key={marketObj?.id}
                                         >

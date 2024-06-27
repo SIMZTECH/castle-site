@@ -15,8 +15,8 @@ function Login({loginCallBackHandler,authStatus}) {
     const [loader, setLoader] = useState(false);
     const [showResPrompt,setShowResPrompt]=useState(false);
     const [formData, setFormData] = useState({
-        username: "",
-        password: "",
+       username: "0700700707",
+        password: "7782",
     });
 
     // username: "0700700707",

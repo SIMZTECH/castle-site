@@ -72,7 +72,7 @@ function ActualBetSlip({cashOutCallBackHandler,cashOutRes}) {
           <header className="bg-[#f6f8fc] h-[40px] border-b-[1px] flex items-center px-4 relative">
               <button
                   onClick={() =>
-                      navigate("/castle-site?page=mybets&filter=open")
+                      navigate("/?page=mybets&filter=open")
                   }
                   className="flex items-center outline-none text-[13px] hover:underline"
               >

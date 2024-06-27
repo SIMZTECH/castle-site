@@ -1,11 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useMemo, useState } from "react";
 import {Link} from 'react-router-dom';
 import CastleBetFooter from "@/Components/CastleBetFooter";
 import { flg_zambia } from "@/assets/flags/worldFlags";
 import { HashLoader } from "react-spinners";
+import UtilizedHooks from "@/Hooks/UtilizedHooks";
+import { storeTempContext } from "@/Context/DataStoreTemp";
+import { isNil } from "lodash";
 
-function Register({userRegistrationCallBack,registerRes}) {
+function Register({socket}) {
+    const {registerRes,setRegisterRes}=useContext(storeTempContext);
+    const {registerUser}=UtilizedHooks();
     const [loader,setLoader]=useState(false);
+    const [registrationError,setRegistrationError]=useState(false);
+    const [registrationSuccess,setRegistrationSuccess]=useState(false);
     const [formData, setFormData] = useState({
         username: "",
         password: "",
@@ -33,12 +40,31 @@ function Register({userRegistrationCallBack,registerRes}) {
         event.preventDefault();
 
         setLoader(true);
-        userRegistrationCallBack(formData);
+        registerUser(formData,socket);
     };
 
+
     useEffect(()=>{
-        setLoader(false);
-        console.log(registerRes,"i have recieved the response in register");
+        if(!isNil(registerRes)){
+            setLoader(false);
+            console.log(registerRes,"i have recieved the response in register");
+
+            if(registerRes?.result==='OK'){
+                setRegistrationSuccess(true);
+                setTimeout(() => {
+                    setRegistrationSuccess(false); 
+                    setRegisterRes(null); 
+                },2000);
+            }
+
+            if(isNil(registerRes?.result)){
+                setRegistrationError(true)
+                setTimeout(() => {
+                    setRegistrationError(false); 
+                    setRegisterRes(null);  
+                },2000);
+            }
+        }
     },[registerRes]);
 
     return (
@@ -48,12 +74,26 @@ function Register({userRegistrationCallBack,registerRes}) {
                     onSubmit={onSubmitRegister}
                     className="flex-1 w-full sm:max-w-[450px] bg-white border mx-auto rounded-md mt-8 p-3 mb-5 shadow-sm"
                 >
+                    {/* error */}
+                    {!isNil(registerRes) &&(
+                        <div>
+                            {registrationError &&(
+                                <div className="text-red-500 p-2.5 border-[1px] rounded-md ring-red-300 ring-2 bg-red-50 text-center capitalize">{registerRes?.msg}</div>
+                            )}
+                            {registrationSuccess &&(
+                                <div  className="text-green-500 p-2.5 border-[1px] rounded-md ring-green-300 ring-2 bg-green-50 text-center">
+                                    {'Registration was usccessfull'}
+                                </div>
+                            )}
+                        </div>
+                        
+                    )}
                     <div className="pt-2 mb-1">
                         <label
                             for="username"
                             className="block mb-1 text-sm font-medium text-[#5c5c5c]"
                         >
-                            Mobile number
+                            Username
                         </label>
                         <div className="relative ">
                             <div className="absolute inset-y-0 flex items-center mr-2 pointer-events-none start-0 ps-2">
@@ -68,7 +108,7 @@ function Register({userRegistrationCallBack,registerRes}) {
                                 value={formData.username}
                                 onChange={onchangeInput}
                                 class="bg-gray-50 border border-gray-300 text-gray-600 text-sm outline-none rounded-lg focus:ring-1 focus:ring-gray-800 focus:border-gray-800 block w-full ps-12 p-2.5"
-                                placeholder="+260 96 or 076"
+                                placeholder="mobile number"
                                 required
                             />
                         </div>

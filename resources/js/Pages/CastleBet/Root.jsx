@@ -38,13 +38,13 @@ function Root() {
         logoutUser,
         logoutRes,
         registerUser,
-        registerRes,
         requestCashout,
         cashOutRes,
         getSingleGameDetails,
         getBoostedGames,
         getTodayGamesByTimeStamp,
-        getGameByRegionAndCompetition
+        getGameByRegionAndCompetition,
+        socket
     } = FetchSwarmData();
 
     const [key, setKey] = React.useState(1);
@@ -161,6 +161,7 @@ function Root() {
     return (
         <BetSlipContextProvider>
             <WelcomeGuestLayout
+                socket={socket}
                 logoutRes={logoutRes}
                 logOutCallBackHandler={logOutAuthenticatedUser}
                 cashOutRes={cashOutRes}
@@ -179,7 +180,7 @@ function Root() {
                     />)}
 
                 {/*group of games display */}
-                {route?.page == "game" && <GameScreen requestGetGameDetails={requestGetGameDetails} />}
+                {route?.page == "game" && <GameScreen socket={socket} requestGetGameDetails={requestGetGameDetails} />}
 
                 {/* user profile display */}
                 {route?.page == "profile" && <Profile />}
@@ -192,10 +193,7 @@ function Root() {
 
                 {/*user register */}
                 {route?.page == "register" && (
-                    <Register
-                        userRegistrationCallBack={userRegistrationCallBack}
-                        registerRes={registerRes}
-                    />
+                    <Register socket={socket} />
                 )}
 
                 {/*money deposit display */}

@@ -13,11 +13,11 @@ function BetCardGroup({amount,odds,outcome,payout,events,bet_id,date_time,possib
   return (
       <div
           onClick={() =>
-              navigate(`/castle-site?page=betslip&betslip_id=${bet_id}`, {
+              navigate(`/?page=betslip&betslip_id=${bet_id}`, {
                   state: { bet_id },
               })
           }
-          className="px-3 py-1 mb-3 bg-[#f6f8fc8d] rounded-md cursor-pointer shadow-sm"
+          className="px-3 py-1 mb-3 bg-white rounded-md shadow-sm cursor-pointer ring-1 ring-gray-600 ring-opacity-30"
       >
           <header className="flex items-center gap-3 border-b-[1px] pb-1">
               {/* status icon */}
@@ -37,7 +37,7 @@ function BetCardGroup({amount,odds,outcome,payout,events,bet_id,date_time,possib
                   </span>
               )}
               {/* menue */}
-              <div className="flex-1 text-[11px]">
+              <div className="flex-1 text-[12px] text-gray-500">
                   <p>
                       {formattedDate} <span>({formattedTime})</span>
                   </p>
@@ -52,11 +52,11 @@ function BetCardGroup({amount,odds,outcome,payout,events,bet_id,date_time,possib
                       ID <span>{bet_id}</span>
                   </p>
               </div>
-              <span className="text-[15px]">
+              <span className="text-[15px] text-gray-700">
                   <TfiAngleRight />
               </span>
           </header>
-          <div className="flex flex-col pt-1 space-y-1 text-[11px] text-textMediumBlue">
+          <div className="flex flex-col pt-1 space-y-1 text-[11px] text-gray-700">
               {outcome !== 5 && (
                   <div className="flex items-center justify-between">
                       <p>Odds</p>

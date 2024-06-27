@@ -7,15 +7,15 @@ import { useMemo } from 'react';
 
 export default function FetchSwarmData() {
     const {getCompAndRegParams,setGetGamesByCompetition,placeBetReqParams,setPlaceBetReqParams,liveGamesUpdateKey,getGameDetailsParams,singleLiveGamesUpdateKey,getDepositParams}=useContext(storeTempContext);
-    const [isReady,swarmData,send,authData,userAuth,placeBetRes,logoutRes,registerRes,cashOutRes] = WebSocketCustomHook();
+    const [isReady,swarmData,send,authData,userAuth,placeBetRes,logoutRes,cashOutRes,socket] = WebSocketCustomHook();
 
     // request session method 
     function writeSessionData() {
         const request_session = {
             command: "request_session",
             params: {
-                site_id: 18762391,
-                // site_id: 65,
+                // site_id: 18762391,
+                site_id: 65,
                 language: "eng",
             },
             rid: "1",
@@ -293,36 +293,38 @@ const getUpdatesWhatsUp=()=>{
 const getSingleGameDetails=(arg)=>{//get match scores by gamed id
     const {game_id,region_id,competition_id}=arg;
 
-    const query={
-        "command":"get",
-        "params": {
-            "source":"betting",
-            "what": { //selector
-                "game": [
-                    'info',
-                    'id',
-                    'team1_name',
-                    'team2_name',
-                    'start_ts',
-                    'markets_count',
-                    'strong_team',
-                    'type',
+    const query = {
+        command: "get",
+        params: {
+            source: "betting",
+            what: {
+                //selector
+                game: [
+                    "info",
+                    "id",
+                    "team1_name",
+                    "team2_name",
+                    "start_ts",
+                    "markets_count",
+                    "strong_team",
+                    "type",
                     "live_events",
                 ],
-                "market": [],
-                "event": [],//list of all games under
+                market: [],
+                event: [], //list of all games under
             },
-            "where": {//filter on selected
-                "competition":{"id":competition_id},
-                "region":{"id":region_id},
-                "game":{"id":game_id},
-                "market":{},
+            where: {
+                //filter on selected
+                competition: { id: competition_id },
+                region: { id: region_id },
+                game: { id: game_id },
+                market: {},
             },
         },
-        "rid":"18"
-    }
+        rid: "18",
+    };
 
-    console.log(arg,"i have requested for single game details of game_id"+game_id);
+    console.log(query,"i have requested for single game details of game_id"+game_id);
     send(JSON.stringify(query));
 };
 
@@ -621,7 +623,6 @@ useMemo(()=>{
         logoutUser,
         logoutRes,
         registerUser,
-        registerRes,
         requestCashout,
         getAuthUserBetHistory,
         getFilteredGamesCollection,
@@ -630,6 +631,7 @@ useMemo(()=>{
         getSingleGameDetails,
         getBoostedGames,
         getTodayGamesByTimeStamp,
+        socket,
         getGameByRegionAndCompetition
     };
 };

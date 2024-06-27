@@ -116,7 +116,7 @@ function MyBetsScreen(){
 
   return (
       <main className="flex flex-col h-full pb-8 select-none b font-poppins">
-          <div className="bg-[#f6f8fc] h-[40px] border-b-[1px] flex items-center px-4">
+          <div className="bg-[#f6f8fc] h-[40px] border-b-[1px] text-gray-500 flex items-center px-4">
               <p>My Bets</p>
           </div>
           <div className='flex flex-col flex-1 overflow-y-scroll mybets-container'>
@@ -125,10 +125,10 @@ function MyBetsScreen(){
                       <div
                           key={tab?.id}
                           onClick={() => tabNavigatorHandler(tab.path)}
-                          className={`h-[40px] basis-[25%] border-b-[2px] border-b-transparent flex items-center justify-center cursor-pointer transition ease-in-out duration-75 text-[12px] sm:text-[14px] ${
-                              activeTab == tab.path
-                                  ? " border-b-primaryColor text-primaryColor"
-                                  : ""
+                          className={`h-[40px] basis-[25%] border-b-[2px] border-b-transparent flex items-center justify-center cursor-pointer translate-transform transition ease-in-out duration-75 text-[12px] sm:text-[14px] ${
+                              activeTab === tab.path
+                                  ? " border-b-gray-900 border-b-2 text-gray-900 font-medium"
+                                  : "text-gray-400"
                           }`}
                       >
                           <p>{tab?.name}</p>

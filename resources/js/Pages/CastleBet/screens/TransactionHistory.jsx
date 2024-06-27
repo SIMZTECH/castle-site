@@ -27,7 +27,7 @@ function TransactionHistory(){
         <header className="fixed sm:hidden flex items-center w-full h-[55px] px-4  shadow-md select-none bg-gray-800 font-poppins">
                 {/* back button */}
                 <button
-                    onClick={() => navigate("/castle-site?page=profile")}
+                    onClick={() => navigate("/?page=profile")}
                     className=" text-[16px] gap-1 cursor-pointer flex items-center justify-center"
                 >
                     <div className="w-[22px] text-gray-500 h-[22px] bg-white rounded-full flex items-center justify-center">

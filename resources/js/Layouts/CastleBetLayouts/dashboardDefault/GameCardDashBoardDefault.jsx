@@ -25,7 +25,7 @@ function GameCardDashBoardDefault({fetchedGameData,competition_name,sport_name,r
     const {formattedDate,formattedTime} = formatDateByTimeStamp(start_ts);
 
     const routeConstruct=()=>{
-        return `/castle-site?page=game&game_id=${game_id}&compt_id=${competition_id}&reg_id=${region_id}&markt_type=All`;
+        return `/?page=game&game_id=${game_id}&compt_id=${competition_id}&reg_id=${region_id}&markt_type=All`;
     };
 
     /**

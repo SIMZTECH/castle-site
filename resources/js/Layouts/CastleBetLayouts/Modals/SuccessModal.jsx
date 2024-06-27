@@ -67,12 +67,9 @@ function SuccessModal({isOpen,onclose,response,buttonCallBack}) {
                             {response?.result == "OK" ? (
                                 <div>Bet was placed successfully</div>
                             ) : (
-                                <div className='flex flex-col items-center justify-center w-full gap-1 font-poppins'>
+                                <div className='flex flex-col items-center justify-center w-full gap-1 py-4 font-normal text-red-500 font-poppins'>
                                     <p className='text-center'>
-                                        Failed to place a bet,please try again later
-                                    </p>
-                                    <p className='font-medium'>
-                                        Reason:<span className='font-normal text-red-500 b'>{response?.result_text}</span>
+                                        {response?.result_text}
                                     </p>
                                 </div>
                             )}

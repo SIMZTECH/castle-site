@@ -3,7 +3,7 @@ import { betSlipContext } from '@/Context/BetSlipContext';
 import { eventsContext } from '@/Context/EventsCatchContext';
 import BetSlipUtilities from '@/utilities/BetSlipUtilities';
 import { Drawer } from 'flowbite-react';
-import React from 'react'
+import React, { useMemo } from 'react'
 import { useRef } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -18,9 +18,11 @@ import { RiDeleteBin6Line } from 'react-icons/ri';
 import { betSlipIcon } from '@/assets/icons';
 import { storeTempContext } from '@/Context/DataStoreTemp';
 import { isNil } from 'lodash';
+import UtilizedHooks from '@/Hooks/UtilizedHooks';
 
-function BetSlipDrawer({auth,isOnBetSlipDrawer,onCloseBetSlipDrawer}){
-    const {setPlaceBetReqParams,placeBetResponse,setPlaceBetResponse}=useContext(storeTempContext);
+function BetSlipDrawer({auth,isOnBetSlipDrawer,onCloseBetSlipDrawer,socket}){
+    const {placeBetRequest}=UtilizedHooks();
+    const {placeBetResponse,setPlaceBetResponse}=useContext(storeTempContext);
     const navigate = useNavigate();
     const {
         totalOddsGenerator,
@@ -70,7 +72,8 @@ function BetSlipDrawer({auth,isOnBetSlipDrawer,onCloseBetSlipDrawer}){
             bets: Array.from(bet_slip),
         };
         // TODO::invock the use memo hook in fetchswarm data
-        setPlaceBetReqParams(betData)
+        placeBetRequest(betData?.stakeAmount,betData?.bets,socket);
+        // setPlaceBetReqParams(betData)
         // placeBetCallBackHandler(betData);
         console.log(pressBetEvent, "press bet event....");
     };
@@ -93,9 +96,10 @@ function BetSlipDrawer({auth,isOnBetSlipDrawer,onCloseBetSlipDrawer}){
         setOpenBetModal(arg);
     };
 
-    useEffect(() => {
-        console.log(placeBetResponse, "received place bet res in betslip...");
+    useMemo(() => {
+        
         if (!isNil(placeBetResponse)) {
+            console.log(placeBetResponse, "received place bet res in betslip...");
             setPlaceBetLoader(false);
             onOpenModal(true); //open success modal
             return;

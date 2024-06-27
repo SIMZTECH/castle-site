@@ -15,7 +15,7 @@ import AsideNavRightSkeleton from '../skeletons/AsideNavRightSkeleton';
 import BetSlipDrawer from './Drawers/BetSlipDrawer';
 import { storeTempContext } from '@/Context/DataStoreTemp';
 
-function WelcomeGuestLayout({children,logOutCallBackHandler,logoutRes,cashOutRes,auth,onSelectedFilterHandler}) {
+function WelcomeGuestLayout({children,logOutCallBackHandler,logoutRes,cashOutRes,auth,onSelectedFilterHandler,socket}) {
     const {tempSwarmData}=useContext(storeTempContext);
     const navigate=useNavigate();
 
@@ -116,7 +116,7 @@ function WelcomeGuestLayout({children,logOutCallBackHandler,logoutRes,cashOutRes
                         {/* right flex-20%*/}
                         <div className="basis-[20%] hidden sm:block bg-[#f6f8fc] px-1 border-l-[1px] border-r-0 border-t-0 border-b-0 border pb-8 ">
                         {isNil(tempSwarmData) && <AsideNavRightSkeleton/>}
-                        {!isNil(tempSwarmData) && <AsideNavRight auth={auth}/>}
+                        {!isNil(tempSwarmData) && <AsideNavRight auth={auth} socket={socket}/>}
                         </div>
                     </div>
                 </main>
@@ -131,6 +131,7 @@ function WelcomeGuestLayout({children,logOutCallBackHandler,logoutRes,cashOutRes
 
                 {/* :::::::::::::TODO::Implement the betslip modal mobile view:::::::::::::: */}
                 <BetSlipDrawer 
+                    socket={socket}
                     auth={auth}
                     isOnBetSlipDrawer={openBetSlipDrawer}
                     onCloseBetSlipDrawer={toggleBetSlipDrawer}

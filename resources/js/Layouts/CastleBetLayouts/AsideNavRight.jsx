@@ -1,4 +1,4 @@
-import React, { useState,useContext, useEffect} from 'react';
+import React, { useState,useContext, useEffect, useMemo} from 'react';
 import BetSlipUtilities from '@/utilities/BetSlipUtilities';
 import {Link} from 'react-router-dom';
 import { betSlipContext } from '@/Context/BetSlipContext';
@@ -13,10 +13,12 @@ import SuccessModal from './Modals/SuccessModal';
 import { HashLoader } from 'react-spinners';
 import { storeTempContext } from '@/Context/DataStoreTemp';
 import { isNil } from 'lodash';
+import UtilizedHooks from '@/Hooks/UtilizedHooks';
 
 
-function AsideNavRight({auth}){
-  const {setPlaceBetReqParams,placeBetResponse,setPlaceBetResponse}=useContext(storeTempContext);
+function AsideNavRight({auth,socket}){
+  const {placeBetResponse,setPlaceBetResponse}=useContext(storeTempContext);
+  const {placeBetRequest}=UtilizedHooks();
   const navigate=useNavigate();
   const [isOpenBetModal,setOpenBetModal]=useState(false);
   const {bet_slip}=useContext(betSlipContext);
@@ -53,8 +55,7 @@ function AsideNavRight({auth}){
         bets:Array.from(bet_slip)
     };
 
-    // TODO::invock the use memo hook in fetchswarm data
-    setPlaceBetReqParams(betData)
+    placeBetRequest(betData?.amount,betData?.bets,socket);
 };
 
 /**
@@ -76,16 +77,14 @@ const onCloseModal=(arg)=>{
     setOpenBetModal(arg);
 };
 
-useEffect(() => {
-    console.log(placeBetResponse, "received place bet res in betslip...");
+useMemo(()=>{
     if (!isNil(placeBetResponse)) {
+        console.log(placeBetResponse, "received place bet res in betslip...");
         setPlaceBetLoader(false);
         onOpenModal(true); //open success modal
         return;
     }
-}, [placeBetResponse]);
-
-
+},[placeBetResponse]);
 
   return (
       <div className="relative flex-1 h-full">
@@ -94,18 +93,18 @@ useEffect(() => {
                   onClick={() =>
                       navigate("/?page=mybets&filter=open")
                   }
-                  className="flex items-center outline-none hover:underline text-primaryColor b"
+                  className="flex items-center text-gray-600 outline-none hover:underline"
               >
                   <span className="font-light text-[15px] b">
                       <FaAngleLeft />
                   </span>
-                  <p className="text-[12px]">View my bets</p>
+                  <p className="text-[13px]">View my bets</p>
               </button>
           </header>
-          <div className="flex flex-col w-full h-full overflow-y-scroll bg-[#f6f8fc] asideNav-right">
+          <div className="flex flex-col w-full  h-full  bg-[#f6f8fc] ">
               <div className="flex flex-col pt-8 rounded-md">
                   <div className="space-y-1 b">
-                      <nav className="flex items-center justify-center gap-5 text-[#03396c] text-opacity-70">
+                      <nav className="flex items-center justify-center gap-5 text-gray-700">
                           <Link className="b font-poppins font-medium  text-[11px]">
                               <span className="flex items-center gap-2">
                                   Bet slip ({bet_slip?.length})
@@ -119,7 +118,7 @@ useEffect(() => {
                       </nav>
 
                       {bet_slip?.length > 0 && (
-                          <div className="flex items-center justify-center gap-2 font-poppins text-textMediumBlue">
+                          <div className="flex items-center justify-center gap-2 text-gray-700 font-poppins">
                               <span className="text-[12px]">
                                   Keep this slip?
                               </span>
@@ -131,7 +130,7 @@ useEffect(() => {
                   </div>
                   {bet_slip?.length > 0 && (
                       <>
-                          <div className="w-full pt-2 mb-8 ">
+                          <div className="w-full pt-2 h-[350px] overflow-y-scroll asideNav-right">
                               {bet_slip.map((game) => (
                                   <SelectedGame
                                       key={game?.game_id}
@@ -143,7 +142,7 @@ useEffect(() => {
                           <div>
                               <div>
                                   <p className="flex items-center justify-between mx-2">
-                                      <span className="text-[12px] text-[#5c5c5c] flex items-center gap-1 font-poppins">
+                                      <span className="text-[12px] text-gray-500 flex items-center gap-1 font-poppins">
                                           Total Odds{" "}
                                           <IoIosInformationCircleOutline />
                                       </span>
@@ -152,7 +151,7 @@ useEffect(() => {
                                       </span>
                                   </p>
                                   <p className="flex items-center justify-between mx-2">
-                                      <span className="text-[12px] text-[#5c5c5c] flex items-center gap-1 font-poppins">
+                                      <span className="text-[12px] text-gray-500 flex items-center gap-1 font-poppins">
                                           Final Payout{" "}
                                           <IoIosInformationCircleOutline />
                                       </span>
@@ -168,9 +167,8 @@ useEffect(() => {
                                   name="amount"
                                   onChange={onChangeStakeAmount}
                                   placeholder="Amount (KW)"
-                                  className="w-[100%] placeholder:text-[12px] px-2
-                                py-1 rounded-md border-1 border-transparent outline-none focus-within:outline-none text-primaryColor text-[13px]
-                                bg-mediumBlackcolor bg-opacity-10 font-poppins focus:border-primaryColor focus:border-opacity-60 focus:border-[0.5px]"
+                                  className="w-[100%] placeholder:text-[12px] text-gray-700 focus:border-gray-800 focus:ring-gray-800 focus:ring-1 rounded-md border-[1px] border-gray-400 p-2.5  outline-none  text-[13px]
+                                bg-gray-200  font-poppins "
                               />
                           </div>
                           {/* show only when stake amount is greater than 0 */}
@@ -183,7 +181,7 @@ useEffect(() => {
                                                   placeBetLoader ? true : false
                                               }
                                               onClick={() => placeBetHandler()}
-                                              className="w-[100%] bg-primaryColor active:scale-95 py-2 rounded-md cursor-pointer flex items-center justify-center h-[40px]"
+                                              className="w-[100%] bg-gray-800 active:scale-95 py-2 rounded-md cursor-pointer flex items-center justify-center h-[40px]"
                                           >
                                               {placeBetLoader ? (
                                                   <HashLoader
@@ -218,12 +216,13 @@ useEffect(() => {
                           )}
 
                           <div className="flex items-center justify-center w-full pt-2 pb-2 cursor-pointer">
-                              <span
+                              <button
+                                  type='button'
                                   onClick={() => removeAllGamesFromSlip()}
-                                  className="flex items-center gap-1 cursor-pointer text-[12px] text-mediumBlackcolor font-poppins active:scale-95"
+                                  className="flex  justify-center items-center outline-none gap-1 cursor-pointer border-gray-300 text-[12px] text-gray-500 border-[1px] focus:border-gray-800 focus:ring-gray-800 focus:ring-1 rounded-md mx-2 p-2.5 w-full font-poppins active:scale-95"
                               >
                                   <RiDeleteBin6Line /> Remove all
-                              </span>
+                              </button>
                           </div>
                       </>
                   )}
@@ -238,7 +237,7 @@ useEffect(() => {
                                       alt="photo"
                                   />
                               </figure>
-                              <div className="b font-poppins text-[10px] text-center leading-4 pt-2 text-[#5c5c5c]">
+                              <div className="b font-poppins text-[10px] text-center leading-4 pt-2 text-gray-500">
                                   <p>No bet is selected</p>
                                   <p>Please choose an Odd to place a bet</p>
                               </div>
