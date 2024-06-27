@@ -231,7 +231,7 @@ function BetSlipDrawer({auth,isOnBetSlipDrawer,onCloseBetSlipDrawer}){
                                             <div className="w-full text-white font-poppins text-[13px] mt-2">
                                                 <button
                                                     onClick={() => {
-                                                        navigate("/castle-site?page=login");
+                                                        navigate("/?page=login");
                                                         onCloseBetSlipDrawer();//close the bet slip drawer modal
                                                     }}
                                                     className="w-[100%] bg-primaryColor active:scale-95 py-2 rounded-md cursor-pointer flex items-center justify-center h-[40px]"

@@ -119,7 +119,7 @@ function TopNavBar({callBack,logOutCallBackHandler,className}) {
                   {/* deposit button LOGGED IN USER */}
                   {auth_token && (
                       <button
-                        onClick={()=>navigate("/castle-site?page=deposit&filter=All")}
+                        onClick={()=>navigate("/?page=deposit&filter=All")}
                         className="b bg-mediumYellowColor active:scale-95 w-[45px] flex items-center justify-center h-[25px] font-medium text-mediumBlackcolor text-[10px] rounded-sm">
                           Deposit
                       </button>
@@ -134,7 +134,7 @@ function TopNavBar({callBack,logOutCallBackHandler,className}) {
                               </p>
                               <p className="text-[8px]">ID:{user_id}</p>
                           </div>
-                          <Link to={"/castle-site?page=profile"}>
+                          <Link to={"/?page=profile"}>
                               <div className="text-white shadow-md w-[25px] text-[16px] text-opacity-30 h-[25px] rounded-full flex items-center justify-center cursor-pointer bg-[#202020]">
                                   <RiUser3Fill />
                               </div>
@@ -146,7 +146,7 @@ function TopNavBar({callBack,logOutCallBackHandler,className}) {
                   {/* buttons */}
                   {!auth_token && (
                       <div className="flex items-center gap-2 sm:gap-3">
-                          <Link to={"/castle-site?page=login"}>
+                          <Link to={"/?page=login"}>
                               <div
                                   className="w-[55px]  font-poppins  font-medium text-white flex items-center justify-center
                         border-smBlackcolor border-opacity-20 text-[11px]  border-solid border-[1px] h-[30px] shadow-authButtonLayout"
@@ -154,7 +154,7 @@ function TopNavBar({callBack,logOutCallBackHandler,className}) {
                                   Login
                               </div>
                           </Link>
-                          <Link to={"/castle-site?page=register"}>
+                          <Link to={"/?page=register"}>
                               <div
                                   className="w-[55px] font-poppins  flex items-center justify-center
                          bg-primaryColor text-white text-[11px] border-[1px] h-[30px] shadow-authButtonLayout"

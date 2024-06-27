@@ -7,7 +7,7 @@ function ScreenContentLayout({children}) {
         <main className='flex-1 w-full '>
             {children}
         </main>
-        <CastleBetFooter />
+        {/* <CastleBetFooter /> */}
     </div>
   )
 }

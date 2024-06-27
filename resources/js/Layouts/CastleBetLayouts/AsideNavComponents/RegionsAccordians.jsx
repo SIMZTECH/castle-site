@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TfiAngleUp } from "react-icons/tfi";
 import { useNavigate } from "react-router-dom";
 
-function RegionsAccordians({_data,keyIndicator,onClickAccordianCallBack,getGamesByCompAndReg}) {
+function RegionsAccordians({_data,isAccordianOpen,onClickAccordianCallBack,getGamesByCompAndReg}) {
     const route=useNavigate();
     const {
         competition,
@@ -11,15 +11,6 @@ function RegionsAccordians({_data,keyIndicator,onClickAccordianCallBack,getGames
         region_alias,
         region_id,
     } = _data;
-    const [isAccordianOpen, setAccordianOpen] = useState(false);
-
-    /**
-     *
-     * @param {boolean} arg
-     */
-    const onClickAccordianHandler = (arg) => {
-        setAccordianOpen(arg);
-    };
 
     /**
      * 
@@ -30,7 +21,7 @@ function RegionsAccordians({_data,keyIndicator,onClickAccordianCallBack,getGames
     */
    const asideRouteToHandler=(arg)=>{
        const {compt_id,reg_id}=arg;
-       route(`/castle-site?page=league&reg_id=${Number(reg_id)}&compt_id=${Number(compt_id)}&filter=all`);
+       route(`/?page=league&reg_id=${Number(reg_id)}&compt_id=${Number(compt_id)}&filter=all`);
    };
 
 
@@ -53,9 +44,7 @@ function RegionsAccordians({_data,keyIndicator,onClickAccordianCallBack,getGames
     return (
         <div className="flex flex-col transition-all duration-100 ease-in-out border rounded-t-sm shadow-sm">
             <header
-                onClick={() => {
-                    onClickAccordianHandler(!isAccordianOpen);//change accordian state
-                }}
+                onClick={() =>onClickAccordianCallBack()}
                 className={`flex hover:bg-[#b3cde0] items-center justify-between cursor-pointer px-2  select-none  h-[30px] ${(isAccordianOpen)?`border-b-[1px] bg-[#0E76BC] text-white transition-all ease-in-out duration-100 rounded-md shadow-sm`:'border-b-0 text-[#03396c]'}`}
             >
                 <div className="flex items-center gap-1 ">
@@ -71,7 +60,7 @@ function RegionsAccordians({_data,keyIndicator,onClickAccordianCallBack,getGames
                     <p className="text-[12px] w-[35px] flex items-center justify-center">
                         <span className="text-[11px]">{isAccordianOpen?'':compt_count}</span>
                     </p>
-                    <p className={`${(isAccordianOpen)? " rotate-180" : ""}`}>
+                    <p className={`${(isAccordianOpen)? " rotate-180" : ""} translate-transform duration-150 ease-linear`}>
                         <TfiAngleUp />
                     </p>
                 </div>

@@ -111,24 +111,21 @@ function CountriesList(){
                     {availableRegions && (
                         <>
                             {availableRegions?.map((reg, index) => {
-                                const currentIndex = index + 1;
                                 return (
                                     <RegionsAccordians
                                         getGamesByCompAndReg={handleGetParamsFromCallBack}
                                         key={reg?.region_id}
-                                        onClickAccordianCallBack={(state) => {
+                                        onClickAccordianCallBack={() => {
                                             //TODO::invock the route to specific games
                                             // chancge current clicked accordian state
-                                            setCurrentKeyIndicator(
-                                                state ? currentIndex : 0
-                                            );
+                                            setCurrentKeyIndicator((el)=>(el==(index+1))?0:index+1);
 
                                             console.log(
-                                                currentIndex,
+                                                arg,
                                                 "current state of accordian......"
                                             );
                                         }}
-                                        keyIndicator={currentKeyIndicator == currentIndex}
+                                        isAccordianOpen={currentKeyIndicator==(index+1)}
                                         _data={reg}
                                     />
                                 );

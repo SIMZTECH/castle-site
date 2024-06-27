@@ -92,7 +92,7 @@ useEffect(() => {
           <header className="h-[40px] flex items-center gap-1 border-b-[1px] font-medium px-2">
               <button
                   onClick={() =>
-                      navigate("/castle-site?page=mybets&filter=open")
+                      navigate("/?page=mybets&filter=open")
                   }
                   className="flex items-center outline-none hover:underline text-primaryColor b"
               >
@@ -205,7 +205,7 @@ useEffect(() => {
                                       <button
                                           onClick={() => {
                                               navigate(
-                                                  "/castle-site?page=login"
+                                                  "/?page=login"
                                               );
                                               closeThisModal();
                                           }}

@@ -21,7 +21,7 @@ function PopupBox({isOpen,onClose,response }) {
             ref={modalRef}
             className="flex flex-col flex-1 h-full gap-1 p-5 font-poppins"
         >
-            <div className="flex flex-col items-center justify-center p-2 pb-4 mb-1 bg-white rounded-md shadow-popup cursor-pointer">
+            <div className="flex flex-col items-center justify-center p-2 py-5 pb-4 mb-3 bg-white rounded-md cursor-pointer shadow-popup">
                 <p
                     className={`text-[30px]  ${
                         response?.auth_token ? "text-green-700" : "text-red-600"
@@ -34,25 +34,17 @@ function PopupBox({isOpen,onClose,response }) {
                     )}
                 </p>
                 {!response?.auth_token && (
-                    <p className="text-[11px]">
-                        Log in failed, something went wrong
+                    <p className="text-[12px] text-red-600">
+                        {response?.details?.Message}
                     </p>
                 )}
                 {response?.auth_token && (
-                    <p className="text-[11px]">
+                    <p className="text-[12px] text-green-700">
                         You have successfully logged in
                     </p>
                 )}
             </div>
-            {/* error msg */}
-            {!response?.auth_token && (
-                <p className="text-[10px] text-black font-medium">
-                    Reason:{" "}
-                    <span className="font-normal text-red-600">
-                        {response?.details?.Message}
-                    </span>
-                </p>
-            )}
+         
             {/* hi message */}
             {response?.auth_token && (
                 <p className="text-[10px]">{`👋Hi ${authUser?.first_name},Welcome back!!`}</p>
@@ -62,7 +54,7 @@ function PopupBox({isOpen,onClose,response }) {
             {!response?.auth_token && (
                 <button
                     onClick={() => onClose(false)} //remove the error prompt
-                    className="h-[30px] flex items-center justify-center active:scale-95 text-center text-[12px] cursor-pointer text-white bg-black rounded-sm"
+                    className="p-2.5 rounded-md flex items-center justify-center active:scale-95 text-center text-[12px] cursor-pointer text-white bg-gray-900"
                 >
                     Try again
                 </button>

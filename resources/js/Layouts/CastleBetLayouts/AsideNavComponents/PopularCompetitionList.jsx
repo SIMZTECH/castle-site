@@ -18,13 +18,13 @@ const fixedAsideNavEventsData=[
     {
         id:1,//identifier
         title:"Live",
-        path:"/castle-site?page=league&reg_id=all&compt_id=all&filter=live",
+        path:"/?page=league&reg_id=all&compt_id=all&filter=live",
         icon:liveGames
     },
     {
         id:2,//identifier
         title:"Boosted",
-        path:"/castle-site?page=league&reg_id=all&compt_id=all&filter=boosted",
+        path:"/?page=league&reg_id=all&compt_id=all&filter=boosted",
         icon:boosts
     },
 ]
@@ -173,7 +173,7 @@ function PopularCompetitionList() {
      */
     const asideRouteToHandler=(arg)=>{
         const {compt_id,reg_id}=arg;
-        route(`/castle-site?page=league&reg_id=${Number(reg_id)}&compt_id=${Number(compt_id)}&filter=all`);
+        route(`/?page=league&reg_id=${Number(reg_id)}&compt_id=${Number(compt_id)}&filter=all`);
     };
 
     useEffect(()=>{

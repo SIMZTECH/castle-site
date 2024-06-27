@@ -46,7 +46,7 @@ function Register({userRegistrationCallBack,registerRes}) {
             <section>
                 <form
                     onSubmit={onSubmitRegister}
-                    className="flex-1 w-full sm:max-w-[450px] border mx-auto rounded-md mt-8 p-3 mb-5 shadow-sm"
+                    className="flex-1 w-full sm:max-w-[450px] bg-white border mx-auto rounded-md mt-8 p-3 mb-5 shadow-sm"
                 >
                     <div className="pt-2 mb-1">
                         <label
@@ -56,9 +56,9 @@ function Register({userRegistrationCallBack,registerRes}) {
                             Mobile number
                         </label>
                         <div className="relative ">
-                            <div className="absolute inset-y-0 flex items-center pointer-events-none start-0 ps-2">
-                                <figure className="h-[15px] w-[15]">
-                                    <img src={flg_zambia} />
+                            <div className="absolute inset-y-0 flex items-center mr-2 pointer-events-none start-0 ps-2">
+                                <figure className="h-[25px] w-[25]">
+                                    <img src={flg_zambia} className="w-full h-full"/>
                                 </figure>
                             </div>
                             <input
@@ -67,7 +67,7 @@ function Register({userRegistrationCallBack,registerRes}) {
                                 id="username"
                                 value={formData.username}
                                 onChange={onchangeInput}
-                                class="bg-gray-50 border border-gray-300 text-[#5c5c5c] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-12 p-2.5"
+                                class="bg-gray-50 border border-gray-300 text-gray-600 text-sm outline-none rounded-lg focus:ring-1 focus:ring-gray-800 focus:border-gray-800 block w-full ps-12 p-2.5"
                                 placeholder="+260 96 or 076"
                                 required
                             />
@@ -90,7 +90,7 @@ function Register({userRegistrationCallBack,registerRes}) {
                             onChange={onchangeInput}
                             id="password"
                             placeholder="******"
-                            className="shadow-sm bg-gray-50 border border-gray-300 text-[#5c5c5c] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                            className="bg-gray-50 border border-gray-300 text-gray-600 text-sm outline-none rounded-lg focus:ring-1 focus:ring-gray-800 focus:border-gray-800 block w-full p-2.5"
                             required
                         />
                         <p className="px-2 text-gray-400 py-1 text-[13px]">
@@ -111,7 +111,7 @@ function Register({userRegistrationCallBack,registerRes}) {
                             onChange={onchangeInput}
                             id="confirmPassword"
                             placeholder="******"
-                            class="shadow-sm bg-gray-50 border border-gray-300 text-[#5c5c5c] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                            class="bg-gray-50 border border-gray-300 text-gray-600 text-sm outline-none rounded-lg focus:ring-1 focus:ring-gray-800 focus:border-gray-800 block w-full p-2.5"
                             required
                         />
                         {/* error message */}
@@ -138,7 +138,7 @@ function Register({userRegistrationCallBack,registerRes}) {
                                 id="terms"
                                 type="checkbox"
                                 checked
-                                className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300"
+                                className="w-4 h-4 bg-gray-900 border border-gray-300 rounded focus:ring-1 focus:ring-gray-800 focus:border-gray-800"
                                 required
                             />
                         </div>
@@ -149,7 +149,7 @@ function Register({userRegistrationCallBack,registerRes}) {
                             I agree with the{" "}
                             <a
                                 href="#"
-                                className="text-blue-600 hover:underline"
+                                className="text-gray-900 hover:underline"
                             >
                                 terms and conditions
                             </a>
@@ -157,7 +157,7 @@ function Register({userRegistrationCallBack,registerRes}) {
                     </div>
                     <button
                         disabled={loader}
-                        className="w-full text-[14px] h-[35px] flex items-center justify-center text-center active:scale-95 text-white bg-black rounded-md"
+                        className="w-full text-[14px] h-[35px] flex items-center justify-center text-center active:scale-95 text-white bg-gray-800 rounded-md"
                     >
                         {loader ? (
                             <HashLoader size={25} color="white" />
@@ -169,8 +169,8 @@ function Register({userRegistrationCallBack,registerRes}) {
                     Already have an account?
                     {" "}
                     <Link
-                        className="text-[12px] font-medium hover:underline text-primaryColor"
-                        to={"/castle-site?page=login"}
+                        className="text-[12px] font-medium hover:underline text-gray-900"
+                        to={"/?page=login"}
                     >
                         LOGIN
                     </Link>
@@ -178,7 +178,7 @@ function Register({userRegistrationCallBack,registerRes}) {
                 </form>
                 
             </section>
-            <CastleBetFooter />
+            {/* <CastleBetFooter /> */}
         </main>
     );
 }

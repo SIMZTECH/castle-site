@@ -12,14 +12,10 @@ import { Skeleton } from '@mui/material';
 import { isNil } from 'lodash';
 
 
-function LiveGames({requestLiveGamesUpdate}) {
+function LiveGames() {
     const {liveGames,tempSwarmData}=useContext(storeTempContext);
 
-    //TODO::implement the timer to peridically get updated games....
-    const incrementTimerKeyHandler=()=>{
-        // Innvock get updates handler
-        // requestLiveGamesUpdate();
-    };
+   
 
     useEffect(()=>{
         if(liveGames){
@@ -71,7 +67,6 @@ function LiveGames({requestLiveGamesUpdate}) {
                               colorsTime={[7, 5, 2, 0]}
                               onComplete={() => {
                                   // do your stuff here
-                                  incrementTimerKeyHandler();
                                   return { shouldRepeat: true, delay: 1.5 };
                               }}
                           >

@@ -16,7 +16,7 @@ function Profile() {
             <header className="fixed sm:hidden flex items-center w-full h-[55px] px-4  shadow-md select-none bg-gray-800 font-poppins">
                 {/* back button */}
                 <button
-                    onClick={() => navigate("/castle-site?page=home")}
+                    onClick={() => navigate("/?page=home")}
                     className=" text-[16px] gap-1 cursor-pointer flex items-center justify-center"
                 >
                     <div className="w-[22px] text-gray-500 h-[22px] bg-white rounded-full flex items-center justify-center">
@@ -66,7 +66,7 @@ function Profile() {
                     </div>
                     {/*view bet history*/}
                     <button 
-                        onClick={() => navigate("/castle-site?page=transaction-history")}
+                        onClick={() => navigate("/?page=transaction-history")}
                         className="flex items-center justify-between outline-none w-full active:scale-95 h-[40px] text-[#27393f] border-b-[1px]">
                         <div className='flex items-center gap-1'>
                             <span className='text-[14px] text-[#27393f]'><FaEnvelopeOpenText/></span>
@@ -78,7 +78,7 @@ function Profile() {
                     </button>
                     {/* deposit */}
                     <button 
-                        onClick={() => navigate("/castle-site?page=deposit&filter=All")}
+                        onClick={() => navigate("/?page=deposit&filter=All")}
                         className="flex items-center justify-between outline-none w-full active:scale-95 h-[40px] text-[#27393f] border-b-[1px]">
                         <div className='flex items-center gap-1'>
                             <span className='text-[14px] text-[#27393f]'><TbCoins/></span>
@@ -90,7 +90,7 @@ function Profile() {
                     </button>
                     {/* withdraw */}
                     <button 
-                        onClick={() => navigate("/castle-site?page=deposit&filter=All")}
+                        onClick={() => navigate("/?page=deposit&filter=All")}
                         className="flex items-center justify-between outline-none w-full active:scale-95 h-[40px] text-[#27393f] border-b-[1px]">
                         <div className='flex items-center gap-1'>
                             <span className='text-[14px] text-[#27393f]'><TbCoins/></span>

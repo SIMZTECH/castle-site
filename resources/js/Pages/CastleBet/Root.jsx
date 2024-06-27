@@ -41,7 +41,6 @@ function Root() {
         registerRes,
         requestCashout,
         cashOutRes,
-        getAllLiveGames,
         getSingleGameDetails,
         getBoostedGames,
         getTodayGamesByTimeStamp,
@@ -120,10 +119,6 @@ function Root() {
         console.log(arg,"the params.....");
     };
 
-    //Request live games updates
-    const requestLiveGamesUpdate=()=>{
-        getAllLiveGames();
-    };
 
     // request to day games update on refresh
     const requestTodayGamesUpdate=()=>{
@@ -178,7 +173,6 @@ function Root() {
                 {/*group of games display */}
                 {route?.page == "league" && (
                     <FilteredLeagues
-                        requestLiveGamesUpdate={requestLiveGamesUpdate}
                         requestTodayGamesUpdate={requestTodayGamesUpdate}
                         requestBoostedGamesUpdate={requestBoostedGamesUpdate}
                         requestSpecificGamesUpdate={getGameByRegionAndCompetition}

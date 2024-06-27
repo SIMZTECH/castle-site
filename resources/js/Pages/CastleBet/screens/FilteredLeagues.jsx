@@ -6,7 +6,7 @@ import LeagueCollectionGames from './LeagueCollectionGames';
 import BoostedGames from './BoostedGames';
 import TodayGames from './TodayGames';
 
-function FilteredLeagues({requestLiveGamesUpdate,requestTodayGamesUpdate,requestBoostedGamesUpdate,requestSpecificGamesUpdate}) {
+function FilteredLeagues({requestTodayGamesUpdate,requestBoostedGamesUpdate,requestSpecificGamesUpdate}) {
     const [searchParams,setSearchParams] = useSearchParams();
     const [route,setRoute]=useState({
         page:"",
@@ -28,7 +28,7 @@ function FilteredLeagues({requestLiveGamesUpdate,requestTodayGamesUpdate,request
         switch (arg?.filter) {
             case "live":{
                 // TODO::logic for fetching live games
-                return (<LiveGames  requestLiveGamesUpdate={requestLiveGamesUpdate}/>);
+                return (<LiveGames/>);
             }
             case "boosted":{
                 // TODO::logic for fetching live games

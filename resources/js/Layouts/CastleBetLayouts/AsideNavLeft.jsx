@@ -13,7 +13,7 @@ function AsideNavLeft(){
   return (
       <div className="relative flex flex-col flex-1 h-full">
           {/* route to home */}
-          <Link to={"/castle-site?page=home"}>
+          <Link to={"/?page=home"}>
               <div className="flex  items-center h-[40px] gap-1 border-b-[1px] px-2 font-poppins rounded-md hover:bg-blue-50">
                   <span className="text-[20px] text-primaryColor">
                       <IoHome />

@@ -143,7 +143,7 @@ function PopularDashboardDefault() {
                                 <button
                                     onClick={() =>
                                         navigate(
-                                            "/castle-site?page=league&reg_id=all&compt_id=all&filter=boosted"
+                                            "/?page=league&reg_id=all&compt_id=all&filter=boosted"
                                         )
                                     }
                                     className="text-white rounded-sm w-[40%]  outline-none font-medium mx-auto p-3 active:scale-95 bg-primaryColor text-[12px] font-poppins"

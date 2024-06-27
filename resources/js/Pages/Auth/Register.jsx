@@ -46,8 +46,8 @@ export default function Register() {
                             className="flex items-center px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md hover:text-gray-700 focus:outline-none"
                         >
                             <div className='flex items-center gap-1'>
-                                <figure className='w-[25px] h-[25px] flex items-center justify-center'>
-                                    <img src={flg_zambia} className='object-cover'/>
+                                <figure className='w-[10px] h-[10px] flex items-center justify-center'>
+                                    <img src={flg_zambia} className='w-full h-full'/>
                                 </figure>
                                 <p>+260</p>
                             </div>

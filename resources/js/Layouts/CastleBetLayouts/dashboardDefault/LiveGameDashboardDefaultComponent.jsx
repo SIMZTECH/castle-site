@@ -25,7 +25,7 @@ function LiveGameDashboardDefaultComponent({fetchedGameData,competition_name,spo
    
 
     const routeConstruct=()=>{
-        return `/castle-site?page=game&game_id=${game_id}&compt_id=${competition_id}&reg_id=${region_id}&markt_type=All`;
+        return `/?page=game&game_id=${game_id}&compt_id=${competition_id}&reg_id=${region_id}&markt_type=All`;
     };
 
     /**
@@ -186,85 +186,6 @@ function LiveGameDashboardDefaultComponent({fetchedGameData,competition_name,spo
                                   />
                               )
                       )}
-                     
-                      {/* {Object.keys(market[keys].event).map((eventKeys) => (
-                          <>
-                              {market[keys].event[eventKeys].name == "Draw" && (
-                                  <EventComponent
-                                      isHighLighted={isEventIdExistInBetSlip(
-                                          market[keys].event[eventKeys].id
-                                      )}
-                                      onSelectedCallBack={() => {
-                                          const _data = {
-                                              market_id: Number(keys),
-                                              game_id: Number(game_id),
-                                              selection:
-                                                  market[keys].event[eventKeys]
-                                                      .name,
-                                              market_price:
-                                                  market[keys].event[eventKeys]
-                                                      .price,
-                                              home_team: team1_name,
-                                              away_team: team2_name,
-                                              competition: competition_name,
-                                              start_time: start_ts,
-                                              event_id: Number(eventKeys),
-                                              sport_name: sport_name,
-                                              region_name: region_name,
-                                              market_name: market[keys].name,
-                                          };
-                                          // push to betslip on click
-                                          selectedMarketHandler(_data);
-                                      }}
-                                      isStrongTeam={false}
-                                      name={"X"}
-                                      price={
-                                          market[keys].event[eventKeys].price
-                                      }
-                                      key={market[keys].event[eventKeys].id}
-                                  />
-                              )}
-                          </>
-                      ))}
-                      {Object.keys(market[keys].event).map((eventKeys) => (
-                          <>
-                              {market[keys].event[eventKeys].name == "W2" && (
-                                  <EventComponent
-                                      isHighLighted={isEventIdExistInBetSlip(
-                                          market[keys].event[eventKeys].id
-                                      )}
-                                      onSelectedCallBack={() => {
-                                          const _data = {
-                                              market_id: Number(keys),
-                                              game_id: Number(game_id),
-                                              selection:
-                                                  market[keys].event[eventKeys]
-                                                      .name,
-                                              market_price:
-                                                  market[keys].event[eventKeys]
-                                                      .price,
-                                              home_team: team1_name,
-                                              away_team: team2_name,
-                                              competition: competition_name,
-                                              start_time: start_ts,
-                                              event_id: Number(eventKeys),
-                                              sport_name: sport_name,
-                                              region_name: region_name,
-                                              market_name: market[keys].name,
-                                          };
-                                          // push to betslip on click
-                                          selectedMarketHandler(_data);
-                                      }}
-                                      isStrongTeam={strong_team == 2}
-                                      name={"2"}
-                                      price={
-                                          market[keys].event[eventKeys].price
-                                      }
-                                      key={market[keys].event[eventKeys].id}
-                                  />
-                              )}
-                          </>
-                      ))} */}
                   </div>
               ))}
           </div>

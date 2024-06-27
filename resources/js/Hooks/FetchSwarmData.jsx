@@ -9,19 +9,19 @@ export default function FetchSwarmData() {
     const {getCompAndRegParams,setGetGamesByCompetition,placeBetReqParams,setPlaceBetReqParams,liveGamesUpdateKey,getGameDetailsParams,singleLiveGamesUpdateKey,getDepositParams}=useContext(storeTempContext);
     const [isReady,swarmData,send,authData,userAuth,placeBetRes,logoutRes,registerRes,cashOutRes] = WebSocketCustomHook();
 
-    // request session method
+    // request session method 
     function writeSessionData() {
         const request_session = {
-            "command": "request_session",
-            "params": {
-                "site_id": 65,
-                "language": "eng",
-                "subscribe":true,
+            command: "request_session",
+            params: {
+                site_id: 18762391,
+                // site_id: 65,
+                language: "eng",
             },
-            "rid":"1"
-        }//end of data structure
+            rid: "1",
+        }; //end of data structure
         send(JSON.stringify(request_session));
-        console.log("i have requested the session......socket:"+isReady);
+        console.log("i have requested the session......socket:" + isReady);
     };
 
     // get all available games on swarm
@@ -271,47 +271,6 @@ export default function FetchSwarmData() {
     send(JSON.stringify(query));
 };
 
-const getAllLiveGames=()=>{
-    const query = {
-        "command": "get",
-        "params": {
-            "source":"betting",
-            "what": { //selector
-                "sport": ['alias'], //football
-                "region": ['id','alias'],//europe
-                "competition":['id','name'],//UEFA Champions League
-                "game": [
-                    'info',
-                    'id',
-                    'team1_name',
-                    'team2_name',
-                    'start_ts',
-                    'markets_count',
-                    'strong_team',
-                    'type',
-                    "live_events",
-                ],
-                "market": ["name","type","market_type"],
-                "event": [],//list of all games under
-            },
-            "where": {//filter on selected
-                "sport": {"alias":"Soccer"},
-                "market":{
-                    "market_type":{
-                        "@in":["MatchResult"]
-                    }
-                },
-                "game":{
-                    "type":1
-                }
-            },
-        },
-        "rid": "14",
-    };
-
-    console.log(query,"i have requested for live games.....");
-    send(JSON.stringify(query));
-}
 
 const getUpdatesWhatsUp=()=>{
     const query={
@@ -473,14 +432,14 @@ const getTodayGamesByTimeStamp=()=>{
 const getGameByRegionAndCompetition=(arg)=>{
     const {compt_id,reg_id,sport_id}=arg;
     const query = {
-        "command": "get",
-        "params": {
-            "source":"betting",
-            "what": { //selector
-                "sport": ['alias'], //football
-                "region": ['id','alias'],//europe
-                "competition":['id','name'],//UEFA Champions League
-                "game": [
+        command: "get",
+        params: {
+            source:"betting",
+            what: { //selector
+                sport: ['alias'], //football
+                region: ['id','alias'],//europe
+                competition:['id','name'],//UEFA Champions League
+                game: [
                     'id',
                     'team1_name',
                     'team2_name',
@@ -490,19 +449,19 @@ const getGameByRegionAndCompetition=(arg)=>{
                     'type',
                     'order'
                 ],
-                "market": ["name","type","market_type"],
-                "event": [],//list of all games under
+                market: ["name","type","market_type"],
+                event:["id","price","order","name"]
             },
-            "where": {//filter on selected
-                "sport": {"alias":"Soccer"},
-                "region":{"id":reg_id},
-                "market":{
-                    "market_type":{
+            where: {//filter on selected
+                sport: {"alias":"Soccer"},
+                region:{"id":reg_id},
+                market:{
+                    market_type:{
                         "@in":["MatchResult"]
                     }
                 },
-                "competition":{
-                    "id":compt_id//popular competition
+                competition:{
+                    id:compt_id//popular competition
                 }
             },
             // "subscribe":true,
@@ -612,13 +571,6 @@ useMemo(()=>{
 
 },[placeBetReqParams]);
 
-useMemo(()=>{
-
-    if(liveGamesUpdateKey>0){
-        getAllLiveGames(); //request game updates........
-    }
-
-},[liveGamesUpdateKey]);
 
 useMemo(()=>{
     if(!isNil(getDepositParams)){
@@ -675,7 +627,6 @@ useMemo(()=>{
         getFilteredGamesCollection,
         cashOutRes,
         getUpdatesWhatsUp,
-        getAllLiveGames,
         getSingleGameDetails,
         getBoostedGames,
         getTodayGamesByTimeStamp,

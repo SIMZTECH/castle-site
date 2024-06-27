@@ -103,9 +103,9 @@ function LiveGamesDashboardDefault() {
             setRecievedLiveGames(extractAndSortLiveGames().slice(0,DEFAULT_SHOW_LIVEGAME));
         }
 
-    },[liveGames]);
+        console.log(liveGames,"the live games in live game dashboard screen............");
 
-    console.log(extractAndSortLiveGames(),"live games in live game dashboard default......");
+    },[liveGames]);
 
   return (
     <>
@@ -170,7 +170,7 @@ function LiveGamesDashboardDefault() {
                                 )
                             )}
                             <button 
-                            onClick={()=>navigate("/castle-site?page=league&reg_id=all&compt_id=all&filter=live")}
+                            onClick={()=>navigate("/?page=league&reg_id=all&compt_id=all&filter=live")}
                             className='text-white rounded-sm w-[40%]  outline-none font-medium mx-auto p-3 active:scale-95 bg-primaryColor text-[12px] font-poppins'>
                             More Live Games
                             </button>

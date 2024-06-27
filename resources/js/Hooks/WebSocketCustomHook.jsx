@@ -56,7 +56,6 @@ function WebSocketCustomHook() {
                 case "2":{
                     if(data?.auth_token){//successfull login
                         getAuthenticatedUserProfile(data);//request user details
-                        // getAuthUserBetHistory();
                     }else{
                         setUserAuth(data);//report to the caller error
                         console.log(data,"i have reported to the call login error......");
@@ -158,6 +157,11 @@ function WebSocketCustomHook() {
                         //request payment wallets
                         getPaymentWallets();
                         return;
+                    }else{
+                         // reguest user transaction history
+                         getUserTransactionHistory();
+                         //request payment wallets
+                         getPaymentWallets();
                     }
                 }
                     break;
@@ -174,7 +178,7 @@ function WebSocketCustomHook() {
                     console.log(data,"cashout data has been recieved in socket....");
                 }
                     break;
-                case "13":{
+                case "13":{//get all games collection
                     if(data?.data?.sport){
                         setSwarmData(data);
                         setTempSwarmData(data);
@@ -183,24 +187,10 @@ function WebSocketCustomHook() {
                     break;
                 case "14":{
                      //Get match scores for live games
-                    if(data){
+                    if(!isNil(data)){
                         setLiveGames(data?.data);
                     }
-    
                     console.log(JSON.parse(event?.data),"the live games update all.....");
-    
-                    //TODO:: am handling the updates recieved
-                    // console.log(data,"live games are here sir......");
-                    // if(!isNil(data.subid)){
-                    //     if(!checkSubscriptionIfExist(data?.subid)){
-                    //         subscriptionId.push({
-                    //             subId:data?.subid,
-                    //             rid:"14",
-                    //             name:"live-games"
-                    //         })
-                    //     }
-                    // }
-                    //TODO::Implement invock get game scores for each match present in the game collection
                 }
                     break;
                 case "15":{
@@ -212,9 +202,6 @@ function WebSocketCustomHook() {
                     setGetGamesByCompetition(data?.data);
                     console.log(data,"games by competition are here........");
                 }
-                    break;
-                case "16":
-                    
                     break;
                 case "18":
                     
@@ -251,7 +238,19 @@ function WebSocketCustomHook() {
         ws.current.onerror = (event) => {
             console.log("socket error......",event);
         };
-    },[ws.current])
+    },[ws.current]);
+
+    const unsubscribeFromUpdate=()=>{
+        const querry={
+            command: "unsubscribe",
+            params: {
+                subid: "1674899778778092800"
+            }
+        }
+
+        ws.current.send(JSON.stringify(querry));
+        console.log(querry,"i have requested for unsubscribing.....");
+    };
 
    
 
@@ -296,7 +295,7 @@ function WebSocketCustomHook() {
                     },
                     game:{'is_live':1}
                 },
-                subscribe:true,
+                // subscribe:true,
             },
             rid: "14",
         };
@@ -305,7 +304,7 @@ function WebSocketCustomHook() {
         setTimeout(() => {
             ws.current.send(JSON.stringify(query));
             console.log(query,"i have requested for live games.....");
-        },4000);
+        },2000);
         
     }
 
@@ -400,9 +399,9 @@ function WebSocketCustomHook() {
      */
     const getAuthenticatedUserProfile = (authUser) => {
         const query = {
-            "command":"get_user",
-            "params": {},
-            "rid":"4",//the id of the logged in user
+            command: "get_user",
+            params: {},
+            rid: "4", //the id of the logged in user
         };
         ws.current.send(JSON.stringify(query));
     };
@@ -430,13 +429,13 @@ function WebSocketCustomHook() {
      * }} data
      */
     const restoreUserLogin=(data)=>{
-        const query={
-            "command": "restore_login",
-                "params": {
-                "user_id":Number(data?.user_id),
-                "auth_token":data?.auth_token
+        const query = {
+            command: "restore_login",
+            params: {
+                user_id: Number(data?.user_id),
+                auth_token: data?.auth_token,
             },
-            "rid":"7"
+            rid: "7",
         };
         console.log(query,"i have requested to re-store login.......");
         ws.current.send(JSON.stringify(query));
@@ -454,14 +453,14 @@ function WebSocketCustomHook() {
      */
     const getAuthUserBetHistory = (arg) => {
         const query = {
-            "command":"bet_history",
-            "params": {
-                "where":{
-                    "from_date":(Math.floor(timeNow/1000)-(7*24*60*60)),
-                    "to_date":timeNow
-                }
+            command: "bet_history",
+            params: {
+                where: {
+                    from_date: Math.floor(timeNow / 1000) - 7 * 24 * 60 * 60,
+                    to_date: timeNow,
+                },
             },
-            "rid":"9",
+            rid: "9",
         };
         console.log(query,"i have requested for bet history for this user.......");
         ws.current.send(JSON.stringify(query));
@@ -480,15 +479,15 @@ function WebSocketCustomHook() {
         //histroy for the past 3 month 2629743, 3*30.44x24x60x60
         //history for the past 7 days 7x24x60x60, 604800
         const query = {
-            "command":"balance_history",
-            "params": {
-                "where":{
-                    "from_date":(Math.floor(timeNow/1000)-(7*24*60*60)),
-                    "to_date":timeNow,
+            command: "balance_history",
+            params: {
+                where: {
+                    from_date: Math.floor(timeNow / 1000) - 7 * 24 * 60 * 60,
+                    to_date: timeNow,
                 },
-                "product":"Sport"
+                product: "Sport",
             },
-            "rid":"19",
+            rid: "19",
         };
         console.log(query,"i have requested transaction history.......");
         ws.current.send(JSON.stringify(query));
