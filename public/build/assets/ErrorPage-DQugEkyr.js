@@ -1,0 +1,1 @@
+import{j as r}from"./app-r8XvK69h.js";import{u as s}from"./index-BCf6WEWb.js";function n(){const e=s();return console.log(e),r.jsxs("div",{children:[r.jsx("h1",{children:"Opps!!!"}),r.jsx("p",{children:"Sorry, an unexpected error has occurred."}),r.jsx("p",{children:r.jsx("i",{children:e.StatusText||e.message})})]})}export{n as default};

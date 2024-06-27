@@ -1,47 +1,47 @@
 {
-  "_AdminLayout-BEv1yfu3.js": {
-    "file": "assets/AdminLayout-BEv1yfu3.js",
+  "_AdminLayout-aTOTCnNH.js": {
+    "file": "assets/AdminLayout-aTOTCnNH.js",
     "name": "AdminLayout",
     "imports": [
       "resources/js/app.jsx",
-      "_Dropdown-ByUF5YLp.js",
-      "_index-3s6h75TQ.js",
-      "_index-5uflDiLC.js",
-      "_index-KcG-XtG0.js",
-      "_index-DfpGWnH-.js",
-      "_index-BT-Uq5RZ.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-B2V79RLg.js"
+      "_Dropdown-DTamTfdR.js",
+      "_index-CUwZOzdo.js",
+      "_index-Bs6hzq6e.js",
+      "_index-Cbbwr3n9.js",
+      "_index-DBHZhA6V.js",
+      "_index-DsOsJtub.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-BvqTu_aC.js"
     ]
   },
-  "_AuthenticatedLayout-Df5V2Zp-.js": {
-    "file": "assets/AuthenticatedLayout-Df5V2Zp-.js",
+  "_AuthenticatedLayout-BcLhSxhH.js": {
+    "file": "assets/AuthenticatedLayout-BcLhSxhH.js",
     "name": "AuthenticatedLayout",
     "imports": [
       "resources/js/app.jsx",
-      "_Dropdown-ByUF5YLp.js"
+      "_Dropdown-DTamTfdR.js"
     ]
   },
-  "_BetSlipContext-DJX6SmXt.js": {
-    "file": "assets/BetSlipContext-DJX6SmXt.js",
+  "_BetSlipContext-DcjUfPjE.js": {
+    "file": "assets/BetSlipContext-DcjUfPjE.js",
     "name": "BetSlipContext",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_CastleBetFooter-ZvbFpos7.js": {
-    "file": "assets/CastleBetFooter-ZvbFpos7.js",
+  "_CastleBetFooter-DLhPhQ4C.js": {
+    "file": "assets/CastleBetFooter-DLhPhQ4C.js",
     "name": "CastleBetFooter",
     "imports": [
       "resources/js/app.jsx",
-      "_index-5uflDiLC.js",
-      "_index-D31IpMiY.js",
-      "_SwarmDataContext-BPfnqclp.js",
-      "_Skeleton-CyVWMQ4S.js"
+      "_index-Bs6hzq6e.js",
+      "_index-Dul_ih0x.js",
+      "_SwarmDataContext-CrAlUiX0.js",
+      "_Skeleton-AYxjryWC.js"
     ]
   },
-  "_DataStoreTemp-dR6HfQ01.js": {
-    "file": "assets/DataStoreTemp-dR6HfQ01.js",
+  "_DataStoreTemp-D60g7j7S.js": {
+    "file": "assets/DataStoreTemp-D60g7j7S.js",
     "name": "DataStoreTemp",
     "imports": [
       "resources/js/app.jsx"
@@ -51,30 +51,30 @@
     "file": "assets/DateFormatter-CgdAk38a.js",
     "name": "DateFormatter"
   },
-  "_Dropdown-ByUF5YLp.js": {
-    "file": "assets/Dropdown-ByUF5YLp.js",
+  "_Dropdown-DTamTfdR.js": {
+    "file": "assets/Dropdown-DTamTfdR.js",
     "name": "Dropdown",
     "imports": [
       "resources/js/app.jsx",
-      "_transition-B7TXYEI3.js"
+      "_transition-Bict0URE.js"
     ]
   },
-  "_FetchSwarmData-CuL63YVo.js": {
-    "file": "assets/FetchSwarmData-CuL63YVo.js",
+  "_FetchSwarmData-C825pgsC.js": {
+    "file": "assets/FetchSwarmData-C825pgsC.js",
     "name": "FetchSwarmData",
     "imports": [
       "resources/js/app.jsx",
-      "_UserAuthenticationContext-B9CgKNWH.js",
-      "_DataStoreTemp-dR6HfQ01.js"
+      "_UserAuthenticationContext-DOfhghB8.js",
+      "_DataStoreTemp-D60g7j7S.js"
     ]
   },
-  "_GameFile-BHWl_uPj.js": {
-    "file": "assets/GameFile-BHWl_uPj.js",
+  "_GameFile-DYS5qk98.js": {
+    "file": "assets/GameFile-DYS5qk98.js",
     "name": "GameFile",
     "imports": [
       "resources/js/app.jsx",
-      "_index-5uflDiLC.js",
-      "_iconBase-1NaSG4wA.js",
+      "_index-Bs6hzq6e.js",
+      "_iconBase-BHsM4znX.js",
       "_zambia-uSIXTnlC.js"
     ],
     "assets": [
@@ -115,8 +115,8 @@
       "assets/live-games-C3vK1RdF.png"
     ]
   },
-  "_GuestLayout-DG_CDMD8.js": {
-    "file": "assets/GuestLayout-DG_CDMD8.js",
+  "_GuestLayout-B8wWceRF.js": {
+    "file": "assets/GuestLayout-B8wWceRF.js",
     "name": "GuestLayout",
     "imports": [
       "resources/js/app.jsx"
@@ -125,76 +125,76 @@
       "assets/lottieFile_bola-yIBHbwfW.gif"
     ]
   },
-  "_HashLoader-BrsX1Acl.js": {
-    "file": "assets/HashLoader-BrsX1Acl.js",
+  "_HashLoader-oyD9OkyJ.js": {
+    "file": "assets/HashLoader-oyD9OkyJ.js",
     "name": "HashLoader",
     "imports": [
       "resources/js/app.jsx",
       "_animation-RB9YhObT.js"
     ]
   },
-  "_InputLabel-BPF4v9ZX.js": {
-    "file": "assets/InputLabel-BPF4v9ZX.js",
+  "_InputLabel-D8vZSExQ.js": {
+    "file": "assets/InputLabel-D8vZSExQ.js",
     "name": "InputLabel",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_MarketHandlerUtilities-CPaMnl7q.js": {
-    "file": "assets/MarketHandlerUtilities-CPaMnl7q.js",
+  "_MarketHandlerUtilities-BPKOhKIv.js": {
+    "file": "assets/MarketHandlerUtilities-BPKOhKIv.js",
     "name": "MarketHandlerUtilities",
     "imports": [
       "resources/js/app.jsx",
-      "_iconBase-1NaSG4wA.js",
-      "_BetSlipContext-DJX6SmXt.js"
+      "_iconBase-BHsM4znX.js",
+      "_BetSlipContext-DcjUfPjE.js"
     ]
   },
-  "_PrimaryButton-DekYmlo9.js": {
-    "file": "assets/PrimaryButton-DekYmlo9.js",
+  "_PrimaryButton-Bgz_oO8i.js": {
+    "file": "assets/PrimaryButton-Bgz_oO8i.js",
     "name": "PrimaryButton",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_ScaleLoader-rtlFhg8e.js": {
-    "file": "assets/ScaleLoader-rtlFhg8e.js",
+  "_ScaleLoader-CyUJoI2R.js": {
+    "file": "assets/ScaleLoader-CyUJoI2R.js",
     "name": "ScaleLoader",
     "imports": [
       "resources/js/app.jsx",
       "_animation-RB9YhObT.js"
     ]
   },
-  "_ScaleLoader-sEsA_HUc.js": {
-    "file": "assets/ScaleLoader-sEsA_HUc.js",
+  "_ScaleLoader-DfR9qC5w.js": {
+    "file": "assets/ScaleLoader-DfR9qC5w.js",
     "name": "ScaleLoader",
     "imports": [
       "resources/js/app.jsx",
       "_animation-6cYxsNWS.js"
     ]
   },
-  "_Skeleton-CyVWMQ4S.js": {
-    "file": "assets/Skeleton-CyVWMQ4S.js",
+  "_Skeleton-AYxjryWC.js": {
+    "file": "assets/Skeleton-AYxjryWC.js",
     "name": "Skeleton",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_SwarmDataContext-BPfnqclp.js": {
-    "file": "assets/SwarmDataContext-BPfnqclp.js",
+  "_SwarmDataContext-CrAlUiX0.js": {
+    "file": "assets/SwarmDataContext-CrAlUiX0.js",
     "name": "SwarmDataContext",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_TextInput-CeU4glsG.js": {
-    "file": "assets/TextInput-CeU4glsG.js",
+  "_TextInput-CW75cmpk.js": {
+    "file": "assets/TextInput-CW75cmpk.js",
     "name": "TextInput",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_UserAuthenticationContext-B9CgKNWH.js": {
-    "file": "assets/UserAuthenticationContext-B9CgKNWH.js",
+  "_UserAuthenticationContext-DOfhghB8.js": {
+    "file": "assets/UserAuthenticationContext-DOfhghB8.js",
     "name": "UserAuthenticationContext",
     "imports": [
       "resources/js/app.jsx"
@@ -204,33 +204,33 @@
     "file": "assets/UtilizedHooks-CHuqxHq9.js",
     "name": "UtilizedHooks"
   },
-  "_WelcomeGuestLayout-CnKaiDK2.js": {
-    "file": "assets/WelcomeGuestLayout-CnKaiDK2.js",
+  "_WelcomeGuestLayout-osn9w7Md.js": {
+    "file": "assets/WelcomeGuestLayout-osn9w7Md.js",
     "name": "WelcomeGuestLayout",
     "imports": [
       "resources/js/app.jsx",
-      "_iconBase-1NaSG4wA.js",
-      "_GameFile-BHWl_uPj.js",
-      "_index-D38Vun6w.js",
-      "_index-vyvQfyPS.js",
-      "_index-DfpGWnH-.js",
-      "_index-D31IpMiY.js",
-      "_index-C_RXlj0E.js",
-      "_UserAuthenticationContext-B9CgKNWH.js",
-      "_index-B2V79RLg.js",
+      "_iconBase-BHsM4znX.js",
+      "_GameFile-DYS5qk98.js",
+      "_index-CCwBDxu7.js",
+      "_index-DhAB4uQs.js",
+      "_index-DBHZhA6V.js",
+      "_index-Dul_ih0x.js",
+      "_index-DB5vtFC6.js",
+      "_UserAuthenticationContext-DOfhghB8.js",
+      "_index-BvqTu_aC.js",
       "_zambia-uSIXTnlC.js",
-      "_index-D-oKYPRd.js",
-      "_DataStoreTemp-dR6HfQ01.js",
-      "_index-BT-Uq5RZ.js",
-      "_BetSlipContext-DJX6SmXt.js",
-      "_index-KcG-XtG0.js",
+      "_index-BCf6WEWb.js",
+      "_DataStoreTemp-D60g7j7S.js",
+      "_index-DsOsJtub.js",
+      "_BetSlipContext-DcjUfPjE.js",
+      "_index-Cbbwr3n9.js",
       "_DateFormatter-CgdAk38a.js",
-      "_index-5uflDiLC.js",
+      "_index-Bs6hzq6e.js",
       "_animation-RB9YhObT.js",
       "_UtilizedHooks-CHuqxHq9.js",
-      "_HashLoader-BrsX1Acl.js",
+      "_HashLoader-oyD9OkyJ.js",
       "_animation-6cYxsNWS.js",
-      "_Skeleton-CyVWMQ4S.js"
+      "_Skeleton-AYxjryWC.js"
     ],
     "assets": [
       "assets/burning-ball-BmY8-FtT.png",
@@ -245,125 +245,125 @@
     "file": "assets/animation-RB9YhObT.js",
     "name": "animation"
   },
-  "_iconBase-1NaSG4wA.js": {
-    "file": "assets/iconBase-1NaSG4wA.js",
+  "_iconBase-BHsM4znX.js": {
+    "file": "assets/iconBase-BHsM4znX.js",
     "name": "iconBase",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_index-3s6h75TQ.js": {
-    "file": "assets/index-3s6h75TQ.js",
-    "name": "index",
-    "imports": [
-      "_iconBase-1NaSG4wA.js"
-    ]
-  },
-  "_index-5uflDiLC.js": {
-    "file": "assets/index-5uflDiLC.js",
-    "name": "index",
-    "imports": [
-      "_iconBase-1NaSG4wA.js"
-    ]
-  },
-  "_index-B2V79RLg.js": {
-    "file": "assets/index-B2V79RLg.js",
-    "name": "index",
-    "imports": [
-      "_iconBase-1NaSG4wA.js"
-    ]
-  },
-  "_index-BD6qrxYm.js": {
-    "file": "assets/index-BD6qrxYm.js",
-    "name": "index",
-    "imports": [
-      "_iconBase-1NaSG4wA.js"
-    ]
-  },
-  "_index-BT-Uq5RZ.js": {
-    "file": "assets/index-BT-Uq5RZ.js",
-    "name": "index",
-    "imports": [
-      "_iconBase-1NaSG4wA.js"
-    ]
-  },
-  "_index-C_RXlj0E.js": {
-    "file": "assets/index-C_RXlj0E.js",
-    "name": "index",
-    "imports": [
-      "resources/js/app.jsx",
-      "_index-D-oKYPRd.js"
-    ]
-  },
-  "_index-Ctm4ZS69.js": {
-    "file": "assets/index-Ctm4ZS69.js",
-    "name": "index",
-    "imports": [
-      "_iconBase-1NaSG4wA.js"
-    ]
-  },
-  "_index-D-oKYPRd.js": {
-    "file": "assets/index-D-oKYPRd.js",
+  "_index-BCf6WEWb.js": {
+    "file": "assets/index-BCf6WEWb.js",
     "name": "index",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_index-D31IpMiY.js": {
-    "file": "assets/index-D31IpMiY.js",
+  "_index-BJZnW7iH.js": {
+    "file": "assets/index-BJZnW7iH.js",
     "name": "index",
     "imports": [
-      "_iconBase-1NaSG4wA.js"
+      "resources/js/app.jsx"
     ]
   },
-  "_index-D38Vun6w.js": {
-    "file": "assets/index-D38Vun6w.js",
+  "_index-BhW4rTCj.js": {
+    "file": "assets/index-BhW4rTCj.js",
     "name": "index",
     "imports": [
-      "_iconBase-1NaSG4wA.js"
+      "_iconBase-BHsM4znX.js"
+    ]
+  },
+  "_index-Bs6hzq6e.js": {
+    "file": "assets/index-Bs6hzq6e.js",
+    "name": "index",
+    "imports": [
+      "_iconBase-BHsM4znX.js"
+    ]
+  },
+  "_index-BvqTu_aC.js": {
+    "file": "assets/index-BvqTu_aC.js",
+    "name": "index",
+    "imports": [
+      "_iconBase-BHsM4znX.js"
+    ]
+  },
+  "_index-CCwBDxu7.js": {
+    "file": "assets/index-CCwBDxu7.js",
+    "name": "index",
+    "imports": [
+      "_iconBase-BHsM4znX.js"
+    ]
+  },
+  "_index-CUwZOzdo.js": {
+    "file": "assets/index-CUwZOzdo.js",
+    "name": "index",
+    "imports": [
+      "_iconBase-BHsM4znX.js"
+    ]
+  },
+  "_index-Cbbwr3n9.js": {
+    "file": "assets/index-Cbbwr3n9.js",
+    "name": "index",
+    "imports": [
+      "_iconBase-BHsM4znX.js"
+    ]
+  },
+  "_index-CdLPJ4SW.js": {
+    "file": "assets/index-CdLPJ4SW.js",
+    "name": "index",
+    "imports": [
+      "_iconBase-BHsM4znX.js"
+    ]
+  },
+  "_index-DB5vtFC6.js": {
+    "file": "assets/index-DB5vtFC6.js",
+    "name": "index",
+    "imports": [
+      "resources/js/app.jsx",
+      "_index-BCf6WEWb.js"
+    ]
+  },
+  "_index-DBHZhA6V.js": {
+    "file": "assets/index-DBHZhA6V.js",
+    "name": "index",
+    "imports": [
+      "_iconBase-BHsM4znX.js"
     ]
   },
   "_index-DVATffkL.js": {
     "file": "assets/index-DVATffkL.js",
     "name": "index"
   },
-  "_index-DXAxeEQu.js": {
-    "file": "assets/index-DXAxeEQu.js",
+  "_index-DhAB4uQs.js": {
+    "file": "assets/index-DhAB4uQs.js",
     "name": "index",
     "imports": [
-      "resources/js/app.jsx"
+      "_iconBase-BHsM4znX.js"
     ]
   },
-  "_index-DfpGWnH-.js": {
-    "file": "assets/index-DfpGWnH-.js",
+  "_index-DsOsJtub.js": {
+    "file": "assets/index-DsOsJtub.js",
     "name": "index",
     "imports": [
-      "_iconBase-1NaSG4wA.js"
+      "_iconBase-BHsM4znX.js"
     ]
   },
-  "_index-KcG-XtG0.js": {
-    "file": "assets/index-KcG-XtG0.js",
+  "_index-Dul_ih0x.js": {
+    "file": "assets/index-Dul_ih0x.js",
     "name": "index",
     "imports": [
-      "_iconBase-1NaSG4wA.js"
+      "_iconBase-BHsM4znX.js"
     ]
   },
-  "_index-vyvQfyPS.js": {
-    "file": "assets/index-vyvQfyPS.js",
-    "name": "index",
-    "imports": [
-      "_iconBase-1NaSG4wA.js"
-    ]
-  },
-  "_index.module-CrqLhVNB.js": {
-    "file": "assets/index.module-CrqLhVNB.js",
+  "_index.module-CKCr6Tp1.js": {
+    "file": "assets/index.module-CKCr6Tp1.js",
     "name": "index.module",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_transition-B7TXYEI3.js": {
-    "file": "assets/transition-B7TXYEI3.js",
+  "_transition-Bict0URE.js": {
+    "file": "assets/transition-Bict0URE.js",
     "name": "transition",
     "imports": [
       "resources/js/app.jsx"
@@ -381,325 +381,325 @@
     "src": "resources/images/lottieFile_bola.gif"
   },
   "resources/js/Pages/Admin/AdminScreen.jsx": {
-    "file": "assets/AdminScreen-BLxwjCqi.js",
+    "file": "assets/AdminScreen-Bxqm1Cai.js",
     "name": "AdminScreen",
     "src": "resources/js/Pages/Admin/AdminScreen.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AdminLayout-BEv1yfu3.js",
-      "_Dropdown-ByUF5YLp.js",
-      "_transition-B7TXYEI3.js",
-      "_index-3s6h75TQ.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-5uflDiLC.js",
-      "_index-KcG-XtG0.js",
-      "_index-DfpGWnH-.js",
-      "_index-BT-Uq5RZ.js",
-      "_index-B2V79RLg.js"
+      "_AdminLayout-aTOTCnNH.js",
+      "_Dropdown-DTamTfdR.js",
+      "_transition-Bict0URE.js",
+      "_index-CUwZOzdo.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-Bs6hzq6e.js",
+      "_index-Cbbwr3n9.js",
+      "_index-DBHZhA6V.js",
+      "_index-DsOsJtub.js",
+      "_index-BvqTu_aC.js"
     ]
   },
   "resources/js/Pages/Admin/Other/OtherScreen.jsx": {
-    "file": "assets/OtherScreen-GspO9Nd1.js",
+    "file": "assets/OtherScreen-B4hmNxqz.js",
     "name": "OtherScreen",
     "src": "resources/js/Pages/Admin/Other/OtherScreen.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AdminLayout-BEv1yfu3.js",
-      "_Dropdown-ByUF5YLp.js",
-      "_transition-B7TXYEI3.js",
-      "_index-3s6h75TQ.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-5uflDiLC.js",
-      "_index-KcG-XtG0.js",
-      "_index-DfpGWnH-.js",
-      "_index-BT-Uq5RZ.js",
-      "_index-B2V79RLg.js"
+      "_AdminLayout-aTOTCnNH.js",
+      "_Dropdown-DTamTfdR.js",
+      "_transition-Bict0URE.js",
+      "_index-CUwZOzdo.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-Bs6hzq6e.js",
+      "_index-Cbbwr3n9.js",
+      "_index-DBHZhA6V.js",
+      "_index-DsOsJtub.js",
+      "_index-BvqTu_aC.js"
     ]
   },
   "resources/js/Pages/Admin/Permissions/AllPermissionScreen.jsx": {
-    "file": "assets/AllPermissionScreen-DxxXF9oP.js",
+    "file": "assets/AllPermissionScreen-Bx2-Pn_I.js",
     "name": "AllPermissionScreen",
     "src": "resources/js/Pages/Admin/Permissions/AllPermissionScreen.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AdminLayout-BEv1yfu3.js",
-      "_Dropdown-ByUF5YLp.js",
-      "_transition-B7TXYEI3.js",
-      "_index-3s6h75TQ.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-5uflDiLC.js",
-      "_index-KcG-XtG0.js",
-      "_index-DfpGWnH-.js",
-      "_index-BT-Uq5RZ.js",
-      "_index-B2V79RLg.js"
+      "_AdminLayout-aTOTCnNH.js",
+      "_Dropdown-DTamTfdR.js",
+      "_transition-Bict0URE.js",
+      "_index-CUwZOzdo.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-Bs6hzq6e.js",
+      "_index-Cbbwr3n9.js",
+      "_index-DBHZhA6V.js",
+      "_index-DsOsJtub.js",
+      "_index-BvqTu_aC.js"
     ]
   },
   "resources/js/Pages/Admin/Permissions/Create.jsx": {
-    "file": "assets/Create-Ck7ffyfy.js",
+    "file": "assets/Create-DBXLPqmq.js",
     "name": "Create",
     "src": "resources/js/Pages/Admin/Permissions/Create.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AdminLayout-BEv1yfu3.js",
-      "_TextInput-CeU4glsG.js",
-      "_InputLabel-BPF4v9ZX.js",
-      "_PrimaryButton-DekYmlo9.js",
-      "_index-D38Vun6w.js",
-      "_Dropdown-ByUF5YLp.js",
-      "_transition-B7TXYEI3.js",
-      "_index-3s6h75TQ.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-5uflDiLC.js",
-      "_index-KcG-XtG0.js",
-      "_index-DfpGWnH-.js",
-      "_index-BT-Uq5RZ.js",
-      "_index-B2V79RLg.js"
+      "_AdminLayout-aTOTCnNH.js",
+      "_TextInput-CW75cmpk.js",
+      "_InputLabel-D8vZSExQ.js",
+      "_PrimaryButton-Bgz_oO8i.js",
+      "_index-CCwBDxu7.js",
+      "_Dropdown-DTamTfdR.js",
+      "_transition-Bict0URE.js",
+      "_index-CUwZOzdo.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-Bs6hzq6e.js",
+      "_index-Cbbwr3n9.js",
+      "_index-DBHZhA6V.js",
+      "_index-DsOsJtub.js",
+      "_index-BvqTu_aC.js"
     ]
   },
   "resources/js/Pages/Admin/Permissions/Edit.jsx": {
-    "file": "assets/Edit-DtjvdKCg.js",
+    "file": "assets/Edit-B6XvbOa6.js",
     "name": "Edit",
     "src": "resources/js/Pages/Admin/Permissions/Edit.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AdminLayout-BEv1yfu3.js",
-      "_TextInput-CeU4glsG.js",
-      "_InputLabel-BPF4v9ZX.js",
-      "_PrimaryButton-DekYmlo9.js",
-      "_index-D38Vun6w.js",
-      "_Dropdown-ByUF5YLp.js",
-      "_transition-B7TXYEI3.js",
-      "_index-3s6h75TQ.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-5uflDiLC.js",
-      "_index-KcG-XtG0.js",
-      "_index-DfpGWnH-.js",
-      "_index-BT-Uq5RZ.js",
-      "_index-B2V79RLg.js"
+      "_AdminLayout-aTOTCnNH.js",
+      "_TextInput-CW75cmpk.js",
+      "_InputLabel-D8vZSExQ.js",
+      "_PrimaryButton-Bgz_oO8i.js",
+      "_index-CCwBDxu7.js",
+      "_Dropdown-DTamTfdR.js",
+      "_transition-Bict0URE.js",
+      "_index-CUwZOzdo.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-Bs6hzq6e.js",
+      "_index-Cbbwr3n9.js",
+      "_index-DBHZhA6V.js",
+      "_index-DsOsJtub.js",
+      "_index-BvqTu_aC.js"
     ]
   },
   "resources/js/Pages/Admin/Roles/AllRoleScreen.jsx": {
-    "file": "assets/AllRoleScreen-Brz9nzUu.js",
+    "file": "assets/AllRoleScreen-hXeQsCSD.js",
     "name": "AllRoleScreen",
     "src": "resources/js/Pages/Admin/Roles/AllRoleScreen.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AdminLayout-BEv1yfu3.js",
-      "_Dropdown-ByUF5YLp.js",
-      "_transition-B7TXYEI3.js",
-      "_index-3s6h75TQ.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-5uflDiLC.js",
-      "_index-KcG-XtG0.js",
-      "_index-DfpGWnH-.js",
-      "_index-BT-Uq5RZ.js",
-      "_index-B2V79RLg.js"
+      "_AdminLayout-aTOTCnNH.js",
+      "_Dropdown-DTamTfdR.js",
+      "_transition-Bict0URE.js",
+      "_index-CUwZOzdo.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-Bs6hzq6e.js",
+      "_index-Cbbwr3n9.js",
+      "_index-DBHZhA6V.js",
+      "_index-DsOsJtub.js",
+      "_index-BvqTu_aC.js"
     ]
   },
   "resources/js/Pages/Admin/Roles/Create.jsx": {
-    "file": "assets/Create-DcYuAEHa.js",
+    "file": "assets/Create-BXBz2PvX.js",
     "name": "Create",
     "src": "resources/js/Pages/Admin/Roles/Create.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AdminLayout-BEv1yfu3.js",
-      "_TextInput-CeU4glsG.js",
-      "_InputLabel-BPF4v9ZX.js",
-      "_PrimaryButton-DekYmlo9.js",
-      "_index-D38Vun6w.js",
-      "_index-DXAxeEQu.js",
-      "_Dropdown-ByUF5YLp.js",
-      "_transition-B7TXYEI3.js",
-      "_index-3s6h75TQ.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-5uflDiLC.js",
-      "_index-KcG-XtG0.js",
-      "_index-DfpGWnH-.js",
-      "_index-BT-Uq5RZ.js",
-      "_index-B2V79RLg.js"
+      "_AdminLayout-aTOTCnNH.js",
+      "_TextInput-CW75cmpk.js",
+      "_InputLabel-D8vZSExQ.js",
+      "_PrimaryButton-Bgz_oO8i.js",
+      "_index-CCwBDxu7.js",
+      "_index-BJZnW7iH.js",
+      "_Dropdown-DTamTfdR.js",
+      "_transition-Bict0URE.js",
+      "_index-CUwZOzdo.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-Bs6hzq6e.js",
+      "_index-Cbbwr3n9.js",
+      "_index-DBHZhA6V.js",
+      "_index-DsOsJtub.js",
+      "_index-BvqTu_aC.js"
     ]
   },
   "resources/js/Pages/Admin/Roles/Edit.jsx": {
-    "file": "assets/Edit-gnkmlkHc.js",
+    "file": "assets/Edit-DhpIJKG3.js",
     "name": "Edit",
     "src": "resources/js/Pages/Admin/Roles/Edit.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AdminLayout-BEv1yfu3.js",
-      "_TextInput-CeU4glsG.js",
-      "_InputLabel-BPF4v9ZX.js",
-      "_PrimaryButton-DekYmlo9.js",
-      "_index-D38Vun6w.js",
-      "_index-DXAxeEQu.js",
+      "_AdminLayout-aTOTCnNH.js",
+      "_TextInput-CW75cmpk.js",
+      "_InputLabel-D8vZSExQ.js",
+      "_PrimaryButton-Bgz_oO8i.js",
+      "_index-CCwBDxu7.js",
+      "_index-BJZnW7iH.js",
       "_index-DVATffkL.js",
-      "_Dropdown-ByUF5YLp.js",
-      "_transition-B7TXYEI3.js",
-      "_index-3s6h75TQ.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-5uflDiLC.js",
-      "_index-KcG-XtG0.js",
-      "_index-DfpGWnH-.js",
-      "_index-BT-Uq5RZ.js",
-      "_index-B2V79RLg.js"
+      "_Dropdown-DTamTfdR.js",
+      "_transition-Bict0URE.js",
+      "_index-CUwZOzdo.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-Bs6hzq6e.js",
+      "_index-Cbbwr3n9.js",
+      "_index-DBHZhA6V.js",
+      "_index-DsOsJtub.js",
+      "_index-BvqTu_aC.js"
     ]
   },
   "resources/js/Pages/Admin/Users/AllUserScreen.jsx": {
-    "file": "assets/AllUserScreen-Dp0Oicw0.js",
+    "file": "assets/AllUserScreen-B_N5_llE.js",
     "name": "AllUserScreen",
     "src": "resources/js/Pages/Admin/Users/AllUserScreen.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AdminLayout-BEv1yfu3.js",
-      "_Dropdown-ByUF5YLp.js",
-      "_transition-B7TXYEI3.js",
-      "_index-3s6h75TQ.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-5uflDiLC.js",
-      "_index-KcG-XtG0.js",
-      "_index-DfpGWnH-.js",
-      "_index-BT-Uq5RZ.js",
-      "_index-B2V79RLg.js"
+      "_AdminLayout-aTOTCnNH.js",
+      "_Dropdown-DTamTfdR.js",
+      "_transition-Bict0URE.js",
+      "_index-CUwZOzdo.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-Bs6hzq6e.js",
+      "_index-Cbbwr3n9.js",
+      "_index-DBHZhA6V.js",
+      "_index-DsOsJtub.js",
+      "_index-BvqTu_aC.js"
     ]
   },
   "resources/js/Pages/Admin/Users/Create.jsx": {
-    "file": "assets/Create-D0xBImaZ.js",
+    "file": "assets/Create-BoIXxgpC.js",
     "name": "Create",
     "src": "resources/js/Pages/Admin/Users/Create.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AdminLayout-BEv1yfu3.js",
-      "_TextInput-CeU4glsG.js",
-      "_InputLabel-BPF4v9ZX.js",
-      "_PrimaryButton-DekYmlo9.js",
-      "_index-D38Vun6w.js",
-      "_index-DXAxeEQu.js",
-      "_Dropdown-ByUF5YLp.js",
-      "_transition-B7TXYEI3.js",
-      "_index-3s6h75TQ.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-5uflDiLC.js",
-      "_index-KcG-XtG0.js",
-      "_index-DfpGWnH-.js",
-      "_index-BT-Uq5RZ.js",
-      "_index-B2V79RLg.js"
+      "_AdminLayout-aTOTCnNH.js",
+      "_TextInput-CW75cmpk.js",
+      "_InputLabel-D8vZSExQ.js",
+      "_PrimaryButton-Bgz_oO8i.js",
+      "_index-CCwBDxu7.js",
+      "_index-BJZnW7iH.js",
+      "_Dropdown-DTamTfdR.js",
+      "_transition-Bict0URE.js",
+      "_index-CUwZOzdo.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-Bs6hzq6e.js",
+      "_index-Cbbwr3n9.js",
+      "_index-DBHZhA6V.js",
+      "_index-DsOsJtub.js",
+      "_index-BvqTu_aC.js"
     ]
   },
   "resources/js/Pages/Admin/Users/Edit.jsx": {
-    "file": "assets/Edit-CJNgRrsW.js",
+    "file": "assets/Edit-CRWtSBRH.js",
     "name": "Edit",
     "src": "resources/js/Pages/Admin/Users/Edit.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AdminLayout-BEv1yfu3.js",
-      "_TextInput-CeU4glsG.js",
-      "_InputLabel-BPF4v9ZX.js",
-      "_PrimaryButton-DekYmlo9.js",
-      "_index-D38Vun6w.js",
-      "_index-DXAxeEQu.js",
+      "_AdminLayout-aTOTCnNH.js",
+      "_TextInput-CW75cmpk.js",
+      "_InputLabel-D8vZSExQ.js",
+      "_PrimaryButton-Bgz_oO8i.js",
+      "_index-CCwBDxu7.js",
+      "_index-BJZnW7iH.js",
       "_index-DVATffkL.js",
-      "_Dropdown-ByUF5YLp.js",
-      "_transition-B7TXYEI3.js",
-      "_index-3s6h75TQ.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-5uflDiLC.js",
-      "_index-KcG-XtG0.js",
-      "_index-DfpGWnH-.js",
-      "_index-BT-Uq5RZ.js",
-      "_index-B2V79RLg.js"
+      "_Dropdown-DTamTfdR.js",
+      "_transition-Bict0URE.js",
+      "_index-CUwZOzdo.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-Bs6hzq6e.js",
+      "_index-Cbbwr3n9.js",
+      "_index-DBHZhA6V.js",
+      "_index-DsOsJtub.js",
+      "_index-BvqTu_aC.js"
     ]
   },
   "resources/js/Pages/Auth/ConfirmPassword.jsx": {
-    "file": "assets/ConfirmPassword-BdXDwk3j.js",
+    "file": "assets/ConfirmPassword-6knTjXmQ.js",
     "name": "ConfirmPassword",
     "src": "resources/js/Pages/Auth/ConfirmPassword.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_GuestLayout-DG_CDMD8.js",
-      "_TextInput-CeU4glsG.js",
-      "_InputLabel-BPF4v9ZX.js",
-      "_PrimaryButton-DekYmlo9.js"
+      "_GuestLayout-B8wWceRF.js",
+      "_TextInput-CW75cmpk.js",
+      "_InputLabel-D8vZSExQ.js",
+      "_PrimaryButton-Bgz_oO8i.js"
     ]
   },
   "resources/js/Pages/Auth/ForgotPassword.jsx": {
-    "file": "assets/ForgotPassword-9ImlVzyV.js",
+    "file": "assets/ForgotPassword-DdxV3FcL.js",
     "name": "ForgotPassword",
     "src": "resources/js/Pages/Auth/ForgotPassword.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_GuestLayout-DG_CDMD8.js",
-      "_TextInput-CeU4glsG.js",
-      "_PrimaryButton-DekYmlo9.js"
+      "_GuestLayout-B8wWceRF.js",
+      "_TextInput-CW75cmpk.js",
+      "_PrimaryButton-Bgz_oO8i.js"
     ]
   },
   "resources/js/Pages/Auth/Login.jsx": {
-    "file": "assets/Login-Cun5CGGg.js",
+    "file": "assets/Login-cv8Pld7W.js",
     "name": "Login",
     "src": "resources/js/Pages/Auth/Login.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_GuestLayout-DG_CDMD8.js",
-      "_TextInput-CeU4glsG.js",
-      "_InputLabel-BPF4v9ZX.js",
-      "_PrimaryButton-DekYmlo9.js",
-      "_transition-B7TXYEI3.js"
+      "_GuestLayout-B8wWceRF.js",
+      "_TextInput-CW75cmpk.js",
+      "_InputLabel-D8vZSExQ.js",
+      "_PrimaryButton-Bgz_oO8i.js",
+      "_transition-Bict0URE.js"
     ]
   },
   "resources/js/Pages/Auth/Register.jsx": {
-    "file": "assets/Register-C-S_82-2.js",
+    "file": "assets/Register-E3i_BZ3X.js",
     "name": "Register",
     "src": "resources/js/Pages/Auth/Register.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_GuestLayout-DG_CDMD8.js",
-      "_TextInput-CeU4glsG.js",
-      "_InputLabel-BPF4v9ZX.js",
-      "_PrimaryButton-DekYmlo9.js",
-      "_index-D38Vun6w.js",
+      "_GuestLayout-B8wWceRF.js",
+      "_TextInput-CW75cmpk.js",
+      "_InputLabel-D8vZSExQ.js",
+      "_PrimaryButton-Bgz_oO8i.js",
+      "_index-CCwBDxu7.js",
       "_zambia-uSIXTnlC.js",
-      "_iconBase-1NaSG4wA.js"
+      "_iconBase-BHsM4znX.js"
     ]
   },
   "resources/js/Pages/Auth/ResetPassword.jsx": {
-    "file": "assets/ResetPassword-C84U1pRb.js",
+    "file": "assets/ResetPassword-C7Mq7LbX.js",
     "name": "ResetPassword",
     "src": "resources/js/Pages/Auth/ResetPassword.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_GuestLayout-DG_CDMD8.js",
-      "_TextInput-CeU4glsG.js",
-      "_InputLabel-BPF4v9ZX.js",
-      "_PrimaryButton-DekYmlo9.js"
+      "_GuestLayout-B8wWceRF.js",
+      "_TextInput-CW75cmpk.js",
+      "_InputLabel-D8vZSExQ.js",
+      "_PrimaryButton-Bgz_oO8i.js"
     ]
   },
   "resources/js/Pages/Auth/VerifyEmail.jsx": {
-    "file": "assets/VerifyEmail-DjkfYOZp.js",
+    "file": "assets/VerifyEmail-Cn9u6IML.js",
     "name": "VerifyEmail",
     "src": "resources/js/Pages/Auth/VerifyEmail.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_GuestLayout-DG_CDMD8.js",
-      "_PrimaryButton-DekYmlo9.js"
+      "_GuestLayout-B8wWceRF.js",
+      "_PrimaryButton-Bgz_oO8i.js"
     ]
   },
   "resources/js/Pages/Auth/custom_auth/Register.jsx": {
-    "file": "assets/Register-D1QgzGXy.js",
+    "file": "assets/Register-CKpRy1sG.js",
     "name": "Register",
     "src": "resources/js/Pages/Auth/custom_auth/Register.jsx",
     "isDynamicEntry": true,
@@ -708,13 +708,13 @@
     ]
   },
   "resources/js/Pages/CastleBet/CastleBetSite.jsx": {
-    "file": "assets/CastleBetSite-DYAFX6FS.js",
+    "file": "assets/CastleBetSite-pfdGB_LB.js",
     "name": "CastleBetSite",
     "src": "resources/js/Pages/CastleBet/CastleBetSite.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-C_RXlj0E.js",
+      "_index-DB5vtFC6.js",
       "resources/js/Pages/CastleBet/Welcome.jsx",
       "resources/js/Pages/CastleBet/Group.jsx",
       "resources/js/Pages/CastleBet/ErrorPage.jsx",
@@ -724,44 +724,44 @@
       "resources/js/Pages/CastleBet/screens/GameScreen.jsx",
       "resources/js/Pages/CastleBet/screens/Auth/Login.jsx",
       "resources/js/Pages/CastleBet/screens/Auth/Register.jsx",
-      "_SwarmDataContext-BPfnqclp.js",
-      "_UserAuthenticationContext-B9CgKNWH.js",
-      "_WelcomeGuestLayout-CnKaiDK2.js",
-      "_DataStoreTemp-dR6HfQ01.js",
-      "_index-D-oKYPRd.js",
-      "_CastleBetFooter-ZvbFpos7.js",
-      "_index-5uflDiLC.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-D31IpMiY.js",
-      "_Skeleton-CyVWMQ4S.js",
-      "_BetSlipContext-DJX6SmXt.js",
-      "_GameFile-BHWl_uPj.js",
+      "_SwarmDataContext-CrAlUiX0.js",
+      "_UserAuthenticationContext-DOfhghB8.js",
+      "_WelcomeGuestLayout-osn9w7Md.js",
+      "_DataStoreTemp-D60g7j7S.js",
+      "_index-BCf6WEWb.js",
+      "_CastleBetFooter-DLhPhQ4C.js",
+      "_index-Bs6hzq6e.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-Dul_ih0x.js",
+      "_Skeleton-AYxjryWC.js",
+      "_BetSlipContext-DcjUfPjE.js",
+      "_GameFile-DYS5qk98.js",
       "_zambia-uSIXTnlC.js",
-      "_index-BT-Uq5RZ.js",
-      "_index.module-CrqLhVNB.js",
-      "_index-3s6h75TQ.js",
-      "_MarketHandlerUtilities-CPaMnl7q.js",
-      "_index-BD6qrxYm.js",
-      "_index-D38Vun6w.js",
+      "_index-DsOsJtub.js",
+      "_index.module-CKCr6Tp1.js",
+      "_index-CUwZOzdo.js",
+      "_MarketHandlerUtilities-BPKOhKIv.js",
+      "_index-BhW4rTCj.js",
+      "_index-CCwBDxu7.js",
       "_DateFormatter-CgdAk38a.js",
-      "_FetchSwarmData-CuL63YVo.js",
-      "_ScaleLoader-sEsA_HUc.js",
+      "_FetchSwarmData-C825pgsC.js",
+      "_ScaleLoader-DfR9qC5w.js",
       "_animation-6cYxsNWS.js",
-      "_index-vyvQfyPS.js",
+      "_index-DhAB4uQs.js",
       "resources/js/Pages/CastleBet/screens/funds/AvailableAgents.jsx",
       "resources/js/Pages/CastleBet/screens/funds/SelectedPaymentSystem.jsx",
       "resources/js/Pages/CastleBet/screens/funds/MTNPayment.jsx",
       "resources/js/Pages/CastleBet/screens/funds/AiretelPayment.jsx",
-      "_HashLoader-BrsX1Acl.js",
+      "_HashLoader-oyD9OkyJ.js",
       "_animation-RB9YhObT.js",
       "resources/js/Pages/CastleBet/screens/funds/ZamtelPayment.jsx",
       "resources/js/Pages/CastleBet/screens/funds/PayGoPayment.jsx",
       "resources/js/Pages/CastleBet/screens/MyBetsScreen.jsx",
       "resources/js/Pages/CastleBet/screens/OpenBets.jsx",
       "resources/js/Pages/CastleBet/screens/mybets/BetCardGroup.jsx",
-      "_index-Ctm4ZS69.js",
+      "_index-CdLPJ4SW.js",
       "resources/js/Pages/CastleBet/screens/SettledBets.jsx",
-      "_ScaleLoader-rtlFhg8e.js",
+      "_ScaleLoader-CyUJoI2R.js",
       "resources/js/Pages/CastleBet/screens/mybets/ActualBetSlip.jsx",
       "resources/js/Pages/CastleBet/screens/mybets/BetEventCard.jsx",
       "resources/js/Pages/CastleBet/screens/FilteredLeagues.jsx",
@@ -777,61 +777,61 @@
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameRegionComponent.jsx",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameCompetitionComponent.jsx",
       "resources/js/Pages/CastleBet/screens/TodayGames.jsx",
-      "_index-B2V79RLg.js",
+      "_index-BvqTu_aC.js",
       "resources/js/Pages/CastleBet/screens/TransactionHistory.jsx",
       "resources/js/Pages/CastleBet/screens/funds/TransactionCard.jsx",
-      "_index-DfpGWnH-.js",
+      "_index-DBHZhA6V.js",
       "_UtilizedHooks-CHuqxHq9.js",
       "resources/js/Pages/CastleBet/screens/Auth/PopupBox.jsx",
-      "_index-KcG-XtG0.js"
+      "_index-Cbbwr3n9.js"
     ]
   },
   "resources/js/Pages/CastleBet/ErrorPage.jsx": {
-    "file": "assets/ErrorPage-wD-aCikZ.js",
+    "file": "assets/ErrorPage-DQugEkyr.js",
     "name": "ErrorPage",
     "src": "resources/js/Pages/CastleBet/ErrorPage.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-D-oKYPRd.js"
+      "_index-BCf6WEWb.js"
     ]
   },
   "resources/js/Pages/CastleBet/Group.jsx": {
-    "file": "assets/Group-Je-omE9G.js",
+    "file": "assets/Group-DtV9NDNp.js",
     "name": "Group",
     "src": "resources/js/Pages/CastleBet/Group.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_WelcomeGuestLayout-CnKaiDK2.js",
-      "_FetchSwarmData-CuL63YVo.js",
-      "_ScaleLoader-sEsA_HUc.js",
-      "_index-vyvQfyPS.js",
-      "_index-5uflDiLC.js",
-      "_BetSlipContext-DJX6SmXt.js",
-      "_iconBase-1NaSG4wA.js",
-      "_GameFile-BHWl_uPj.js",
+      "_WelcomeGuestLayout-osn9w7Md.js",
+      "_FetchSwarmData-C825pgsC.js",
+      "_ScaleLoader-DfR9qC5w.js",
+      "_index-DhAB4uQs.js",
+      "_index-Bs6hzq6e.js",
+      "_BetSlipContext-DcjUfPjE.js",
+      "_iconBase-BHsM4znX.js",
+      "_GameFile-DYS5qk98.js",
       "_zambia-uSIXTnlC.js",
-      "_index-D38Vun6w.js",
-      "_index-DfpGWnH-.js",
-      "_index-D31IpMiY.js",
-      "_index-C_RXlj0E.js",
-      "_index-D-oKYPRd.js",
-      "_UserAuthenticationContext-B9CgKNWH.js",
-      "_index-B2V79RLg.js",
-      "_DataStoreTemp-dR6HfQ01.js",
-      "_index-BT-Uq5RZ.js",
-      "_index-KcG-XtG0.js",
+      "_index-CCwBDxu7.js",
+      "_index-DBHZhA6V.js",
+      "_index-Dul_ih0x.js",
+      "_index-DB5vtFC6.js",
+      "_index-BCf6WEWb.js",
+      "_UserAuthenticationContext-DOfhghB8.js",
+      "_index-BvqTu_aC.js",
+      "_DataStoreTemp-D60g7j7S.js",
+      "_index-DsOsJtub.js",
+      "_index-Cbbwr3n9.js",
       "_DateFormatter-CgdAk38a.js",
       "_animation-RB9YhObT.js",
       "_UtilizedHooks-CHuqxHq9.js",
-      "_HashLoader-BrsX1Acl.js",
+      "_HashLoader-oyD9OkyJ.js",
       "_animation-6cYxsNWS.js",
-      "_Skeleton-CyVWMQ4S.js"
+      "_Skeleton-AYxjryWC.js"
     ]
   },
   "resources/js/Pages/CastleBet/GroupCollection/GroupCollection.jsx": {
-    "file": "assets/GroupCollection-BXnwUYeI.js",
+    "file": "assets/GroupCollection-DfMBL-Dw.js",
     "name": "GroupCollection",
     "src": "resources/js/Pages/CastleBet/GroupCollection/GroupCollection.jsx",
     "isDynamicEntry": true,
@@ -840,53 +840,53 @@
     ]
   },
   "resources/js/Pages/CastleBet/Root.jsx": {
-    "file": "assets/Root-cVwPO_al.js",
+    "file": "assets/Root-DZJ8rW_k.js",
     "name": "Root",
     "src": "resources/js/Pages/CastleBet/Root.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-C_RXlj0E.js",
-      "_BetSlipContext-DJX6SmXt.js",
-      "_FetchSwarmData-CuL63YVo.js",
-      "_SwarmDataContext-BPfnqclp.js",
-      "_WelcomeGuestLayout-CnKaiDK2.js",
+      "_index-DB5vtFC6.js",
+      "_BetSlipContext-DcjUfPjE.js",
+      "_FetchSwarmData-C825pgsC.js",
+      "_SwarmDataContext-CrAlUiX0.js",
+      "_WelcomeGuestLayout-osn9w7Md.js",
       "resources/js/Pages/CastleBet/Welcome.jsx",
       "resources/js/Pages/CastleBet/screens/GameScreen.jsx",
       "resources/js/Pages/CastleBet/screens/Auth/Login.jsx",
       "resources/js/Pages/CastleBet/screens/Profile.jsx",
-      "_UserAuthenticationContext-B9CgKNWH.js",
+      "_UserAuthenticationContext-DOfhghB8.js",
       "resources/js/Pages/CastleBet/screens/funds/AvailableAgents.jsx",
       "resources/js/Pages/CastleBet/screens/MyBetsScreen.jsx",
       "resources/js/Pages/CastleBet/screens/mybets/ActualBetSlip.jsx",
       "resources/js/Pages/CastleBet/screens/Auth/Register.jsx",
       "resources/js/Pages/CastleBet/screens/FilteredLeagues.jsx",
-      "_DataStoreTemp-dR6HfQ01.js",
+      "_DataStoreTemp-D60g7j7S.js",
       "resources/js/Pages/CastleBet/screens/TransactionHistory.jsx",
-      "_index-D-oKYPRd.js",
-      "_iconBase-1NaSG4wA.js",
-      "_GameFile-BHWl_uPj.js",
-      "_index-5uflDiLC.js",
+      "_index-BCf6WEWb.js",
+      "_iconBase-BHsM4znX.js",
+      "_GameFile-DYS5qk98.js",
+      "_index-Bs6hzq6e.js",
       "_zambia-uSIXTnlC.js",
-      "_index-D38Vun6w.js",
-      "_index-vyvQfyPS.js",
-      "_index-DfpGWnH-.js",
-      "_index-D31IpMiY.js",
-      "_index-B2V79RLg.js",
-      "_index-BT-Uq5RZ.js",
-      "_index-KcG-XtG0.js",
+      "_index-CCwBDxu7.js",
+      "_index-DhAB4uQs.js",
+      "_index-DBHZhA6V.js",
+      "_index-Dul_ih0x.js",
+      "_index-BvqTu_aC.js",
+      "_index-DsOsJtub.js",
+      "_index-Cbbwr3n9.js",
       "_DateFormatter-CgdAk38a.js",
       "_animation-RB9YhObT.js",
       "_UtilizedHooks-CHuqxHq9.js",
-      "_HashLoader-BrsX1Acl.js",
+      "_HashLoader-oyD9OkyJ.js",
       "_animation-6cYxsNWS.js",
-      "_Skeleton-CyVWMQ4S.js",
-      "_CastleBetFooter-ZvbFpos7.js",
-      "_index.module-CrqLhVNB.js",
-      "_index-3s6h75TQ.js",
-      "_MarketHandlerUtilities-CPaMnl7q.js",
-      "_index-BD6qrxYm.js",
-      "_ScaleLoader-rtlFhg8e.js",
+      "_Skeleton-AYxjryWC.js",
+      "_CastleBetFooter-DLhPhQ4C.js",
+      "_index.module-CKCr6Tp1.js",
+      "_index-CUwZOzdo.js",
+      "_MarketHandlerUtilities-BPKOhKIv.js",
+      "_index-BhW4rTCj.js",
+      "_ScaleLoader-CyUJoI2R.js",
       "resources/js/Pages/CastleBet/screens/Auth/PopupBox.jsx",
       "resources/js/Pages/CastleBet/screens/funds/SelectedPaymentSystem.jsx",
       "resources/js/Pages/CastleBet/screens/funds/MTNPayment.jsx",
@@ -895,8 +895,8 @@
       "resources/js/Pages/CastleBet/screens/funds/PayGoPayment.jsx",
       "resources/js/Pages/CastleBet/screens/OpenBets.jsx",
       "resources/js/Pages/CastleBet/screens/mybets/BetCardGroup.jsx",
-      "_index-Ctm4ZS69.js",
-      "_ScaleLoader-sEsA_HUc.js",
+      "_index-CdLPJ4SW.js",
+      "_ScaleLoader-DfR9qC5w.js",
       "resources/js/Pages/CastleBet/screens/SettledBets.jsx",
       "resources/js/Pages/CastleBet/screens/mybets/BetEventCard.jsx",
       "resources/js/Pages/CastleBet/screens/LiveGames.jsx",
@@ -915,7 +915,7 @@
     ]
   },
   "resources/js/Pages/CastleBet/SplashScreen/SplashScreen.jsx": {
-    "file": "assets/SplashScreen-Btrap15T.js",
+    "file": "assets/SplashScreen-BtB-6p7x.js",
     "name": "SplashScreen",
     "src": "resources/js/Pages/CastleBet/SplashScreen/SplashScreen.jsx",
     "isDynamicEntry": true,
@@ -927,30 +927,30 @@
     ]
   },
   "resources/js/Pages/CastleBet/Welcome.jsx": {
-    "file": "assets/Welcome-BaozuXRP.js",
+    "file": "assets/Welcome-BcyB38n7.js",
     "name": "Welcome",
     "src": "resources/js/Pages/CastleBet/Welcome.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_CastleBetFooter-ZvbFpos7.js",
-      "_SwarmDataContext-BPfnqclp.js",
-      "_BetSlipContext-DJX6SmXt.js",
-      "_GameFile-BHWl_uPj.js",
-      "_index-5uflDiLC.js",
-      "_index-BT-Uq5RZ.js",
-      "_DataStoreTemp-dR6HfQ01.js",
-      "_index.module-CrqLhVNB.js",
-      "_index-3s6h75TQ.js",
-      "_MarketHandlerUtilities-CPaMnl7q.js",
-      "_index-BD6qrxYm.js",
-      "_index-D38Vun6w.js",
-      "_index-C_RXlj0E.js",
-      "_index-D-oKYPRd.js",
-      "_Skeleton-CyVWMQ4S.js",
+      "_CastleBetFooter-DLhPhQ4C.js",
+      "_SwarmDataContext-CrAlUiX0.js",
+      "_BetSlipContext-DcjUfPjE.js",
+      "_GameFile-DYS5qk98.js",
+      "_index-Bs6hzq6e.js",
+      "_index-DsOsJtub.js",
+      "_DataStoreTemp-D60g7j7S.js",
+      "_index.module-CKCr6Tp1.js",
+      "_index-CUwZOzdo.js",
+      "_MarketHandlerUtilities-BPKOhKIv.js",
+      "_index-BhW4rTCj.js",
+      "_index-CCwBDxu7.js",
+      "_index-DB5vtFC6.js",
+      "_index-BCf6WEWb.js",
+      "_Skeleton-AYxjryWC.js",
       "_DateFormatter-CgdAk38a.js",
-      "_index-D31IpMiY.js",
-      "_iconBase-1NaSG4wA.js",
+      "_index-Dul_ih0x.js",
+      "_iconBase-BHsM4znX.js",
       "_zambia-uSIXTnlC.js"
     ],
     "assets": [
@@ -963,56 +963,56 @@
     ]
   },
   "resources/js/Pages/CastleBet/screens/Auth/Login.jsx": {
-    "file": "assets/Login-BTYKlLlY.js",
+    "file": "assets/Login-Cp2BAvl-.js",
     "name": "Login",
     "src": "resources/js/Pages/CastleBet/screens/Auth/Login.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_SwarmDataContext-BPfnqclp.js",
-      "_index-C_RXlj0E.js",
+      "_SwarmDataContext-CrAlUiX0.js",
+      "_index-DB5vtFC6.js",
       "resources/js/Pages/CastleBet/screens/Auth/PopupBox.jsx",
-      "_UserAuthenticationContext-B9CgKNWH.js",
-      "_index-D-oKYPRd.js",
-      "_HashLoader-BrsX1Acl.js",
-      "_index-B2V79RLg.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-vyvQfyPS.js",
+      "_UserAuthenticationContext-DOfhghB8.js",
+      "_index-BCf6WEWb.js",
+      "_HashLoader-oyD9OkyJ.js",
+      "_index-BvqTu_aC.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-DhAB4uQs.js",
       "_animation-RB9YhObT.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/Auth/PopupBox.jsx": {
-    "file": "assets/PopupBox-C4rVtedk.js",
+    "file": "assets/PopupBox-B5OqJk0x.js",
     "name": "PopupBox",
     "src": "resources/js/Pages/CastleBet/screens/Auth/PopupBox.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-B2V79RLg.js",
-      "_index-vyvQfyPS.js",
-      "_UserAuthenticationContext-B9CgKNWH.js",
-      "_iconBase-1NaSG4wA.js"
+      "_index-BvqTu_aC.js",
+      "_index-DhAB4uQs.js",
+      "_UserAuthenticationContext-DOfhghB8.js",
+      "_iconBase-BHsM4znX.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/Auth/Register.jsx": {
-    "file": "assets/Register-BvUAo8lr.js",
+    "file": "assets/Register-ClEOcwW5.js",
     "name": "Register",
     "src": "resources/js/Pages/CastleBet/screens/Auth/Register.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-C_RXlj0E.js",
-      "_SwarmDataContext-BPfnqclp.js",
+      "_index-DB5vtFC6.js",
+      "_SwarmDataContext-CrAlUiX0.js",
       "_zambia-uSIXTnlC.js",
       "_UtilizedHooks-CHuqxHq9.js",
-      "_DataStoreTemp-dR6HfQ01.js",
-      "_HashLoader-BrsX1Acl.js",
-      "_index-D-oKYPRd.js",
+      "_DataStoreTemp-D60g7j7S.js",
+      "_HashLoader-oyD9OkyJ.js",
+      "_index-BCf6WEWb.js",
       "_animation-RB9YhObT.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/Auth/Success.jsx": {
-    "file": "assets/Success-C8mxr_hH.js",
+    "file": "assets/Success-CinlSSZa.js",
     "name": "Success",
     "src": "resources/js/Pages/CastleBet/screens/Auth/Success.jsx",
     "isDynamicEntry": true,
@@ -1021,67 +1021,67 @@
     ]
   },
   "resources/js/Pages/CastleBet/screens/Bets.jsx": {
-    "file": "assets/Bets-CwgD-U42.js",
+    "file": "assets/Bets-Cdck0b8n.js",
     "name": "Bets",
     "src": "resources/js/Pages/CastleBet/screens/Bets.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-C_RXlj0E.js",
-      "_WelcomeGuestLayout-CnKaiDK2.js",
-      "_SwarmDataContext-BPfnqclp.js",
-      "_index-D-oKYPRd.js",
-      "_iconBase-1NaSG4wA.js",
-      "_GameFile-BHWl_uPj.js",
-      "_index-5uflDiLC.js",
+      "_index-DB5vtFC6.js",
+      "_WelcomeGuestLayout-osn9w7Md.js",
+      "_SwarmDataContext-CrAlUiX0.js",
+      "_index-BCf6WEWb.js",
+      "_iconBase-BHsM4znX.js",
+      "_GameFile-DYS5qk98.js",
+      "_index-Bs6hzq6e.js",
       "_zambia-uSIXTnlC.js",
-      "_index-D38Vun6w.js",
-      "_index-vyvQfyPS.js",
-      "_index-DfpGWnH-.js",
-      "_index-D31IpMiY.js",
-      "_UserAuthenticationContext-B9CgKNWH.js",
-      "_index-B2V79RLg.js",
-      "_DataStoreTemp-dR6HfQ01.js",
-      "_index-BT-Uq5RZ.js",
-      "_BetSlipContext-DJX6SmXt.js",
-      "_index-KcG-XtG0.js",
+      "_index-CCwBDxu7.js",
+      "_index-DhAB4uQs.js",
+      "_index-DBHZhA6V.js",
+      "_index-Dul_ih0x.js",
+      "_UserAuthenticationContext-DOfhghB8.js",
+      "_index-BvqTu_aC.js",
+      "_DataStoreTemp-D60g7j7S.js",
+      "_index-DsOsJtub.js",
+      "_BetSlipContext-DcjUfPjE.js",
+      "_index-Cbbwr3n9.js",
       "_DateFormatter-CgdAk38a.js",
       "_animation-RB9YhObT.js",
       "_UtilizedHooks-CHuqxHq9.js",
-      "_HashLoader-BrsX1Acl.js",
+      "_HashLoader-oyD9OkyJ.js",
       "_animation-6cYxsNWS.js",
-      "_Skeleton-CyVWMQ4S.js"
+      "_Skeleton-AYxjryWC.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/BoostedGames.jsx": {
-    "file": "assets/BoostedGames-B9__eUi1.js",
+    "file": "assets/BoostedGames-DlnCTPoj.js",
     "name": "BoostedGames",
     "src": "resources/js/Pages/CastleBet/screens/BoostedGames.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_BetSlipContext-DJX6SmXt.js",
-      "_DataStoreTemp-dR6HfQ01.js",
-      "_index-5uflDiLC.js",
+      "_BetSlipContext-DcjUfPjE.js",
+      "_DataStoreTemp-D60g7j7S.js",
+      "_index-Bs6hzq6e.js",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameSportComponent.jsx",
-      "_Skeleton-CyVWMQ4S.js",
-      "_ScaleLoader-rtlFhg8e.js",
-      "_iconBase-1NaSG4wA.js",
+      "_Skeleton-AYxjryWC.js",
+      "_ScaleLoader-CyUJoI2R.js",
+      "_iconBase-BHsM4znX.js",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameRegionComponent.jsx",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameCompetitionComponent.jsx",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameComponent.jsx",
-      "_MarketHandlerUtilities-CPaMnl7q.js",
+      "_MarketHandlerUtilities-BPKOhKIv.js",
       "_DateFormatter-CgdAk38a.js",
-      "_index-C_RXlj0E.js",
-      "_index-D-oKYPRd.js",
-      "_CastleBetFooter-ZvbFpos7.js",
-      "_index-D31IpMiY.js",
-      "_SwarmDataContext-BPfnqclp.js",
+      "_index-DB5vtFC6.js",
+      "_index-BCf6WEWb.js",
+      "_CastleBetFooter-DLhPhQ4C.js",
+      "_index-Dul_ih0x.js",
+      "_SwarmDataContext-CrAlUiX0.js",
       "_animation-RB9YhObT.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/Deposit.jsx": {
-    "file": "assets/Deposit-aD7T5LIm.js",
+    "file": "assets/Deposit-BRJyXQxT.js",
     "name": "Deposit",
     "src": "resources/js/Pages/CastleBet/screens/Deposit.jsx",
     "isDynamicEntry": true,
@@ -1090,245 +1090,245 @@
     ]
   },
   "resources/js/Pages/CastleBet/screens/FilteredLeagues.jsx": {
-    "file": "assets/FilteredLeagues-Ba1-iU5F.js",
+    "file": "assets/FilteredLeagues-CfjK5fOK.js",
     "name": "FilteredLeagues",
     "src": "resources/js/Pages/CastleBet/screens/FilteredLeagues.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-C_RXlj0E.js",
+      "_index-DB5vtFC6.js",
       "resources/js/Pages/CastleBet/screens/LiveGames.jsx",
       "resources/js/Pages/CastleBet/screens/LeagueCollectionGames.jsx",
       "resources/js/Pages/CastleBet/screens/BoostedGames.jsx",
       "resources/js/Pages/CastleBet/screens/TodayGames.jsx",
-      "_index-D-oKYPRd.js",
-      "_DataStoreTemp-dR6HfQ01.js",
-      "_index-5uflDiLC.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index.module-CrqLhVNB.js",
+      "_index-BCf6WEWb.js",
+      "_DataStoreTemp-D60g7j7S.js",
+      "_index-Bs6hzq6e.js",
+      "_iconBase-BHsM4znX.js",
+      "_index.module-CKCr6Tp1.js",
       "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameSportComponent.jsx",
       "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameRegionComponent.jsx",
       "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameCompetitionComponent.jsx",
       "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameComponent.jsx",
-      "_MarketHandlerUtilities-CPaMnl7q.js",
-      "_BetSlipContext-DJX6SmXt.js",
+      "_MarketHandlerUtilities-BPKOhKIv.js",
+      "_BetSlipContext-DcjUfPjE.js",
       "_DateFormatter-CgdAk38a.js",
-      "_index-BD6qrxYm.js",
-      "_CastleBetFooter-ZvbFpos7.js",
-      "_index-D31IpMiY.js",
-      "_SwarmDataContext-BPfnqclp.js",
-      "_Skeleton-CyVWMQ4S.js",
-      "_ScaleLoader-rtlFhg8e.js",
+      "_index-BhW4rTCj.js",
+      "_CastleBetFooter-DLhPhQ4C.js",
+      "_index-Dul_ih0x.js",
+      "_SwarmDataContext-CrAlUiX0.js",
+      "_Skeleton-AYxjryWC.js",
+      "_ScaleLoader-CyUJoI2R.js",
       "_animation-RB9YhObT.js",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameComponent.jsx",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameSportComponent.jsx",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameRegionComponent.jsx",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameCompetitionComponent.jsx",
-      "_index-B2V79RLg.js"
+      "_index-BvqTu_aC.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/GameScreen.jsx": {
-    "file": "assets/GameScreen-BPEggy3X.js",
+    "file": "assets/GameScreen-BLTknPeL.js",
     "name": "GameScreen",
     "src": "resources/js/Pages/CastleBet/screens/GameScreen.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_SwarmDataContext-BPfnqclp.js",
-      "_index-BT-Uq5RZ.js",
-      "_index-vyvQfyPS.js",
-      "_BetSlipContext-DJX6SmXt.js",
-      "_index-C_RXlj0E.js",
-      "_DataStoreTemp-dR6HfQ01.js",
-      "_index-D31IpMiY.js",
-      "_MarketHandlerUtilities-CPaMnl7q.js",
-      "_index-BD6qrxYm.js",
-      "_index.module-CrqLhVNB.js",
+      "_SwarmDataContext-CrAlUiX0.js",
+      "_index-DsOsJtub.js",
+      "_index-DhAB4uQs.js",
+      "_BetSlipContext-DcjUfPjE.js",
+      "_index-DB5vtFC6.js",
+      "_DataStoreTemp-D60g7j7S.js",
+      "_index-Dul_ih0x.js",
+      "_MarketHandlerUtilities-BPKOhKIv.js",
+      "_index-BhW4rTCj.js",
+      "_index.module-CKCr6Tp1.js",
       "_UtilizedHooks-CHuqxHq9.js",
-      "_index-D-oKYPRd.js",
-      "_Skeleton-CyVWMQ4S.js",
-      "_ScaleLoader-rtlFhg8e.js",
-      "_iconBase-1NaSG4wA.js",
+      "_index-BCf6WEWb.js",
+      "_Skeleton-AYxjryWC.js",
+      "_ScaleLoader-CyUJoI2R.js",
+      "_iconBase-BHsM4znX.js",
       "_animation-RB9YhObT.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/LeagueCollectionGames.jsx": {
-    "file": "assets/LeagueCollectionGames-DFAH3VrF.js",
+    "file": "assets/LeagueCollectionGames-Bc_mh1m7.js",
     "name": "LeagueCollectionGames",
     "src": "resources/js/Pages/CastleBet/screens/LeagueCollectionGames.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-5uflDiLC.js",
-      "_DataStoreTemp-dR6HfQ01.js",
+      "_index-Bs6hzq6e.js",
+      "_DataStoreTemp-D60g7j7S.js",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameComponent.jsx",
-      "_CastleBetFooter-ZvbFpos7.js",
-      "_Skeleton-CyVWMQ4S.js",
-      "_ScaleLoader-rtlFhg8e.js",
-      "_iconBase-1NaSG4wA.js",
-      "_MarketHandlerUtilities-CPaMnl7q.js",
-      "_BetSlipContext-DJX6SmXt.js",
+      "_CastleBetFooter-DLhPhQ4C.js",
+      "_Skeleton-AYxjryWC.js",
+      "_ScaleLoader-CyUJoI2R.js",
+      "_iconBase-BHsM4znX.js",
+      "_MarketHandlerUtilities-BPKOhKIv.js",
+      "_BetSlipContext-DcjUfPjE.js",
       "_DateFormatter-CgdAk38a.js",
-      "_index-C_RXlj0E.js",
-      "_index-D-oKYPRd.js",
-      "_index-D31IpMiY.js",
-      "_SwarmDataContext-BPfnqclp.js",
+      "_index-DB5vtFC6.js",
+      "_index-BCf6WEWb.js",
+      "_index-Dul_ih0x.js",
+      "_SwarmDataContext-CrAlUiX0.js",
       "_animation-RB9YhObT.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/LiveGames.jsx": {
-    "file": "assets/LiveGames-5WfX_7e8.js",
+    "file": "assets/LiveGames-DK41olou.js",
     "name": "LiveGames",
     "src": "resources/js/Pages/CastleBet/screens/LiveGames.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_DataStoreTemp-dR6HfQ01.js",
-      "_index-5uflDiLC.js",
-      "_index.module-CrqLhVNB.js",
+      "_DataStoreTemp-D60g7j7S.js",
+      "_index-Bs6hzq6e.js",
+      "_index.module-CKCr6Tp1.js",
       "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameSportComponent.jsx",
-      "_Skeleton-CyVWMQ4S.js",
-      "_ScaleLoader-rtlFhg8e.js",
-      "_iconBase-1NaSG4wA.js",
+      "_Skeleton-AYxjryWC.js",
+      "_ScaleLoader-CyUJoI2R.js",
+      "_iconBase-BHsM4znX.js",
       "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameRegionComponent.jsx",
       "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameCompetitionComponent.jsx",
       "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameComponent.jsx",
-      "_MarketHandlerUtilities-CPaMnl7q.js",
-      "_BetSlipContext-DJX6SmXt.js",
+      "_MarketHandlerUtilities-BPKOhKIv.js",
+      "_BetSlipContext-DcjUfPjE.js",
       "_DateFormatter-CgdAk38a.js",
-      "_index-C_RXlj0E.js",
-      "_index-D-oKYPRd.js",
-      "_index-BD6qrxYm.js",
-      "_CastleBetFooter-ZvbFpos7.js",
-      "_index-D31IpMiY.js",
-      "_SwarmDataContext-BPfnqclp.js",
+      "_index-DB5vtFC6.js",
+      "_index-BCf6WEWb.js",
+      "_index-BhW4rTCj.js",
+      "_CastleBetFooter-DLhPhQ4C.js",
+      "_index-Dul_ih0x.js",
+      "_SwarmDataContext-CrAlUiX0.js",
       "_animation-RB9YhObT.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/MyBetsScreen.jsx": {
-    "file": "assets/MyBetsScreen-Bv-NpOWa.js",
+    "file": "assets/MyBetsScreen-C5KsAMgZ.js",
     "name": "MyBetsScreen",
     "src": "resources/js/Pages/CastleBet/screens/MyBetsScreen.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-C_RXlj0E.js",
+      "_index-DB5vtFC6.js",
       "resources/js/Pages/CastleBet/screens/OpenBets.jsx",
       "resources/js/Pages/CastleBet/screens/SettledBets.jsx",
-      "_UserAuthenticationContext-B9CgKNWH.js",
-      "_index-D-oKYPRd.js",
+      "_UserAuthenticationContext-DOfhghB8.js",
+      "_index-BCf6WEWb.js",
       "resources/js/Pages/CastleBet/screens/mybets/BetCardGroup.jsx",
-      "_index-5uflDiLC.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-vyvQfyPS.js",
-      "_index-Ctm4ZS69.js",
-      "_index-D38Vun6w.js",
+      "_index-Bs6hzq6e.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-DhAB4uQs.js",
+      "_index-CdLPJ4SW.js",
+      "_index-CCwBDxu7.js",
       "_DateFormatter-CgdAk38a.js",
-      "_ScaleLoader-sEsA_HUc.js",
+      "_ScaleLoader-DfR9qC5w.js",
       "_animation-6cYxsNWS.js",
-      "_ScaleLoader-rtlFhg8e.js",
+      "_ScaleLoader-CyUJoI2R.js",
       "_animation-RB9YhObT.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/OpenBets.jsx": {
-    "file": "assets/OpenBets-CqVnfwMI.js",
+    "file": "assets/OpenBets-BFySjuRf.js",
     "name": "OpenBets",
     "src": "resources/js/Pages/CastleBet/screens/OpenBets.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
       "resources/js/Pages/CastleBet/screens/mybets/BetCardGroup.jsx",
-      "_ScaleLoader-sEsA_HUc.js",
-      "_index-5uflDiLC.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-vyvQfyPS.js",
-      "_index-Ctm4ZS69.js",
-      "_index-D38Vun6w.js",
+      "_ScaleLoader-DfR9qC5w.js",
+      "_index-Bs6hzq6e.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-DhAB4uQs.js",
+      "_index-CdLPJ4SW.js",
+      "_index-CCwBDxu7.js",
       "_DateFormatter-CgdAk38a.js",
-      "_index-D-oKYPRd.js",
+      "_index-BCf6WEWb.js",
       "_animation-6cYxsNWS.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/Profile.jsx": {
-    "file": "assets/Profile-LxTV395z.js",
+    "file": "assets/Profile-BJGBMJ6i.js",
     "name": "Profile",
     "src": "resources/js/Pages/CastleBet/screens/Profile.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-5uflDiLC.js",
-      "_SwarmDataContext-BPfnqclp.js",
-      "_index-D38Vun6w.js",
-      "_UserAuthenticationContext-B9CgKNWH.js",
-      "_index-DfpGWnH-.js",
-      "_index-D-oKYPRd.js",
-      "_iconBase-1NaSG4wA.js"
+      "_index-Bs6hzq6e.js",
+      "_SwarmDataContext-CrAlUiX0.js",
+      "_index-CCwBDxu7.js",
+      "_UserAuthenticationContext-DOfhghB8.js",
+      "_index-DBHZhA6V.js",
+      "_index-BCf6WEWb.js",
+      "_iconBase-BHsM4znX.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/SettledBets.jsx": {
-    "file": "assets/SettledBets-DpE7lZuf.js",
+    "file": "assets/SettledBets-BmsMatDY.js",
     "name": "SettledBets",
     "src": "resources/js/Pages/CastleBet/screens/SettledBets.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
       "resources/js/Pages/CastleBet/screens/mybets/BetCardGroup.jsx",
-      "_ScaleLoader-rtlFhg8e.js",
-      "_index-5uflDiLC.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-vyvQfyPS.js",
-      "_index-Ctm4ZS69.js",
-      "_index-D38Vun6w.js",
+      "_ScaleLoader-CyUJoI2R.js",
+      "_index-Bs6hzq6e.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-DhAB4uQs.js",
+      "_index-CdLPJ4SW.js",
+      "_index-CCwBDxu7.js",
       "_DateFormatter-CgdAk38a.js",
-      "_index-D-oKYPRd.js",
+      "_index-BCf6WEWb.js",
       "_animation-RB9YhObT.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/TodayGames.jsx": {
-    "file": "assets/TodayGames-BOkRRcEF.js",
+    "file": "assets/TodayGames-LBqHJH1o.js",
     "name": "TodayGames",
     "src": "resources/js/Pages/CastleBet/screens/TodayGames.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_DataStoreTemp-dR6HfQ01.js",
-      "_index-B2V79RLg.js",
+      "_DataStoreTemp-D60g7j7S.js",
+      "_index-BvqTu_aC.js",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameSportComponent.jsx",
-      "_Skeleton-CyVWMQ4S.js",
-      "_ScaleLoader-rtlFhg8e.js",
-      "_iconBase-1NaSG4wA.js",
+      "_Skeleton-AYxjryWC.js",
+      "_ScaleLoader-CyUJoI2R.js",
+      "_iconBase-BHsM4znX.js",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameRegionComponent.jsx",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameCompetitionComponent.jsx",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameComponent.jsx",
-      "_MarketHandlerUtilities-CPaMnl7q.js",
-      "_BetSlipContext-DJX6SmXt.js",
+      "_MarketHandlerUtilities-BPKOhKIv.js",
+      "_BetSlipContext-DcjUfPjE.js",
       "_DateFormatter-CgdAk38a.js",
-      "_index-C_RXlj0E.js",
-      "_index-D-oKYPRd.js",
-      "_CastleBetFooter-ZvbFpos7.js",
-      "_index-5uflDiLC.js",
-      "_index-D31IpMiY.js",
-      "_SwarmDataContext-BPfnqclp.js",
+      "_index-DB5vtFC6.js",
+      "_index-BCf6WEWb.js",
+      "_CastleBetFooter-DLhPhQ4C.js",
+      "_index-Bs6hzq6e.js",
+      "_index-Dul_ih0x.js",
+      "_SwarmDataContext-CrAlUiX0.js",
       "_animation-RB9YhObT.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/TransactionHistory.jsx": {
-    "file": "assets/TransactionHistory-BuzCJzCp.js",
+    "file": "assets/TransactionHistory-XPDyWDGj.js",
     "name": "TransactionHistory",
     "src": "resources/js/Pages/CastleBet/screens/TransactionHistory.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-D38Vun6w.js",
+      "_index-CCwBDxu7.js",
       "resources/js/Pages/CastleBet/screens/funds/TransactionCard.jsx",
-      "_UserAuthenticationContext-B9CgKNWH.js",
-      "_index-D-oKYPRd.js",
-      "_iconBase-1NaSG4wA.js",
+      "_UserAuthenticationContext-DOfhghB8.js",
+      "_index-BCf6WEWb.js",
+      "_iconBase-BHsM4znX.js",
       "_DateFormatter-CgdAk38a.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/Withdrawal.jsx": {
-    "file": "assets/Withdrawal-Dmn5RMoi.js",
+    "file": "assets/Withdrawal-HIiirR2T.js",
     "name": "Withdrawal",
     "src": "resources/js/Pages/CastleBet/screens/Withdrawal.jsx",
     "isDynamicEntry": true,
@@ -1337,38 +1337,38 @@
     ]
   },
   "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameCompetitionComponent.jsx": {
-    "file": "assets/BoostedGameCompetitionComponent-zc-PZovF.js",
+    "file": "assets/BoostedGameCompetitionComponent-CNBmH-j9.js",
     "name": "BoostedGameCompetitionComponent",
     "src": "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameCompetitionComponent.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameComponent.jsx",
-      "_MarketHandlerUtilities-CPaMnl7q.js",
-      "_iconBase-1NaSG4wA.js",
-      "_BetSlipContext-DJX6SmXt.js",
+      "_MarketHandlerUtilities-BPKOhKIv.js",
+      "_iconBase-BHsM4znX.js",
+      "_BetSlipContext-DcjUfPjE.js",
       "_DateFormatter-CgdAk38a.js",
-      "_index-C_RXlj0E.js",
-      "_index-D-oKYPRd.js"
+      "_index-DB5vtFC6.js",
+      "_index-BCf6WEWb.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameComponent.jsx": {
-    "file": "assets/BoostedGameComponent-DSza9W4y.js",
+    "file": "assets/BoostedGameComponent-Cib7C_Y9.js",
     "name": "BoostedGameComponent",
     "src": "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameComponent.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_MarketHandlerUtilities-CPaMnl7q.js",
+      "_MarketHandlerUtilities-BPKOhKIv.js",
       "_DateFormatter-CgdAk38a.js",
-      "_index-C_RXlj0E.js",
-      "_iconBase-1NaSG4wA.js",
-      "_BetSlipContext-DJX6SmXt.js",
-      "_index-D-oKYPRd.js"
+      "_index-DB5vtFC6.js",
+      "_iconBase-BHsM4znX.js",
+      "_BetSlipContext-DcjUfPjE.js",
+      "_index-BCf6WEWb.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameRegionComponent.jsx": {
-    "file": "assets/BoostedGameRegionComponent-KGJJWZ7l.js",
+    "file": "assets/BoostedGameRegionComponent-i33vdr5i.js",
     "name": "BoostedGameRegionComponent",
     "src": "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameRegionComponent.jsx",
     "isDynamicEntry": true,
@@ -1376,39 +1376,39 @@
       "resources/js/app.jsx",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameCompetitionComponent.jsx",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameComponent.jsx",
-      "_MarketHandlerUtilities-CPaMnl7q.js",
-      "_iconBase-1NaSG4wA.js",
-      "_BetSlipContext-DJX6SmXt.js",
+      "_MarketHandlerUtilities-BPKOhKIv.js",
+      "_iconBase-BHsM4znX.js",
+      "_BetSlipContext-DcjUfPjE.js",
       "_DateFormatter-CgdAk38a.js",
-      "_index-C_RXlj0E.js",
-      "_index-D-oKYPRd.js"
+      "_index-DB5vtFC6.js",
+      "_index-BCf6WEWb.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameSportComponent.jsx": {
-    "file": "assets/BoostedGameSportComponent-DmM3hrUY.js",
+    "file": "assets/BoostedGameSportComponent-eN4KQpGw.js",
     "name": "BoostedGameSportComponent",
     "src": "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameSportComponent.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameRegionComponent.jsx",
-      "_CastleBetFooter-ZvbFpos7.js",
+      "_CastleBetFooter-DLhPhQ4C.js",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameCompetitionComponent.jsx",
       "resources/js/Pages/CastleBet/screens/boostedGameComp/BoostedGameComponent.jsx",
-      "_MarketHandlerUtilities-CPaMnl7q.js",
-      "_iconBase-1NaSG4wA.js",
-      "_BetSlipContext-DJX6SmXt.js",
+      "_MarketHandlerUtilities-BPKOhKIv.js",
+      "_iconBase-BHsM4znX.js",
+      "_BetSlipContext-DcjUfPjE.js",
       "_DateFormatter-CgdAk38a.js",
-      "_index-C_RXlj0E.js",
-      "_index-D-oKYPRd.js",
-      "_index-5uflDiLC.js",
-      "_index-D31IpMiY.js",
-      "_SwarmDataContext-BPfnqclp.js",
-      "_Skeleton-CyVWMQ4S.js"
+      "_index-DB5vtFC6.js",
+      "_index-BCf6WEWb.js",
+      "_index-Bs6hzq6e.js",
+      "_index-Dul_ih0x.js",
+      "_SwarmDataContext-CrAlUiX0.js",
+      "_Skeleton-AYxjryWC.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/exceptions/LogInToView.jsx": {
-    "file": "assets/LogInToView-T_jbl8P4.js",
+    "file": "assets/LogInToView-B5Stm0pN.js",
     "name": "LogInToView",
     "src": "resources/js/Pages/CastleBet/screens/exceptions/LogInToView.jsx",
     "isDynamicEntry": true,
@@ -1417,49 +1417,49 @@
     ]
   },
   "resources/js/Pages/CastleBet/screens/funds/AiretelPayment.jsx": {
-    "file": "assets/AiretelPayment-Cjy5dNx6.js",
+    "file": "assets/AiretelPayment-BIUMToYa.js",
     "name": "AiretelPayment",
     "src": "resources/js/Pages/CastleBet/screens/funds/AiretelPayment.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_DataStoreTemp-dR6HfQ01.js",
-      "_index-5uflDiLC.js",
-      "_index-C_RXlj0E.js",
-      "_Skeleton-CyVWMQ4S.js",
-      "_HashLoader-BrsX1Acl.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-D-oKYPRd.js",
+      "_DataStoreTemp-D60g7j7S.js",
+      "_index-Bs6hzq6e.js",
+      "_index-DB5vtFC6.js",
+      "_Skeleton-AYxjryWC.js",
+      "_HashLoader-oyD9OkyJ.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-BCf6WEWb.js",
       "_animation-RB9YhObT.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/funds/AvailableAgents.jsx": {
-    "file": "assets/AvailableAgents-9eTr3KUu.js",
+    "file": "assets/AvailableAgents-DCzJCyr7.js",
     "name": "AvailableAgents",
     "src": "resources/js/Pages/CastleBet/screens/funds/AvailableAgents.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_UserAuthenticationContext-B9CgKNWH.js",
-      "_index-vyvQfyPS.js",
+      "_UserAuthenticationContext-DOfhghB8.js",
+      "_index-DhAB4uQs.js",
       "resources/js/Pages/CastleBet/screens/funds/SelectedPaymentSystem.jsx",
-      "_index-C_RXlj0E.js",
-      "_iconBase-1NaSG4wA.js",
+      "_index-DB5vtFC6.js",
+      "_iconBase-BHsM4znX.js",
       "resources/js/Pages/CastleBet/screens/funds/MTNPayment.jsx",
-      "_DataStoreTemp-dR6HfQ01.js",
-      "_index-5uflDiLC.js",
+      "_DataStoreTemp-D60g7j7S.js",
+      "_index-Bs6hzq6e.js",
       "_animation-6cYxsNWS.js",
-      "_Skeleton-CyVWMQ4S.js",
+      "_Skeleton-AYxjryWC.js",
       "resources/js/Pages/CastleBet/screens/funds/AiretelPayment.jsx",
-      "_HashLoader-BrsX1Acl.js",
+      "_HashLoader-oyD9OkyJ.js",
       "_animation-RB9YhObT.js",
       "resources/js/Pages/CastleBet/screens/funds/ZamtelPayment.jsx",
       "resources/js/Pages/CastleBet/screens/funds/PayGoPayment.jsx",
-      "_index-D-oKYPRd.js"
+      "_index-BCf6WEWb.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/funds/Deposit.jsx": {
-    "file": "assets/Deposit-S_xG-7zQ.js",
+    "file": "assets/Deposit-BziE6VyC.js",
     "name": "Deposit",
     "src": "resources/js/Pages/CastleBet/screens/funds/Deposit.jsx",
     "isDynamicEntry": true,
@@ -1468,7 +1468,7 @@
     ]
   },
   "resources/js/Pages/CastleBet/screens/funds/KazangPayment.jsx": {
-    "file": "assets/KazangPayment-BVrShgpn.js",
+    "file": "assets/KazangPayment-D2prtZoQ.js",
     "name": "KazangPayment",
     "src": "resources/js/Pages/CastleBet/screens/funds/KazangPayment.jsx",
     "isDynamicEntry": true,
@@ -1477,23 +1477,23 @@
     ]
   },
   "resources/js/Pages/CastleBet/screens/funds/MTNPayment.jsx": {
-    "file": "assets/MTNPayment-ChWauxA3.js",
+    "file": "assets/MTNPayment-lldhccZo.js",
     "name": "MTNPayment",
     "src": "resources/js/Pages/CastleBet/screens/funds/MTNPayment.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_DataStoreTemp-dR6HfQ01.js",
-      "_index-5uflDiLC.js",
-      "_index-C_RXlj0E.js",
+      "_DataStoreTemp-D60g7j7S.js",
+      "_index-Bs6hzq6e.js",
+      "_index-DB5vtFC6.js",
       "_animation-6cYxsNWS.js",
-      "_Skeleton-CyVWMQ4S.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-D-oKYPRd.js"
+      "_Skeleton-AYxjryWC.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-BCf6WEWb.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/funds/PayGoPayment.jsx": {
-    "file": "assets/PayGoPayment-DdL0VQ3K.js",
+    "file": "assets/PayGoPayment-jfRe-Jfj.js",
     "name": "PayGoPayment",
     "src": "resources/js/Pages/CastleBet/screens/funds/PayGoPayment.jsx",
     "isDynamicEntry": true,
@@ -1502,7 +1502,7 @@
     ]
   },
   "resources/js/Pages/CastleBet/screens/funds/SelectedPaymentSystem.jsx": {
-    "file": "assets/SelectedPaymentSystem-mALOYGEX.js",
+    "file": "assets/SelectedPaymentSystem-yHKfv-EO.js",
     "name": "SelectedPaymentSystem",
     "src": "resources/js/Pages/CastleBet/screens/funds/SelectedPaymentSystem.jsx",
     "isDynamicEntry": true,
@@ -1512,19 +1512,19 @@
       "resources/js/Pages/CastleBet/screens/funds/AiretelPayment.jsx",
       "resources/js/Pages/CastleBet/screens/funds/ZamtelPayment.jsx",
       "resources/js/Pages/CastleBet/screens/funds/PayGoPayment.jsx",
-      "_DataStoreTemp-dR6HfQ01.js",
-      "_index-5uflDiLC.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-C_RXlj0E.js",
-      "_index-D-oKYPRd.js",
+      "_DataStoreTemp-D60g7j7S.js",
+      "_index-Bs6hzq6e.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-DB5vtFC6.js",
+      "_index-BCf6WEWb.js",
       "_animation-6cYxsNWS.js",
-      "_Skeleton-CyVWMQ4S.js",
-      "_HashLoader-BrsX1Acl.js",
+      "_Skeleton-AYxjryWC.js",
+      "_HashLoader-oyD9OkyJ.js",
       "_animation-RB9YhObT.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/funds/TransactionCard.jsx": {
-    "file": "assets/TransactionCard-Hk8cSuBD.js",
+    "file": "assets/TransactionCard-CIN-ACsp.js",
     "name": "TransactionCard",
     "src": "resources/js/Pages/CastleBet/screens/funds/TransactionCard.jsx",
     "isDynamicEntry": true,
@@ -1534,7 +1534,7 @@
     ]
   },
   "resources/js/Pages/CastleBet/screens/funds/Withdrawal.jsx": {
-    "file": "assets/Withdrawal-C6mcTdVo.js",
+    "file": "assets/Withdrawal-DnZEppyf.js",
     "name": "Withdrawal",
     "src": "resources/js/Pages/CastleBet/screens/funds/Withdrawal.jsx",
     "isDynamicEntry": true,
@@ -1543,70 +1543,70 @@
     ]
   },
   "resources/js/Pages/CastleBet/screens/funds/ZamtelPayment.jsx": {
-    "file": "assets/ZamtelPayment-2ZT-MaA0.js",
+    "file": "assets/ZamtelPayment-l8-UO2e8.js",
     "name": "ZamtelPayment",
     "src": "resources/js/Pages/CastleBet/screens/funds/ZamtelPayment.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_DataStoreTemp-dR6HfQ01.js",
-      "_index-5uflDiLC.js",
-      "_index-C_RXlj0E.js",
-      "_Skeleton-CyVWMQ4S.js",
-      "_HashLoader-BrsX1Acl.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-D-oKYPRd.js",
+      "_DataStoreTemp-D60g7j7S.js",
+      "_index-Bs6hzq6e.js",
+      "_index-DB5vtFC6.js",
+      "_Skeleton-AYxjryWC.js",
+      "_HashLoader-oyD9OkyJ.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-BCf6WEWb.js",
       "_animation-RB9YhObT.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/funds/ZanacoPayment.jsx": {
-    "file": "assets/ZanacoPayment-C-TfFtvM.js",
+    "file": "assets/ZanacoPayment-FdmlbjWd.js",
     "name": "ZanacoPayment",
     "src": "resources/js/Pages/CastleBet/screens/funds/ZanacoPayment.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-5uflDiLC.js",
-      "_index-C_RXlj0E.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-D-oKYPRd.js"
+      "_index-Bs6hzq6e.js",
+      "_index-DB5vtFC6.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-BCf6WEWb.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameCompetitionComponent.jsx": {
-    "file": "assets/LiveGameCompetitionComponent-BdBnDwmq.js",
+    "file": "assets/LiveGameCompetitionComponent-CN9nZm2d.js",
     "name": "LiveGameCompetitionComponent",
     "src": "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameCompetitionComponent.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
       "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameComponent.jsx",
-      "_MarketHandlerUtilities-CPaMnl7q.js",
-      "_iconBase-1NaSG4wA.js",
-      "_BetSlipContext-DJX6SmXt.js",
+      "_MarketHandlerUtilities-BPKOhKIv.js",
+      "_iconBase-BHsM4znX.js",
+      "_BetSlipContext-DcjUfPjE.js",
       "_DateFormatter-CgdAk38a.js",
-      "_index-C_RXlj0E.js",
-      "_index-D-oKYPRd.js",
-      "_index-BD6qrxYm.js"
+      "_index-DB5vtFC6.js",
+      "_index-BCf6WEWb.js",
+      "_index-BhW4rTCj.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameComponent.jsx": {
-    "file": "assets/LiveGameComponent-CB94c3Af.js",
+    "file": "assets/LiveGameComponent-Bams6qFd.js",
     "name": "LiveGameComponent",
     "src": "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameComponent.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_MarketHandlerUtilities-CPaMnl7q.js",
+      "_MarketHandlerUtilities-BPKOhKIv.js",
       "_DateFormatter-CgdAk38a.js",
-      "_index-C_RXlj0E.js",
-      "_index-BD6qrxYm.js",
-      "_iconBase-1NaSG4wA.js",
-      "_BetSlipContext-DJX6SmXt.js",
-      "_index-D-oKYPRd.js"
+      "_index-DB5vtFC6.js",
+      "_index-BhW4rTCj.js",
+      "_iconBase-BHsM4znX.js",
+      "_BetSlipContext-DcjUfPjE.js",
+      "_index-BCf6WEWb.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameRegionComponent.jsx": {
-    "file": "assets/LiveGameRegionComponent-CtRlRNii.js",
+    "file": "assets/LiveGameRegionComponent-D5oLCVtG.js",
     "name": "LiveGameRegionComponent",
     "src": "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameRegionComponent.jsx",
     "isDynamicEntry": true,
@@ -1614,128 +1614,128 @@
       "resources/js/app.jsx",
       "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameCompetitionComponent.jsx",
       "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameComponent.jsx",
-      "_MarketHandlerUtilities-CPaMnl7q.js",
-      "_iconBase-1NaSG4wA.js",
-      "_BetSlipContext-DJX6SmXt.js",
+      "_MarketHandlerUtilities-BPKOhKIv.js",
+      "_iconBase-BHsM4znX.js",
+      "_BetSlipContext-DcjUfPjE.js",
       "_DateFormatter-CgdAk38a.js",
-      "_index-C_RXlj0E.js",
-      "_index-D-oKYPRd.js",
-      "_index-BD6qrxYm.js"
+      "_index-DB5vtFC6.js",
+      "_index-BCf6WEWb.js",
+      "_index-BhW4rTCj.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameSportComponent.jsx": {
-    "file": "assets/LiveGameSportComponent-BWBSDjI-.js",
+    "file": "assets/LiveGameSportComponent-BqvVnN1l.js",
     "name": "LiveGameSportComponent",
     "src": "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameSportComponent.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
       "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameRegionComponent.jsx",
-      "_CastleBetFooter-ZvbFpos7.js",
+      "_CastleBetFooter-DLhPhQ4C.js",
       "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameCompetitionComponent.jsx",
       "resources/js/Pages/CastleBet/screens/liveGamesComp/LiveGameComponent.jsx",
-      "_MarketHandlerUtilities-CPaMnl7q.js",
-      "_iconBase-1NaSG4wA.js",
-      "_BetSlipContext-DJX6SmXt.js",
+      "_MarketHandlerUtilities-BPKOhKIv.js",
+      "_iconBase-BHsM4znX.js",
+      "_BetSlipContext-DcjUfPjE.js",
       "_DateFormatter-CgdAk38a.js",
-      "_index-C_RXlj0E.js",
-      "_index-D-oKYPRd.js",
-      "_index-BD6qrxYm.js",
-      "_index-5uflDiLC.js",
-      "_index-D31IpMiY.js",
-      "_SwarmDataContext-BPfnqclp.js",
-      "_Skeleton-CyVWMQ4S.js"
+      "_index-DB5vtFC6.js",
+      "_index-BCf6WEWb.js",
+      "_index-BhW4rTCj.js",
+      "_index-Bs6hzq6e.js",
+      "_index-Dul_ih0x.js",
+      "_SwarmDataContext-CrAlUiX0.js",
+      "_Skeleton-AYxjryWC.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/mybets/ActualBetSlip.jsx": {
-    "file": "assets/ActualBetSlip-pmGTq2CR.js",
+    "file": "assets/ActualBetSlip-CEKArhit.js",
     "name": "ActualBetSlip",
     "src": "resources/js/Pages/CastleBet/screens/mybets/ActualBetSlip.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-D38Vun6w.js",
-      "_index-Ctm4ZS69.js",
+      "_index-CCwBDxu7.js",
+      "_index-CdLPJ4SW.js",
       "resources/js/Pages/CastleBet/screens/mybets/BetEventCard.jsx",
-      "_UserAuthenticationContext-B9CgKNWH.js",
-      "_index-D-oKYPRd.js",
-      "_iconBase-1NaSG4wA.js",
-      "_index-BT-Uq5RZ.js",
+      "_UserAuthenticationContext-DOfhghB8.js",
+      "_index-BCf6WEWb.js",
+      "_iconBase-BHsM4znX.js",
+      "_index-DsOsJtub.js",
       "_DateFormatter-CgdAk38a.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/mybets/BetCardGroup.jsx": {
-    "file": "assets/BetCardGroup-DVbA6UpF.js",
+    "file": "assets/BetCardGroup-CPZEnjOx.js",
     "name": "BetCardGroup",
     "src": "resources/js/Pages/CastleBet/screens/mybets/BetCardGroup.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-5uflDiLC.js",
-      "_index-vyvQfyPS.js",
-      "_index-Ctm4ZS69.js",
-      "_index-D38Vun6w.js",
+      "_index-Bs6hzq6e.js",
+      "_index-DhAB4uQs.js",
+      "_index-CdLPJ4SW.js",
+      "_index-CCwBDxu7.js",
       "_DateFormatter-CgdAk38a.js",
-      "_index-D-oKYPRd.js",
-      "_iconBase-1NaSG4wA.js"
+      "_index-BCf6WEWb.js",
+      "_iconBase-BHsM4znX.js"
     ]
   },
   "resources/js/Pages/CastleBet/screens/mybets/BetEventCard.jsx": {
-    "file": "assets/BetEventCard-BuF1UGAX.js",
+    "file": "assets/BetEventCard-DiRyN2ib.js",
     "name": "BetEventCard",
     "src": "resources/js/Pages/CastleBet/screens/mybets/BetEventCard.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-BT-Uq5RZ.js",
+      "_index-DsOsJtub.js",
       "_DateFormatter-CgdAk38a.js",
-      "_iconBase-1NaSG4wA.js"
+      "_iconBase-BHsM4znX.js"
     ]
   },
   "resources/js/Pages/Dashboard.jsx": {
-    "file": "assets/Dashboard-Ch_KnhcG.js",
+    "file": "assets/Dashboard-BqOeH2KZ.js",
     "name": "Dashboard",
     "src": "resources/js/Pages/Dashboard.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-Df5V2Zp-.js",
-      "_Dropdown-ByUF5YLp.js",
-      "_transition-B7TXYEI3.js"
+      "_AuthenticatedLayout-BcLhSxhH.js",
+      "_Dropdown-DTamTfdR.js",
+      "_transition-Bict0URE.js"
     ]
   },
   "resources/js/Pages/Profile/Edit.jsx": {
-    "file": "assets/Edit-DZIQUk2b.js",
+    "file": "assets/Edit-Cl19tkuW.js",
     "name": "Edit",
     "src": "resources/js/Pages/Profile/Edit.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-Df5V2Zp-.js",
+      "_AuthenticatedLayout-BcLhSxhH.js",
       "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx",
       "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx",
       "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx",
-      "_Dropdown-ByUF5YLp.js",
-      "_transition-B7TXYEI3.js",
-      "_TextInput-CeU4glsG.js",
-      "_InputLabel-BPF4v9ZX.js",
-      "_PrimaryButton-DekYmlo9.js"
+      "_Dropdown-DTamTfdR.js",
+      "_transition-Bict0URE.js",
+      "_TextInput-CW75cmpk.js",
+      "_InputLabel-D8vZSExQ.js",
+      "_PrimaryButton-Bgz_oO8i.js"
     ]
   },
   "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx": {
-    "file": "assets/DeleteUserForm-CIaY2Gd2.js",
+    "file": "assets/DeleteUserForm-3wOG92qQ.js",
     "name": "DeleteUserForm",
     "src": "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_TextInput-CeU4glsG.js",
-      "_InputLabel-BPF4v9ZX.js",
-      "_transition-B7TXYEI3.js"
+      "_TextInput-CW75cmpk.js",
+      "_InputLabel-D8vZSExQ.js",
+      "_transition-Bict0URE.js"
     ]
   },
   "resources/js/Pages/Profile/Partials/PizzaStatus.jsx": {
-    "file": "assets/PizzaStatus-Ccts773v.js",
+    "file": "assets/PizzaStatus-CeHZwuIv.js",
     "name": "PizzaStatus",
     "src": "resources/js/Pages/Profile/Partials/PizzaStatus.jsx",
     "isDynamicEntry": true,
@@ -1744,47 +1744,47 @@
     ]
   },
   "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx": {
-    "file": "assets/UpdatePasswordForm-BRy96eEE.js",
+    "file": "assets/UpdatePasswordForm-D6-8YMAn.js",
     "name": "UpdatePasswordForm",
     "src": "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_TextInput-CeU4glsG.js",
-      "_InputLabel-BPF4v9ZX.js",
-      "_PrimaryButton-DekYmlo9.js",
-      "_transition-B7TXYEI3.js"
+      "_TextInput-CW75cmpk.js",
+      "_InputLabel-D8vZSExQ.js",
+      "_PrimaryButton-Bgz_oO8i.js",
+      "_transition-Bict0URE.js"
     ]
   },
   "resources/js/Pages/Profile/Partials/UpdatePizzaOrderForm.jsx": {
-    "file": "assets/UpdatePizzaOrderForm-Cc4yVLDm.js",
+    "file": "assets/UpdatePizzaOrderForm-MDP1nebX.js",
     "name": "UpdatePizzaOrderForm",
     "src": "resources/js/Pages/Profile/Partials/UpdatePizzaOrderForm.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_TextInput-CeU4glsG.js",
-      "_InputLabel-BPF4v9ZX.js",
-      "_PrimaryButton-DekYmlo9.js",
+      "_TextInput-CW75cmpk.js",
+      "_InputLabel-D8vZSExQ.js",
+      "_PrimaryButton-Bgz_oO8i.js",
       "_index-DVATffkL.js",
-      "_transition-B7TXYEI3.js"
+      "_transition-Bict0URE.js"
     ]
   },
   "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx": {
-    "file": "assets/UpdateProfileInformationForm-DHyChfHa.js",
+    "file": "assets/UpdateProfileInformationForm-BCrhPQVC.js",
     "name": "UpdateProfileInformationForm",
     "src": "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_TextInput-CeU4glsG.js",
-      "_InputLabel-BPF4v9ZX.js",
-      "_PrimaryButton-DekYmlo9.js",
-      "_transition-B7TXYEI3.js"
+      "_TextInput-CW75cmpk.js",
+      "_InputLabel-D8vZSExQ.js",
+      "_PrimaryButton-Bgz_oO8i.js",
+      "_transition-Bict0URE.js"
     ]
   },
   "resources/js/Pages/Welcome.jsx": {
-    "file": "assets/Welcome-Bw9sPPxF.js",
+    "file": "assets/Welcome-B-e-BE1d.js",
     "name": "Welcome",
     "src": "resources/js/Pages/Welcome.jsx",
     "isDynamicEntry": true,
@@ -1793,7 +1793,7 @@
     ]
   },
   "resources/js/app.jsx": {
-    "file": "assets/app-Bdz8U-JN.js",
+    "file": "assets/app-r8XvK69h.js",
     "name": "app",
     "src": "resources/js/app.jsx",
     "isEntry": true,
