@@ -12,7 +12,7 @@ import { GiTrophy } from "react-icons/gi";
 import { RiUser3Fill } from "react-icons/ri";
 import {Link,useSearchParams,useNavigate} from 'react-router-dom';
 import { authUserContext } from '@/Context/UserAuthenticationContext';
-import { BiLogOutCircle } from "react-icons/bi";
+import { BiLogOutCircle, BiSearch } from "react-icons/bi";
 import { flg_zambia } from '@/assets/flags/worldFlags';
 
 
@@ -89,38 +89,54 @@ function TopNavBar({callBack,logOutCallBackHandler,className}) {
     const {auth_token,balance,user_id}=authUser;
 
     const styleGenerator=()=>{
-        const base="flex-col pb-3 bg-gray-900 select-none sm:pb-0 sm:bg-mediumBlackcolor";
+        const base="flex-col flex gap-2 bg-gray-900 select-none sm:p-3 p-2 pb-3 sm:pb-0";
         return base+className;
     };
 
   return (
       <div className={styleGenerator()}>
           {/* topsection */}
-          <div className="flex items-center p-3 sm:justify-between">
+          <div className="flex justify-between sm:justify-start">
               {/* company logo and menu */}
-              <div className="relative flex items-center w-full gap-1 text-white ">
+              <div className="relative flex items-center gap-2 text-white ">
                   <button
                       onClick={() =>callBack()}
                       className="text-[22px] rounded-md
-                      w-[30px] h-[30px]  flex items-center justify-center cursor-pointer"
+                      w-[30px] h-[30px] sm:hidden  flex items-center justify-center cursor-pointer"
                   >
                       <CgMenuLeft />
                   </button>
-                  <div className="text-[13px] flex-1 font-poppins flex items-center gap-1">
-                      <p>{"CASTLEBET"}</p>
-                      <figure className='w-[22px] h-[22px] flex items-center justify-center'>
-                        <img src={flg_zambia} className='object-cover '/>
+                  <div className="text-[13px] flex-1 font-poppins flex items-center gap-3 sm:p-4">
+                      <p className='text-[13px] sm:text-[25px] font-medium'><span className='font-medium text-primaryColor'>CASTLE</span><span>BET</span></p>
+                      <figure className='w-[22px] h-[22px] sm:w-[30px] sm:h-[30px] flex items-center justify-center'>
+                        <img src={flg_zambia} className='object-cover'/>
                       </figure>
                   </div>
               </div>
 
+              {/*search bar*/}
+              <div className='items-center justify-center flex-1 hidden sm:flex'>
+                <div className='flex items-center justify-center w-1/2 px-3 bg-white'>
+                    <input 
+                      name='search'
+                      id='search'
+                      type='search'
+                      className='w-full px-3 border-0 outline-none focus:border-0 focus:ring-0'
+                      placeholder='Search for events and bets'
+                      autoComplete={true}
+                    />
+                    <button type='button' className='text-[25px]  text-gray-600 cursor-pointer'><BiSearch/></button>
+                </div>
+                
+              </div>
+
               {/* login/logout/light mode */}
-              <div className="flex items-center gap-3 font-poppins">
+              <div className="flex items-center gap-2 font-poppins">
                   {/* deposit button LOGGED IN USER */}
                   {auth_token && (
                       <button
                         onClick={()=>navigate("/?page=deposit&filter=All")}
-                        className="b bg-mediumYellowColor active:scale-95 w-[45px] flex items-center justify-center h-[25px] font-medium text-mediumBlackcolor text-[10px] rounded-sm">
+                        className="b bg-mediumYellowColor active:scale-95 w-[45px] sm:h-[40px] sm:w-[120px] sm:text-[14px] flex items-center justify-center h-[25px] font-medium text-mediumBlackcolor text-[10px] rounded-sm">
                           Deposit
                       </button>
                   )}
@@ -128,14 +144,14 @@ function TopNavBar({callBack,logOutCallBackHandler,className}) {
                   {/* :::::::LOGED IN USER:::::::: */}
                   {auth_token && (
                       <div className="flex items-center gap-2">
-                          <div className="text-white text-[10px] flex  flex-col">
-                              <p className=" bg-[#202020] rounded-sm cursor-pointer w-[60%] px-2 flex items-center justify-center">
+                          <div className="text-white text-[10px] sm:text-[15px] sm:h-[40px] sm:w-[120px] sm:bg-[#202020] sm:px-3  flex  flex-col">
+                              <p className=" bg-[#202020] sm:text-[11px] sm:bg-transparent rounded-sm cursor-pointer w-[60%]  px-2 sm:px-0 flex items-center justify-center sm:justify-start">
                                   K{balance}
                               </p>
-                              <p className="text-[8px]">ID:{user_id}</p>
+                              <p className="text-[8px] sm:text-[11px]">ID:{user_id}</p>
                           </div>
                           <Link to={"/?page=profile"}>
-                              <div className="text-white shadow-md w-[25px] text-[16px] text-opacity-30 h-[25px] rounded-full flex items-center justify-center cursor-pointer bg-[#202020]">
+                              <div className="text-white shadow-md w-[25px] sm:hover-ring-2 hover:ring-gray-400 text-[16px] sm:text-[22px] text-opacity-30 h-[25px] sm:h-[40px] sm:w-[40px]   rounded-full flex items-center justify-center cursor-pointer bg-[#202020]">
                                   <RiUser3Fill />
                               </div>
                           </Link>
@@ -148,16 +164,16 @@ function TopNavBar({callBack,logOutCallBackHandler,className}) {
                       <div className="flex items-center gap-2 sm:gap-3">
                           <Link to={"/?page=login"}>
                               <div
-                                  className="w-[55px]  font-poppins  font-medium text-white flex items-center justify-center
-                        border-smBlackcolor border-opacity-20 text-[11px]  border-solid border-[1px] h-[30px] shadow-authButtonLayout"
+                                  className="w-[55px] sm:w-[120px]  font-poppins  font-medium text-white flex items-center justify-center
+                        border-smBlackcolor border-opacity-20 text-[11px] sm:text-[14px]  border-solid border-[1px] h-[30px] sm:h-[40px] shadow-authButtonLayout"
                               >
                                   Login
                               </div>
                           </Link>
                           <Link to={"/?page=register"}>
                               <div
-                                  className="w-[55px] font-poppins  flex items-center justify-center
-                         bg-primaryColor text-white text-[11px] border-[1px] h-[30px] shadow-authButtonLayout"
+                                  className="w-[55px] sm:w-[120px] font-poppins sm:h-[40px]  flex items-center justify-center
+                         bg-primaryColor text-white text-[11px] sm:text-[14px] border-[1px] h-[30px] shadow-authButtonLayout"
                               >
                                   Register
                               </div>
@@ -166,7 +182,7 @@ function TopNavBar({callBack,logOutCallBackHandler,className}) {
                   )}
 
                   {/* mode */}
-                  <div className="font-medium text-white text-[18px] sm:text-[15px]  sm:block cursor-pointer">
+                  <div className="font-medium sm:mx-3 sm:mr-8 text-white text-[18px] sm:text-[15px]  sm:block cursor-pointer">
                       <MdOutlineLightMode />
                   </div>
 
@@ -174,7 +190,7 @@ function TopNavBar({callBack,logOutCallBackHandler,className}) {
                   {auth_token && (
                       <div
                           onClick={() => logOutCallBackHandler()}
-                          className="flex-col active:scale-95 shadow-md leading-3 rounded-full hover:text-whiteSmoke text-[#5c5c5c]  text-[16px] flex items-center justify-center cursor-pointer "
+                          className="flex-col active:scale-95 shadow-md bg-[#202020] sm:mr-3 sm:h-[40px] sm:w-[40px]  leading-3 rounded-full hover:text-whiteSmoke text-gray-500 text-[16px] flex items-center justify-center cursor-pointer "
                       >
                           <button className="">
                               <BiLogOutCircle />
@@ -182,57 +198,13 @@ function TopNavBar({callBack,logOutCallBackHandler,className}) {
                           <p className="text-[9px]">logout</p>
                       </div>
                   )}
-
-                  {/* search button will show on mobile view */}
-                  <div className="text-[25px] w-[40px] h-[40px] hidden flex items-center justify-center font-light text-white font-poppins cursor-pointer sm:hidden">
-                      <GoSearch />
-                  </div>
               </div>
           </div>
 
           {/* show these on desktop view */}
-          {/* bottom section */}
-          <div className="items-center justify-between hidden gap-2 px-2 h-[40px] mx-2 bg-opacity-50 sm:flex sm:gap-3 sm:px-3 rounded-2xl bg-smallBlackColor font-poppins mb-3 shadow-layoutMobileNav">
-              {/* search input/nav list/help section/printe matches */}
-              <div className="flex items-center sm:gap-2">
-                  <button className="text-[22px] text-[#5c5c5c] font-poppins rounded-full hover:text-mediumYellowColor hover:text-opacity-50 transition ease-in-out duration-75">
-                      <GoSearch />
-                  </button>
-                  <input
-                      type="search"
-                      id="search"
-                      className="w-full hidden sm: font-poppins text-sm text-white placeholder:font-poppins bg-transparent border-0 outline-none placeholder:text-white placeholder:text-[11px] placeholder:font-light"
-                      placeholder="Search matches, teams.."
-                  />
-              </div>
-              {/* nav list */}
-              <ul className="flex items-center flex-1 gap-4">
-                  {navList.map((nav) => (
-                      <Link key={nav?.id}>
-                          <li className="text-white text-[11px] font-poppins hover:text-mediumYellowColor hover:text-opacity-50 transition ease-in-out duration-75">
-                              {nav?.name}
-                          </li>
-                      </Link>
-                  ))}
-              </ul>
-              {/* support and other */}
-              <div className="flex items-center gap-4 text-[10px] text-[#acabab] font-poppins">
-                  <button className="flex items-center gap-1 transition duration-75 ease-in-out cursor-pointer hover:text-mediumYellowColor hover:text-opacity-50">
-                      <span className="text-[16px]">
-                          <GoQuestion />
-                      </span>
-                      Help & Support
-                  </button>
-                  <button className="flex items-center gap-1 transition duration-75 ease-in-out cursor-pointer hover:text-mediumYellowColor hover:text-opacity-50">
-                      <span className="text-[16px]">
-                          <TfiPrinter />
-                      </span>
-                      Print Matches
-                  </button>
-              </div>
-          </div>
+          
           {/* bottom navigation responsiveness mobile view */}
-          <div className="flex justify-between px-2 py-1 mx-3 bg-opacity-50 rounded-md sm:hidden bg-smallBlackColor shadow-layoutMobileNav">
+          <div className="flex justify-between px-2 py-1 bg-opacity-50 rounded-md sm:hidden bg-smallBlackColor shadow-layoutMobileNav">
               {responsiveNavList.map((val) => (
                   <div
                       key={val?.id}
