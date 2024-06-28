@@ -6,7 +6,7 @@ import LeagueCollectionGames from './LeagueCollectionGames';
 import BoostedGames from './BoostedGames';
 import TodayGames from './TodayGames';
 
-function FilteredLeagues({requestTodayGamesUpdate,requestBoostedGamesUpdate,requestSpecificGamesUpdate}) {
+function FilteredLeagues({socket}) {
     const [searchParams,setSearchParams] = useSearchParams();
     const [route,setRoute]=useState({
         page:"",
@@ -32,14 +32,10 @@ function FilteredLeagues({requestTodayGamesUpdate,requestBoostedGamesUpdate,requ
             }
             case "boosted":{
                 // TODO::logic for fetching live games
-                return (<BoostedGames onRefreshRequestUpdate={requestBoostedGamesUpdate} />);
-            }
-            case "today":{
-                // TODO::logic for fetching live games
-                return (<TodayGames onRefreshRequestUpdate={requestTodayGamesUpdate} />);
+                return (<BoostedGames/>);
             }
             default:{
-                return (<LeagueCollectionGames urlParams={route} onRefreshRequestUpdate={requestSpecificGamesUpdate}/>);
+                return (<LeagueCollectionGames socket={socket} urlParams={route}/>);
             }
         }
     };

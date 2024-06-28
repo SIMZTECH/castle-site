@@ -210,7 +210,6 @@ function WebSocketCustomHook() {
                     break;
                 case "16":{
                     setGetGamesByCompetition(data?.data);
-                    console.log(data,"games by competition are here........");
                 }
                     break;
                 case "18":{//get single game details
@@ -322,38 +321,40 @@ function WebSocketCustomHook() {
 
     const getBoostedGames=()=>{//popular games
         const query = {
-            "command": "get",
-            "params": {
-                "source": "betting",
-                "what": { //selector
-                    "sport": ['alias'], //football
-                    "region": ['id','alias'],//europe
-                    "competition":['id','name','favorite','favorite_order'],//UEFA Champions League
-                    "game": [
-                        'id',
-                        'team1_name',
-                        'team2_name',
-                        'start_ts',
-                        'markets_count',
-                        'strong_team',
-                        'type',
+            command: "get",
+            params: {
+                source: "betting",
+                what: {
+                    //selector
+                    sport: ["alias"], //football
+                    region: ["id", "alias"], //europe
+                    competition: ["id", "name", "favorite", "favorite_order"], //UEFA Champions League
+                    game: [
+                        "id",
+                        "team1_name",
+                        "team2_name",
+                        "start_ts",
+                        "markets_count",
+                        "strong_team",
+                        "type",
                     ],
-                    "market": ["name","type","market_type"],
-                    "event": [],//list of all games under
+                    market: ["name", "type", "market_type"],
+                    event:["id","price","order","name"]
                 },
-                "where": {//filter on selected
-                    "sport": {"alias":"Soccer"},
-                    "market":{
-                        "market_type":{
-                            "@in":["MatchResult"]
-                        }
+                where: {
+                    //filter on selected
+                    sport: { alias: "Soccer" },
+                    market: {
+                        market_type: {
+                            "@in": ["MatchResult"],
+                        },
                     },
-                    "competition":{
-                        "favorite":true//popular competition
-                    }
+                    competition: {
+                        favorite: true, //popular competition
+                    },
                 },
             },
-            "rid":"15",
+            rid: "15",
         };
     
         console.log(query,"i have requested for boosted games.....");

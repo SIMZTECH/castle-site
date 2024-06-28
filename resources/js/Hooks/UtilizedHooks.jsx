@@ -1,8 +1,4 @@
 // here falls the utilized hooks
-
-
-
-
 export default function UtilizedHooks(){
 
     // place bet hook
@@ -85,10 +81,63 @@ const getSingleGameDetails=(arg,socket)=>{//get match scores by gamed id
         },
         rid: "18",
     };
-
-    console.log(query,"i have requested for single game details of game_id"+game_id);
     socket.send(JSON.stringify(query));
 };
+
+/**
+ *
+ * @param {{
+* compt_id:number,
+* reg_id:number,
+* sport_id:number
+* }} arg
+*@param {WebSocket} socket
+*/
+const getGameByRegionAndCompetition=(arg,socket)=>{
+   const {compt_id,reg_id,sport_id}=arg;
+   const query = {
+       command: "get",
+       params: {
+           source: "betting",
+           what: {
+               //selector
+               sport: ["alias"], //football
+               region: ["id", "alias"], //europe
+               competition: ["id", "name"], //UEFA Champions League
+               game: [
+                   "id",
+                   "team1_name",
+                   "team2_name",
+                   "start_ts",
+                   "markets_count",
+                   "strong_team",
+                   "type",
+                   "order",
+               ],
+               market: ["name", "type", "market_type"],
+               event: ["id", "price", "order", "name"],
+           },
+           where: {
+               //filter on selected
+               sport: { alias: "Soccer" },
+               region: { id: reg_id },
+               market: {
+                   market_type: {
+                       "@in": ["MatchResult"],
+                   },
+               },
+               competition: {
+                   id: compt_id, //popular competition
+               },
+           },
+           // "subscribe":true,
+       },
+       rid: "16",
+   };
+
+   socket.send(JSON.stringify(query));
+}
+
 
 /**
 * @param {{
@@ -115,13 +164,13 @@ const registerUser=(formData,socket)=>{
         rid: "11",
     };
     socket.send(JSON.stringify(query));
-    console.log(query,"i have sent the register request");
 };
 
     return {
         placeBetRequest,
         getSingleGameDetails,
-        registerUser
+        registerUser,
+        getGameByRegionAndCompetition,
     }
 
 };

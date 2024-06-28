@@ -174,9 +174,7 @@ function Root() {
                 {/*group of games display */}
                 {route?.page == "league" && (
                     <FilteredLeagues
-                        requestTodayGamesUpdate={requestTodayGamesUpdate}
-                        requestBoostedGamesUpdate={requestBoostedGamesUpdate}
-                        requestSpecificGamesUpdate={getGameByRegionAndCompetition}
+                        socket={socket}
                     />)}
 
                 {/*group of games display */}

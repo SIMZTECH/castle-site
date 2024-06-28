@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import { storeTempContext } from "@/Context/DataStoreTemp";
+import UtilizedHooks from "@/Hooks/UtilizedHooks";
+import React, { useContext, useState } from "react";
 import { TfiAngleUp } from "react-icons/tfi";
 import { useNavigate } from "react-router-dom";
 
-function RegionsAccordians({_data,isAccordianOpen,onClickAccordianCallBack,getGamesByCompAndReg}) {
+function RegionsAccordians({_data,isAccordianOpen,onClickAccordianCallBack,socket}) {
+    const {setGetGamesByCompetition}=useContext(storeTempContext);
+    const {getGameByRegionAndCompetition}=UtilizedHooks();
     const route=useNavigate();
     const {
         competition,
@@ -83,7 +87,8 @@ function RegionsAccordians({_data,isAccordianOpen,onClickAccordianCallBack,getGa
                                         reg_id:Number(region_id)
                                     }
                                     asideRouteToHandler(params);
-                                    getGamesByCompAndReg(params);   
+                                    getGameByRegionAndCompetition(params,socket);
+                                    setGetGamesByCompetition(null);
                                 }} 
                                 key={comptKeys}
                                 className="flex outline-none items-center text-[12px] rounded-sm active:scale-95 justify-between px-2 cursor-pointer p-1 hover:bg-[#b3cde0]"

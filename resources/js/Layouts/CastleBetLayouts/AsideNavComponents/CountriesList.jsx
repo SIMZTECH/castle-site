@@ -8,11 +8,12 @@ import { useEffect } from 'react';
 import { isNil } from 'lodash';
 import RegionsAccordians from './RegionsAccordians';
 import { TfiAngleDown, TfiAngleUp } from 'react-icons/tfi';
+import UtilizedHooks from '@/Hooks/UtilizedHooks';
 
 const DEFAULT_VEIWABLE_REGIONS=6;//regions you will see at load time
 
-function CountriesList(){
-    const {tempSwarmData,setGetCompAndRegParams}=useContext(storeTempContext);
+function CountriesList({socket}){
+    const {tempSwarmData,setAvailableCompetition}=useContext(storeTempContext);
     const [availableRegions,setAvailableRegions]=useState(null);
     const [currentKeyIndicator,setCurrentKeyIndicator]=useState(0);
     const [filterKey,setFilterKey]=useState(DEFAULT_VEIWABLE_REGIONS);
@@ -29,17 +30,6 @@ function CountriesList(){
         });
 
         return LENGTH;
-    };
-
-    /**
-     * 
-     * @param {{
-     * compt_id:number,
-     * reg_id:number
-     * }} arg 
-     */
-    const handleGetParamsFromCallBack=(arg)=>{
-        setGetCompAndRegParams(arg);
     };
 
     /**
@@ -113,17 +103,12 @@ function CountriesList(){
                             {availableRegions?.map((reg, index) => {
                                 return (
                                     <RegionsAccordians
-                                        getGamesByCompAndReg={handleGetParamsFromCallBack}
+                                        socket={socket}
                                         key={reg?.region_id}
                                         onClickAccordianCallBack={() => {
                                             //TODO::invock the route to specific games
                                             // chancge current clicked accordian state
                                             setCurrentKeyIndicator((el)=>(el==(index+1))?0:index+1);
-
-                                            console.log(
-                                                arg,
-                                                "current state of accordian......"
-                                            );
                                         }}
                                         isAccordianOpen={currentKeyIndicator==(index+1)}
                                         _data={reg}

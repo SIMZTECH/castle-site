@@ -106,7 +106,7 @@ function WelcomeGuestLayout({children,logOutCallBackHandler,logoutRes,cashOutRes
                         {/* left flex-20%*/}
                         <div className="basis-[20%] hidden sm:flex sm:flex-col border-r-[1px] border-l-0 border-t-0 border-b-0 border bg-[#f6f8fc] sm:pb-8">
                         {isNil(tempSwarmData) && <AsideNavLeftSkeleton />}
-                        {!isNil(tempSwarmData) && <AsideNavLeft/>}
+                        {!isNil(tempSwarmData) && <AsideNavLeft socket={socket}/>}
 
                         </div>
                         {/* middle flex-cover available space*/}

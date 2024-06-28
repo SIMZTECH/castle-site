@@ -14,8 +14,8 @@ export default function FetchSwarmData() {
         const request_session = {
             command: "request_session",
             params: {
-                site_id: 18762391,
-                // site_id: 65,
+                // site_id: 18762391,
+                site_id: 65,
                 language: "eng",
             },
             rid: "1",
@@ -329,48 +329,6 @@ const getSingleGameDetails=(arg)=>{//get match scores by gamed id
 };
 
 
-
-const getBoostedGames=()=>{//popular games
-    const query = {
-        "command": "get",
-        "params": {
-            "source": "betting",
-            "what": { //selector
-                "sport": ['alias'], //football
-                "region": ['id','alias'],//europe
-                "competition":['id','name','favorite','favorite_order'],//UEFA Champions League
-                "game": [
-                    'id',
-                    'team1_name',
-                    'team2_name',
-                    'start_ts',
-                    'markets_count',
-                    'strong_team',
-                    'type',
-                ],
-                "market": ["name","type","market_type"],
-                "event": [],//list of all games under
-            },
-            "where": {//filter on selected
-                "sport": {"alias":"Soccer"},
-                "market":{
-                    "market_type":{
-                        "@in":["MatchResult"]
-                    }
-                },
-                "competition":{
-                    "favorite":true//popular competition
-                }
-            },
-            // "subscribe":true,
-        },
-        "rid":"15",
-    };
-
-    console.log(query,"i have requested for boosted games.....");
-    send(JSON.stringify(query));
-}
-
 const getTodayGamesByTimeStamp=()=>{
     const currentDate = new Date();
     const MIUNUTES_SECONDS_CONSTANT=38399;
@@ -550,28 +508,7 @@ useMemo(()=>{//execute when the params change
     }
 },[getCompAndRegParams]);
 
-useMemo(()=>{
-    if(!isNil(getGameDetailsParams)){
-        // const {game_id,region_id,competition_id}=getGameDetailsParams;
-        
-        getSingleGameDetails(getGameDetailsParams);    
-    }
 
-    console.log(getGameDetailsParams,"am executing the testing update....")
-
-},[getGameDetailsParams,singleLiveGamesUpdateKey]);
-
-useMemo(()=>{
-
-    if(!isNil(placeBetReqParams)){
-        const {stakeAmount,bets}=placeBetReqParams;
-        //setPlaceBetReqParams(null);
-        placeBetRequest(stakeAmount,bets);
-
-        console.log(placeBetReqParams,"i have invocked the use memo hook to place bet......");
-    }
-
-},[placeBetReqParams]);
 
 
 useMemo(()=>{
@@ -629,7 +566,6 @@ useMemo(()=>{
         cashOutRes,
         getUpdatesWhatsUp,
         getSingleGameDetails,
-        getBoostedGames,
         getTodayGamesByTimeStamp,
         socket,
         getGameByRegionAndCompetition

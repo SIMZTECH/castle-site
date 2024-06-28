@@ -1,5 +1,5 @@
 import { Skeleton } from '@mui/material';
-import React from 'react';
+import React, { useMemo } from 'react';
 import { ScaleLoader } from 'react-spinners';
 import { FaTrophy } from "react-icons/fa6";
 import { useContext } from 'react';
@@ -9,36 +9,37 @@ import { useState } from 'react';
 import BoostedGameComponent from './boostedGameComp/BoostedGameComponent';
 import { isNil } from 'lodash';
 import CastleBetFooter from '@/Components/CastleBetFooter';
+import UtilizedHooks from '@/Hooks/UtilizedHooks';
 
-function LeagueCollectionGames({onRefreshRequestUpdate,urlParams}) {
+function LeagueCollectionGames({urlParams,socket}) {
+    const {getGameByRegionAndCompetition}=UtilizedHooks();
     const {tempSwarmData,getGamesByCompetition} = useContext(storeTempContext);
     const [recievedDataByCompetition,setRecievedDataByCompetition]=useState(null);
+    const [keyController,setKeyController]=useState(0);
     
     useEffect(()=>{
         if(!isNil(getGamesByCompetition?.sport[1]?.region)){
             setRecievedDataByCompetition(getGamesByCompetition);
+            setKeyController((el)=>el+1);
         }else{
             setRecievedDataByCompetition(null);
         }
     },[getGamesByCompetition]);
 
 
-    useEffect(()=>{
-        if(tempSwarmData&&isNil(recievedDataByCompetition)){
+    useMemo(()=>{
+        if(tempSwarmData&&isNil(recievedDataByCompetition)&&keyController==0){
             // TODO::pass in the required params
-            onRefreshRequestUpdate({
+            const _data={
                 compt_id:Number(urlParams.compt_id),
                 reg_id:Number(urlParams.reg_id),
                 sport_id:1
-            });
+            }
+            getGameByRegionAndCompetition(_data,socket);
+            setKeyController((el)=>el+1);
         };
-        console.log("i have executed for 1st time after loading temp and on refresh...");
     },[tempSwarmData]);
 
-    // console.log(urlParams,"all the url params....");
-    // console.log(recievedDataByCompetition,"the games....");
-    console.log(urlParams,"all the url params....");
-    console.log(recievedDataByCompetition,"game by competition and region in league collection are here...");
 
   return (
       <div className="flex flex-col flex-1 h-full bg-gray-50">
@@ -97,7 +98,7 @@ function LeagueCollectionGames({onRefreshRequestUpdate,urlParams}) {
                       </>
                   )}
 
-                  {isNil(recievedDataByCompetition) && tempSwarmData && (
+                  {isNil(recievedDataByCompetition)&& (
                       <div className="flex items-center self-center justify-center mt-8">
                           <ScaleLoader color="#0E76BC" size={20} />
                       </div>

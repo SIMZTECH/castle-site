@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { liveGames,boosts } from '@/assets/icons';
 import { TfiAngleDown, TfiAngleUp } from 'react-icons/tfi';
 import { Link, useNavigate } from 'react-router-dom';
+import UtilizedHooks from '@/Hooks/UtilizedHooks';
 
 
 const DEFAULT_VEIWABLE_COMPETITIONS=4;//regions you will see at load time
@@ -28,9 +29,10 @@ const fixedAsideNavEventsData=[
         icon:boosts
     },
 ]
-function PopularCompetitionList() {
+function PopularCompetitionList({socket}) {
     const route=useNavigate();
-    const {tempSwarmData,getBoostedGames,liveGames,setGetCompAndRegParams}=useContext(storeTempContext);
+    const {getGameByRegionAndCompetition}=UtilizedHooks();
+    const {tempSwarmData,getBoostedGames,liveGames,setGetGamesByCompetition}=useContext(storeTempContext);
     const [availableCompetitions,setAvailableCompetition]=useState(null);
     const [filterKey,setFilterKey]=useState(DEFAULT_VEIWABLE_COMPETITIONS);
     const [totalLiveGames,setTotalLiveGames]=useState(0);
@@ -50,17 +52,6 @@ function PopularCompetitionList() {
 
         return LENGTH;
     };
-
-    /**
-     * 
-     * @param {{
-    * compt_id:number,
-    * reg_id:number
-    * }} arg 
-    */
-   const handleGetParamsFromCallBack=(arg)=>{
-       setGetCompAndRegParams(arg);
-   };
 
     /**
      * 
@@ -198,7 +189,6 @@ function PopularCompetitionList() {
         }
     },[tempSwarmData,filterKey]);
 
-    // console.log(availableCompetitions,"the collection available in popular competitions...........");
     
 
 
@@ -254,8 +244,8 @@ function PopularCompetitionList() {
                                         key={popularComptKey}
                                         onClick={()=>{
                                             asideRouteToHandler({...rest});//navigate to route
-                                            handleGetParamsFromCallBack({...rest});
-                                            // onSelectedFilterHandler({...rest});//invock get games by competition
+                                            setGetGamesByCompetition(null);//clear prev games
+                                            getGameByRegionAndCompetition({...rest},socket);
                                         }}
                                         className="border-[1px] w-full outline-none justify-between cursor-pointer px-2 h-[30px] flex items-center active:scale-95 rounded-sm shadow-sm hover:bg-[#b3cde0] text-[#03396c] mb-2"
                                     >

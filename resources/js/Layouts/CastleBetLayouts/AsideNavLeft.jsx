@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import PopularCompetitionList from './AsideNavComponents/PopularCompetitionList';
 
 
-function AsideNavLeft(){
+function AsideNavLeft({socket}){
 
   return (
       <div className="relative flex flex-col flex-1 h-full">
@@ -28,10 +28,10 @@ function AsideNavLeft(){
                   {/* favourites */}
                   <FavouritesList favouritesData={[]} />
 
-                  <PopularCompetitionList/>
+                  <PopularCompetitionList socket={socket}/>
                   
                   {/* countries */}
-                  <CountriesList />
+                  <CountriesList socket={socket}/>
 
                   {/* games */}
                   <GamesList gamesData={GamesFixureData} />
